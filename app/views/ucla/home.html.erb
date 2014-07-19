@@ -1,2 +1,71 @@
-<h1>Ucla#home</h1>
-<p>Find me in app/views/ucla/home.html.erb</p>
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>UCLA Campus Page</title>
+        <%= stylesheet_link_tag 'ucla.css.css' %> 
+    </head>
+    <body>
+    	<div class="page">
+    		<div class="UCLAtop">
+    			<div class="cover">
+    				<%= image_tag("Cover21.jpg", :alt => "Cover" :id =>"UclaCover") %>
+    			</div>
+    			<div class="logo">
+    				<b>UCLA ICA</b>
+    			</div>
+    		</div>
+    		<div class="UCLAupdates">
+    			<div class="UCLAannouncments">
+    				<h1 id="AnounTitle">Announcements</h1>	
+    			</div>
+    			<div class="UCLAevent">
+    				<h1 id="EventTitle">Weekly Events</h1>
+					<br>
+					<p>Large Group Rally</p>
+					<p>Wednesday, 6:30pm</p>
+					<p>Akerman Viewpoint Conference Room</p>
+					<br>
+					<p>Praise Night</p>
+					<p>Pickup Time:6:30pm</p>
+					<p>Pickup Location: De Nev Turnaround</p>
+					<br>
+					<p>Church</p>
+					<p>Pickup Time:9:00am</p>
+					<p>Pickup Location: De Nev Turnaround</p>
+    			</div>
+    		</div>
+
+    		<div class="UCLAbio">
+                <div class="smallgroup">
+                    <h1>Small Groups</h1>
+                    <%= image_tag("BruinBear.jpg", :id => "sgBear") %>
+                </div>
+                <div class="leaders">
+                    <h1>Meet The Leaders</h1>
+                    <%= image_tag("BruinBear.jpg", :id => "leadBear") %>
+                </div>
+            </div>
+
+    		<div class="Calendar">
+    			<h1>Upcoming Events</h1>
+    			<iframe src="https://www.google.com/calendar/embed?src=en.usa%23holiday%40group.v.calendar.google.com&ctz=America/Los_Angeles" id="UCLAcalendar"></iframe>
+    		</div>
+
+            
+
+            <div class="Buttons">
+    			<div class="contact">
+    				<div class="ContactButton">
+    					<a href="UCLAcontact.html" id="ContButton">Contact Us</a>
+    				</div>
+    			</div>
+    			<div class="connect">	
+    				<div class="ConnectedButton">
+    					<a href="UCLAconnection.html" id="ConnButton">Get Connected</a>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    	
+    </body>
+</html>
