@@ -1,21 +1,39 @@
-<h1>HOMEPAGE</h1>
+<div class="row">
+  <%= image_tag "landscapeSmall2.jpg", class: "img-max" %>
+  <%= image_tag "ica_logo.png", class: "img-overlay" %>
+</div>
 
 <div class="row">
-  <section id="row1">
+  <section class="between-photo">
+    <section class="separation-2"></section>
+    <h2>To Worship God and to<br>
+      Make Christ's Love Known</h2>
+    <section class="separation-1"></section>
+    <h3>In Christ Alone (ICA) is a ministry commited to loving God,<br>
+      loving our neighbors as ourselves, and making disciples of all nations</h3>
+    <section class="separation-1"></section>
+    <%= link_to "Learn More", about_path, class: "button button-default" %>
+    <section class="separation-2"></section>
+  </section>
+</div>
+
+<div class="row2">
+  <section class="mid-photo" id="home-second">
   </section>
 </div>
 
 <div class="row">
-  <section id="row2">
-  </section>
-</div>
-
-<div class="row">
-  <section id="row3">
-  </section>
-</div>
-
-<div class="row">
-  <section id="row4">
+  <section class="between-photo">
+    <section class="separation-2"></section>
+    <h2>Our Campus Ministries</h2>
+    <section class="separation-2"></section>
+    <section class="center">
+      <%= link_to "", "#", id: "usc-statue", class: "circular inline-block" %>
+      <%= link_to "", "#", id: "ucla-statue", class: "circular inline-block" %>
+      <%= link_to "", "#", id: "uci-statue", class: "circular inline-block" %>
+    </section>
+    <section class="separation-2"></section>
+    <%= link_to "Get Connected", "#", class: "button button-default" %>
+    <section class="separation-2"></section>
   </section>
 </div>

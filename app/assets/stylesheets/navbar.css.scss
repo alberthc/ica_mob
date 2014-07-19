@@ -1,33 +1,101 @@
+@import 'utilities/global';
+
 // Place all the styles related to the Navbar controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// navbar container
 #navbar {
-  background-color: gray;
+  background-color: $navyLight;
+  height: 3em;
 
-  .nav-link {
-    color: white;
+  color: white;
+
+  a {
     text-decoration: none;
-    margin-right: 20px;
-  }
-}
+    color: white;
 
-section {
-  overflow: auto;
-}
-
-.row {
-  section#row1 {
-    min-height: 1000px;
-    height: 200px;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1920px;
-    max-height: 100%;
-    position: relative;
-
-    //background: url(landscapeSmall.jpg) no-repeat;
-    background-size: 100% auto;
+    :hover {
+      background-color: $navyLight;
+    }
   }
 
+  // first level menu
+  #navbar-top {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    li {
+      position: relative;
+      display: inline;
+      padding: 2em 3.2em 0 3.2em;
+    }
+
+    a {
+      display: inline-block;
+      //margin: 20px 100px 0px 100px;
+      padding-top: 1.4em;
+      padding-bottom: .4em; //space between words and bottom border
+    }
+
+    // 1st level list item
+    li:hover {
+      a.nav-link-1 {
+	font-weight: bold;
+	background-color: $navyLight;
+	border-bottom: .2em solid;
+      }
+
+      // 2nd level menu when mouse hovers over 1st level menu
+      ul {
+	left: 0;
+
+	a {
+	  text-decoration: none;
+	  background: none;
+	}
+
+	a:hover {
+	  color: #495159;
+	  background-color: $navyLight;
+	}
+
+//	li:hover {
+//	  cursor: pointer;
+//
+//	  a {
+//	    color: #495159;
+//	  }
+//	}
+      }
+    }
+
+    // 2nd level menu
+    ul {
+      position:absolute;
+      //top:100%; //Uncommenting this makes the dropdowns work in IE7 but looks a little worse in all other browsers. Your call. */
+      left: -9999px;
+      margin:0;
+      padding:0;
+      text-align:left;
+
+      li {
+        display: block;
+	background-color: $navyLight;
+	opacity: 0.8;
+	border-radius: .3em;
+	border: .1em solid;
+	margin: 0 0 0 3.2em;
+	padding: 0 2em 0 2em;
+      }
+
+      a {
+	color: white;
+	white-space: nowrap;
+	display: block;
+      }
+    }
+  }
 }

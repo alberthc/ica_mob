@@ -1,0 +1,220 @@
+@import 'utilities/global';
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat-Regular'), url(http://themes.googleusercontent.com/static/fonts/montserrat/v4/zhcz-_WihjSQC0oHJ9TCYBsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
+}
+
+body {
+  font-family: Montserrat, Calibri, sans-serif !important;
+  font-size: 14pt;
+  width: 100% !important;
+  min-width: 940px !important;
+}
+
+h2 {
+  font-weight: bold !important;
+  font-size: 24pt !important;
+  text-align: center !important;
+  color: $headerOneColor !important;
+}
+
+h3 {
+  font-size: 14pt !important;
+  text-align: center !important;
+  color: $headerThreeColor !important;
+}
+
+/* display conversion */
+
+.inline-block {
+  display: inline-block;
+}
+
+/* rows */
+
+.row {
+  text-align: center;
+
+  .main-photo {
+    margin: 0 auto;
+    position: relative;
+    min-height: 500px;
+    z-index: -1;
+  }
+
+  .between-photo {
+    min-height: 200px;
+  }
+}
+
+.row2 {
+  //min-height: 600px;
+  //height: 400px;
+  //margin: 0 auto;
+  //width: 100%;
+  //max-width: 1920px;
+  //max-height: 100%;
+  //position: relative;
+
+  .mid-photo {
+    //border: 1px solid;
+    min-height: 400px;
+    //min-height: 25em;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1920px;
+    max-height: 100%;
+    position: relative;
+    z-index: -1;
+  }
+
+  #home-second {
+    background: url('group pic.jpg') no-repeat fixed;
+    background-size: 100% auto;
+  }
+
+}
+
+/* Sections with blank space */
+
+.separation-1 {
+  height: 25px;
+}
+
+.separation-2 {
+  height: 50px;
+}
+
+.separation-3 {
+  height: 75px;
+}
+
+.separation-4 {
+  height: 100px;
+}
+
+.separation-5 {
+  height: 125px;
+}
+
+/* images */
+
+.circular {
+  width: 300px;
+  height: 300px;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  border: 1px solid transparent;
+  margin: 0 35px 0 35px;
+}
+
+.img-max {
+  width: 100%;
+  height: auto;
+}
+
+.img-overlay {
+  width: 350px;
+  height: auto;
+  height: auto;
+  display: block;
+  margin: auto;
+  position: absolute;
+  text-align: center;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: 1;
+}
+
+#home-main {
+  background: url(landscapeSmall2.jpg) no-repeat;
+  background-size: 100% auto;
+}
+
+#usc-statue {
+  background: url(usc_statue.jpg) no-repeat;
+  background-position: center center;
+  background-size: auto 100%;
+}
+
+#ucla-statue {
+  background: url(ucla_statue.jpg) no-repeat;
+  background-position: center center;
+  background-size: auto 100%; 
+}
+
+#uci-statue {
+  background: url(uci_statue.jpg) no-repeat;
+  background-position: center center;
+  background-size: auto 100%;
+}
+
+/* buttons */
+
+.button {
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: inline-block;
+  font: 12pt;
+  line-height: 1.42857143;
+  margin: 0 auto;
+  //margin-bottom: 0;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button:active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+
+.button:focus,
+.button:active:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.button-default {
+  background-color: $buttonNavy;
+  background-image: none;
+  color: white;
+  //display: block;
+  //text-align: center;
+}
+
+.test {
+  display: inline-block;
+  background-color: $buttonNavy;
+  background-image: none;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* links */
+
+a.reset {
+  text-decoration: none;
+}
+
+.center {
+  margin: 0 auto;
+  text-align: center;
+  vertical-align: middle;
+}
