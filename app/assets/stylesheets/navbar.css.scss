@@ -8,8 +8,8 @@
 #navbar {
   background-color: $navyLight;
   height: 3em;
-
   color: white;
+  z-index: 5;
 
   a {
     text-decoration: none;
@@ -30,7 +30,7 @@
     li {
       position: relative;
       display: inline;
-      padding: 2em 3.2em 0 3.2em;
+      padding: 2em 3em 0 3em;
     }
 
     a {
@@ -80,13 +80,14 @@
       margin:0;
       padding:0;
       text-align:left;
+      z-index: 5;
 
       li {
         display: block;
 	background-color: $navyLight;
-	opacity: 0.8;
-	border-radius: .3em;
-	border: .1em solid;
+	opacity: .8;
+	//border-radius: .3em;
+	//border: .1em solid;
 	margin: 0 0 0 3.2em;
 	padding: 0 2em 0 2em;
       }
