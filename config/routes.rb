@@ -3,8 +3,15 @@ Rails.application.routes.draw do
 
   get 'navbar/contact'
 
-  match '/ucla',  to: 'ucla#home',    via: 'get'
+  # navbar controller
   match '/about', to: 'navbar#about', via: 'get'
+  match '/about/church_leadership', to: 'navbar#church_leadership', via: 'get'
+  match '/about/discipleship',	to: 'navbar#discipleship', via: 'get'
+
+  # ucla controller
+  match '/ucla',  to: 'ucla#home',    via: 'get'
+  match '/ucla/leaders',  to: 'ucla#leaders',    via: 'get'
+  match '/ucla/small_groups',  to: 'ucla#small_groups',    via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
