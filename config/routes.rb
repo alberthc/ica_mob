@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get 'navbar/contact'
 
+  get '/ucla/small_groups'
+
   match '/ucla',  to: 'ucla#home',    via: 'get'
   match '/about', to: 'navbar#about', via: 'get'
 
