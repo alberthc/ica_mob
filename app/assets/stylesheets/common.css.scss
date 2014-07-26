@@ -16,13 +16,12 @@
 /* images */
 
 .circular {
-  width: 250px;
-  height: 250px;
-  border-radius: 125px;
-  -webkit-border-radius: 125px;
-  -moz-border-radius: 125px;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
   border: 1px solid transparent;
-  margin: 0 0 50px 0;
   transition: opacity .5s;
   -webkit-transition: opacity .5s; /* For Safari 3.1 to 6.0 */
 }
@@ -34,18 +33,6 @@
 .img-max {
   width: 100%;
   height: auto;
-}
-
-.img-overlay {
-  width: 20%;
-  min-width: 200px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  position: absolute;
-  text-align: center;
-  top: 150px; right: 0; bottom: 0; left: 0;
-  z-index: 0;
 }
 
 /* BACKGROUND IMAGES */
@@ -89,6 +76,10 @@
   background-size: cover !important;
 }
 
+.fig-link {
+  margin: 0 0 50px 0; 
+}
+
 .separation-1 {
   height: 25px;
 }
@@ -99,4 +90,16 @@
 
 .separation-3 {
   height: 75px;
+}
+
+/* TRANSITIONS */
+
+.fast-color-trans {
+  transition: color 300ms;
+  -webkit-transition: color 300ms; /* Safari */
+}
+
+.fast-height-trans {
+  transition: height 300ms;
+  -webkit-transition: height 300ms; /* Safari */
 }
