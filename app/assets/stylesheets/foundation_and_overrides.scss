@@ -1219,7 +1219,7 @@ $topbar-dropdown-link-bg: #859ead;
 $topbar-dropdown-link-weight: $font-weight-normal;
 $topbar-dropdown-toggle-size: 5px;
 $topbar-dropdown-toggle-color: #fff;
-$topbar-dropdown-toggle-alpha: 0.4;
+//$topbar-dropdown-toggle-alpha: 0.4;
 
 // Set the link colors and styles for top-level nav
 $topbar-link-color: #fff;
@@ -1257,7 +1257,7 @@ $topbar-link-padding: $topbar-height / 3;
 // $topbar-menu-icon-color-toggled: #888;
 
 // Transitions and breakpoint styles
-$topbar-transition-speed: 300ms;
+// $topbar-transition-speed: 300ms;
 // Using rem-calc for the below breakpoint causes issues with top bar
 // $topbar-breakpoint: #{lower-bound($medium-range)}; // Change to 9999px for always mobile layout
 // $topbar-media-query: $medium-up;
@@ -1365,10 +1365,8 @@ $topbar-transition-speed: 300ms;
     height: auto;
     display: block;
     margin: 0 auto;
-    position: absolute;
-    text-align: center;
-    top: 100px; right: 0; bottom: 0; left: 0;
-    z-index: 0;
+    position: relative;
+    top: 60px; right: 0; bottom: 100px; left: 0;
   }
 }
 
@@ -1398,10 +1396,8 @@ $topbar-transition-speed: 300ms;
     height: auto;
     display: block;
     margin: 0 auto;
-    position: absolute;
-    text-align: center;
-    top: 120px; right: 0; bottom: 0; left: 0;
-    z-index: 0;
+    position: relative;
+    top: 70px; right: 0; bottom: 0; left: 0;
   }
 }
 
@@ -1430,10 +1426,8 @@ $topbar-transition-speed: 300ms;
     height: auto;
     display: block;
     margin: 0 auto;
-    position: absolute;
-    text-align: center;
-    top: 140px; right: 0; bottom: 0; left: 0;
-    z-index: 0;
+    position: relative;
+    top: 90px; right: 0; bottom: 0; left: 0;
   }
 }
 // @media #{$large-only} { }
