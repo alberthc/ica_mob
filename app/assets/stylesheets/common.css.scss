@@ -7,13 +7,13 @@
   src: local('Montserrat-Regular'), url(http://themes.googleusercontent.com/static/fonts/montserrat/v4/zhcz-_WihjSQC0oHJ9TCYBsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
 }
 
-/* element display conversions */
+/* ELEMENT DISPLAY CONVERSIONS */
 
 .inline-block {
   display: inline-block;
 }
 
-/* images */
+/* IMAGES */
 
 .circular {
   width: 200px;
@@ -22,22 +22,24 @@
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
   border: 1px solid transparent;
-  transition: opacity .5s;
-  -webkit-transition: opacity .5s; /* For Safari 3.1 to 6.0 */
 }
 
 .circular:hover {
   opacity: .7;
 }
 
-.img-max {
-  width: 100%;
-  height: auto;
+// Background Images
+
+.img-bg {
+  background-position: center bottom !important;
+  background-size: cover !important;
 }
 
-/* BACKGROUND IMAGES */
+.fig-link {
+  margin: 0 0 50px 0;
+}
 
-/* homepage */
+// homepage
 
 #home-main {
   background: asset-url('landscapeSmall2.jpg') no-repeat;
@@ -71,14 +73,7 @@
   background-size: auto 100%;
 }
 
-.img-bg {
-  background-position: center bottom !important;
-  background-size: cover !important;
-}
-
-.fig-link {
-  margin: 0 0 50px 0; 
-}
+/* MISC. */
 
 .separation-1 {
   height: 25px;
@@ -102,4 +97,40 @@
 .fast-height-trans {
   transition: height 300ms;
   -webkit-transition: height 300ms; /* Safari */
+}
+
+.fast-opacity-trans {
+  transition: opacity 300ms;
+  -webkit-transition: opacity 300ms; /* Safari */
+}
+
+/* TYPOGRAPHY */
+
+h3.arial {
+  font-family: Arial, sans-serif;
+}
+
+h3.serif {
+  font-family: Georgia, serif;
+}
+
+h4.serif {
+  font-family: Georgia, serif;
+}
+
+h5.serif {
+  font-family: Georgia, serif;
+}
+
+h6.serif {
+  font-family: Georgia, serif;
+}
+
+p.default {
+  color: $grey5;
+}
+
+p.serif {
+  font-family: Georgia, serif;
+  color: $grey4;
 }
