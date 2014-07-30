@@ -36,6 +36,7 @@
   height: auto;
 }
 
+
 .img-overlay {
   width: 20%;
   min-width: 200px;
@@ -48,6 +49,7 @@
   z-index: 0;
 }
 
+
 /* BACKGROUND IMAGES */
 
 /* homepage */
@@ -55,6 +57,9 @@
 #home-main {
   background: asset-url('landscapeSmall2.jpg') no-repeat;
 }
+
+
+
 
 #home-second {
   background: asset-url('group_pic.jpg') no-repeat fixed;
@@ -89,6 +94,11 @@
   background-size: cover !important;
 }
 
+.img-bg1 {
+  background-position: center !important;
+  background-size: cover !important;
+}
+
 .separation-1 {
   height: 25px;
 }
@@ -100,3 +110,7 @@
 .separation-3 {
   height: 75px;
 }
+
+
+
+

@@ -1,0 +1,129 @@
+#home-third {
+  background: asset-url('contact_us_banner.jpg') no-repeat fixed;
+}
+
+.header-about {
+  font-family: 'Montserrat', Arial;
+  font-weight: bold;
+  font-size: 24pt;
+  color: #495159;
+  text-align: left;
+}
+
+.css-select {
+   -moz-appearance:window !important;
+//   background-image: url('images/select_arrow.gif');
+//   background-repeat: no-repeat;
+//   background-position: right center;
+//   padding-right: 20px;
+}
+
+.margin-1{
+
+  margin-left:50px;
+
+}
+
+.subheader-about {
+  font-family: 'Georgia', Arial;
+  font-weight: normal;
+  font-size: 14pt;
+  color: #626c76;
+  text-align: left;
+
+}
+
+.form {
+
+  background: #b6b9bd;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+ 
+  }
+
+  .form2 {
+
+  background: #b6b9bd;
+
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+ 
+  }
+
+  .field{
+    height:55px !important;
+
+    padding: 13px 13px 13px 54px !important;
+
+  }
+
+textarea {
+    padding: 13px 13px 13px 54px !important;
+
+    resize:vertical !important;
+}
+
+
+
+  #name{
+  background-image: asset-url('user.png') !important;
+
+ //background-image: url(http://rexkirby.com/kirbyandson/images/name.svg) !important;
+  background-size: 24px 24px !important;
+  background-position: 11px 8px !important;
+  background-repeat: no-repeat !important;
+}
+
+#email{
+  background-image: asset-url('mail.png') !important;
+
+ //background-image: url(http://rexkirby.com/kirbyandson/images/email.svg) !important;
+  background-size: 24px 24px  !important;
+  background-position: 11px 8px !important;
+  background-repeat: no-repeat !important;
+}
+
+#comment{
+  background-image: asset-url('edit.png') !important;
+//  background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg) !important;
+  background-size: 24px 24px !important;
+  background-position: 11px 8px !important;
+  background-repeat: no-repeat !important;
+}
+
+#school{
+  background-image: asset-url('home.png') !important;
+// background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg) !important;
+  background-size: 24px 24px  !important;
+  background-position: 11px 8px !important;
+  background-repeat: no-repeat !important;
+}
+
+
+.roundbox
+{
+  -moz-border-radius:10px; 
+  -webkit-border-radius:10px !important; 
+  -khtml-border-radius: 10px; 
+  border-radius: 10px !important;
+  outline-style:none;
+  -webkit-appearance: none;
+box-shadow:none;
+border-color:transparent;
+
+resize: none;
+
+}
+
+.separation-0 {
+  height: 10px;
+}
+
+select{
+  
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+
+}
