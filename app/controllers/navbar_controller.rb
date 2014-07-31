@@ -16,4 +16,7 @@ class NavbarController < ApplicationController
 
   def special_events
   end
+
+  def stp
+  end
 end
