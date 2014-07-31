@@ -1,12 +1,45 @@
-/* text colors */
+/* COLORS */
 
-$navyLight: #859ead;
+$blue: #3c4753;
+$gold: #dcb95f;
+$grey: #373d43;
+$red: #6C2424;
 
-/* element text colors */
+$primary-color: $blue;
+$text-color: $grey;
 
-$headerOneColor: #495159;
-$headerThreeColor: #626c76;
+$primary1: lighten($primary-color, 5%); //#103459;
+$primary2: lighten($primary-color, 10%); //#445d76;
+$primary3: lighten($primary-color, 15%); //#6b7392;
+$primary4: lighten($primary-color, 20%); //#8ea8c3;
+$primary5: lighten($primary-color, 25%); //#8f9ead;
+$primary6: lighten($primary-color, 30%); //#a5bacf;
+$primary7: lighten($primary-color, 35%); //#bbcbdb;
+$primary8: lighten($primary-color, 40%); //#d2dce7;
+$primary9: lighten($primary-color, 45%); //#e8eef3;
 
-/* button colors */
+// BLUE
+$blue1: lighten($blue, 5%); //#103459
+$blue2: lighten($blue, 10%); //#445d76
+$blue3: lighten($blue, 15%); //#6b7392
+$blue4: lighten($blue, 20%); //#8ea8c3
+$blue5: lighten($blue, 25%); //#8f9ead
 
-$buttonNavy: #445d76;
+// GOLD
+$gold1: lighten($gold, 5%); //#e3c77f;
+
+// GREY
+$grey1: lighten($grey, 5%); //#4a5159; // OR #495159
+$grey2: lighten($grey, 10%); //#626c76;
+$grey3: lighten($grey, 15%); //#818991;
+$grey4: lighten($grey, 20%); //#b6b9bd;
+$grey5: lighten($grey, 25%); //#e0e2e4;
+
+/* PAGE COLORS */
+
+$usc-primary: $red;
+$usc-secondary: $gold1;
+$ucla-primary: $blue5;
+$ucla-secondary: $gold1;
+//$uci-primary:
+//$uci-secondary:

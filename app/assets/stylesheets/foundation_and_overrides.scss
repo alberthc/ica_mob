@@ -34,7 +34,7 @@ $include-html-global-classes: $include-html-classes;
 //$include-html-grid-classes: $include-html-classes;
 //$include-xl-html-grid-classes: false;
 
-//$row-width: rem-calc(1000);
+$row-width: 100%; //rem-calc(1000);
 //$total-columns: 12;
 
 // Global
@@ -135,12 +135,12 @@ $header-font-color: #495159;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-// $h1-font-size: rem-calc(44);
-// $h2-font-size: rem-calc(37);
-// $h3-font-size: rem-calc(27);
-// $h4-font-size: rem-calc(23);
-// $h5-font-size: rem-calc(18);
-// $h6-font-size: 1rem;
+$h1-font-size: rem-calc(44);
+$h2-font-size: rem-calc(37);
+$h3-font-size: rem-calc(27);
+$h4-font-size: rem-calc(23);
+$h5-font-size: rem-calc(18);
+$h6-font-size: 1rem;
 
 // We use these to control header size reduction on small screens
 // $h1-font-reduction: rem-calc(10) !default;
@@ -162,7 +162,7 @@ $subheader-font-color: scale-color($header-font-color, $lightness: 35%);
 // $small-font-color: scale-color($header-font-color, $lightness: 35%);
 
 // We use these to style paragraphs
-// $paragraph-font-family: inherit;
+$paragraph-font-family: Arial, sans-serif; //inherit;
 // $paragraph-font-weight: $font-weight-normal;
 // $paragraph-font-size: 1rem;
 // $paragraph-line-height: 1.6;
@@ -1219,7 +1219,7 @@ $topbar-dropdown-link-bg: #859ead;
 $topbar-dropdown-link-weight: $font-weight-normal;
 $topbar-dropdown-toggle-size: 5px;
 $topbar-dropdown-toggle-color: #fff;
-$topbar-dropdown-toggle-alpha: 0.4;
+//$topbar-dropdown-toggle-alpha: 0.4;
 
 // Set the link colors and styles for top-level nav
 $topbar-link-color: #fff;
@@ -1257,7 +1257,7 @@ $topbar-link-padding: $topbar-height / 3;
 // $topbar-menu-icon-color-toggled: #888;
 
 // Transitions and breakpoint styles
-$topbar-transition-speed: 300ms;
+// $topbar-transition-speed: 300ms;
 // Using rem-calc for the below breakpoint causes issues with top bar
 // $topbar-breakpoint: #{lower-bound($medium-range)}; // Change to 9999px for always mobile layout
 // $topbar-media-query: $medium-up;
@@ -1352,6 +1352,10 @@ $topbar-transition-speed: 300ms;
     );
   }
 
+  html {
+    font-size: .8em;
+  }
+
   .main-photo {
     height: 300px;
   }
@@ -1365,10 +1369,8 @@ $topbar-transition-speed: 300ms;
     height: auto;
     display: block;
     margin: 0 auto;
-    position: absolute;
-    text-align: center;
-    top: 100px; right: 0; bottom: 0; left: 0;
-    z-index: 0;
+    position: relative;
+    top: 60px; right: 0; bottom: 100px; left: 0;
   }
 }
 
@@ -1385,6 +1387,10 @@ $topbar-transition-speed: 300ms;
     );
   }
 
+  html {
+    //font-size: .79em;
+  }
+
   .main-photo {
     height: 400px;
   }
@@ -1398,10 +1404,8 @@ $topbar-transition-speed: 300ms;
     height: auto;
     display: block;
     margin: 0 auto;
-    position: absolute;
-    text-align: center;
-    top: 120px; right: 0; bottom: 0; left: 0;
-    z-index: 0;
+    position: relative;
+    top: 70px; right: 0; bottom: 0; left: 0;
   }
 }
 
@@ -1417,6 +1421,10 @@ $topbar-transition-speed: 300ms;
     );
   }
 
+  html {
+    //font-size: 1em;
+  }
+
   .main-photo {
     height: 500px;
   }
@@ -1430,10 +1438,8 @@ $topbar-transition-speed: 300ms;
     height: auto;
     display: block;
     margin: 0 auto;
-    position: absolute;
-    text-align: center;
-    top: 140px; right: 0; bottom: 0; left: 0;
-    z-index: 0;
+    position: relative;
+    top: 90px; right: 0; bottom: 0; left: 0;
   }
 }
 // @media #{$large-only} { }
