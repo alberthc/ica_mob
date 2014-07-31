@@ -13,6 +13,12 @@
   display: inline-block;
 }
 
+/* GRID LAYOUT */
+
+.block-spacing {
+  margin: 50px 0 50px 0 !important;
+}
+
 /* IMAGES */
 
 .circular {
@@ -47,6 +53,10 @@
 
 #home-second {
   background: asset-url('group_pic.jpg') no-repeat fixed;
+}
+
+#test-iphone {
+  background: asset-url('group_pic.jpg') no-repeat;
 }
 
 #usc-statue {
@@ -130,7 +140,16 @@ p.default {
   color: $grey5;
 }
 
+p.indent {
+  text-indent: 50px;
+}
+
 p.serif {
   font-family: Georgia, serif;
   color: $grey4;
+}
+
+p.serif-black {
+  font-family: Georgia, serif;
+  color: black;
 }

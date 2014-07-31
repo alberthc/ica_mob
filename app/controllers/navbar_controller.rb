@@ -1,7 +1,4 @@
 class NavbarController < ApplicationController
-  def home
-  end
-
   def about
   end
 
@@ -12,5 +9,11 @@ class NavbarController < ApplicationController
   end
 
   def discipleship
+  end
+
+  def home
+  end
+
+  def special_events
   end
 end
