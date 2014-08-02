@@ -1,3 +1,343 @@
 // Place all the styles related to the UCLA controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body 
+{
+	Display:block;
+	text-align: center;
+}
+p
+{
+	margin:0 auto;
+}
+#header
+{
+	max-width: none;
+	width: 100%;
+
+}
+#accordion
+{
+//	width: 74%;
+	margin: 0 auto;
+	Display:block;
+	text-align: center;
+}
+#accordian>li
+{
+	//width: 40%;
+	text-align: center;
+	//display: inline-block;
+	//margin: 0 auto;
+}
+.LeftF
+{
+	Float: left;
+	text-align: left;
+}
+.AccT
+{
+	Font-size: 24pt;
+	Font-family: Georgia;
+	Color: #103459;
+}
+.LeadT
+{
+	Font-size: 30pt;
+	Color: #495159;
+}
+.AccN
+{
+	Font-size: 14pt;
+	Font-family: Georgia;
+	Color: #626C76;
+}
+.AccWord
+{
+	width: 50%;
+	float: left;
+}
+.DownTri
+{
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid #818991;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid #818991;
+	float:right;
+}
+.UpTri
+{
+
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid #818991;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #818991;
+	border-bottom: 5px solid transparent;
+	float:right;
+}
+.accordion .DownTri
+{
+	display:inline;
+}
+.accordion .active .DownTri
+{
+	display: none;
+}
+.AutoM
+{
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+.page
+{
+	//width: 998px;
+	margin:0 auto;
+}
+.UCLAtop 
+{
+  	position: relative;
+}
+
+.cover 
+{
+  	text-align: center;
+  	width: 998px;
+}
+#UclaCover
+{
+	text-align: center;
+	width: 998px;
+}
+/*
+.logo 
+{
+  	position: absolute;
+  	width: 998px;
+  	height: 60px;
+  	z-index: 1;
+  	background-color:rgba(255,255,255,0.7);
+  	top: 233px;
+  	text-align: center;
+  	text-transform: uppercase;
+  	font-size: 30pt;
+  	color: #495159; 
+  	line-height: 50px;
+  	font-family: Verdana, Geneva, sans-serif;
+ }
+*/
+.UCLAupdates
+{
+	width: 998px;
+	height: 400px;
+	
+}
+.UCLAannouncments
+{
+	width: 648px;
+	height: 400px;
+	float:left;
+
+}
+#AnounTitle
+{
+	font-size: 30pt;
+	color: #495159;
+	font-family: Verdana, Geneva, sans-serif;
+}
+.UCLAevent
+{
+	width: 350px;
+	height: 400px;
+	float:right;
+	background-color: #B0B0B0; 
+}
+.UCLAevent p
+{
+	font-size: 14pt;
+	font-family: Arial;
+	color: #373D43;
+}
+#EventTitle
+{
+	font-size: 18pt;
+	color: #103459;	
+	font-family: Verdana, Geneva, sans-serif;
+}
+#events
+{
+	text-align:left;
+
+}
+
+#event
+{
+	margin-bottom: 20px;
+}
+.UCLAbio
+{
+	width: 998px;
+	margin-top: 100px;
+
+}
+.smallgroup
+{
+	width: 499px;
+	float: left;
+	text-align: center;
+	position:relative;
+	top:-50px;
+}
+.leaders
+{
+	width: 499px;
+	float: right;
+	text-align: center;
+	position:relative;
+	top:-50px;
+}
+
+
+.inline-block {
+  display: inline-block;
+}
+
+/* images */
+
+.circular {
+  width: 280px;
+  height: 250px;
+  border-radius: 100px;
+  -webkit-border-radius: 125px;
+  -moz-border-radius: 125px;
+  border: 1px solid transparent;
+  margin: 0 0 50px 0;
+  transition: opacity .5s;
+  -webkit-transition: opacity .5s; /* For Safari 3.1 to 6.0 */
+}
+
+.circular:hover {
+  opacity: .7;
+}
+
+#sgBear, #leadBear
+{
+	width: 250px;
+  	background: asset-url('ucla_statue.jpg') no-repeat;
+  	background-position: center center;
+  	background-size: auto 100%;
+
+}
+.Calendar
+{
+	width: 998px;
+	text-align: center;
+}
+#UCLAcalendar
+{
+	border: 0; 
+	width: 800px; 
+	height: 600px; 
+
+}
+.Buttons
+{
+	width: 998px;
+	height: 200px;
+	margin-top: 50px;
+	
+
+}
+.contact
+{
+	width: 180px;
+	float: left;
+	margin-left: 315px;
+	
+}
+.connect
+{
+	width: 180px;
+	float: right;
+	margin-right: 315px;
+	
+}
+.ConnectedButton, .ContactButton
+{
+	width: 120px;
+	height: 30px;
+	border-radius: 10px;
+	background-color: #445D76;
+}
+.ConnectedButton:hover, .ContactButton:hover
+{
+	opacity: 0.8;
+}
+#ContButton, #ConnButton
+{
+	color: #FFFFFF;
+	font-size: 12pt;
+	font-family: Arial;
+	text-decoration: none;
+	line-height: 30px;
+}
+.sepSmall
+{
+	height: 10px;
+}
+.Letter
+{
+	text-align: left;
+	height: 200px;
+	overflow: auto;
+}
+.CentImg
+{
+	line-height: 200px;
+}
+
+//Orbit
+.orbit-container {
+	height: 100%;
+}
+
+.orb-bg {
+	background-color: #8F9EAD;
+}
+
+.orbit-bullets-container {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+}
+
+.row {
+	max-width: 100%;
+}
+
+.gold {
+	background-color: #E3C77F;
+}
+
+.text-white {
+	color: #FFFFFF; 
+}
+
+.narrow-80 {
+	max-width: 80%;
+}
+
+.narrow-20 {
+	max-width: 20%;
+}
+
+.center-text {
+	text-align: center;
+}
+
+.white-color {
+	color: white;
+}

@@ -11,7 +11,9 @@
 
 // Allows the use of rem-calc() or lower-bound() in your settings
 @import "foundation/functions";
+
 @import "utilities/global";
+
 
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
 // for compatibility with browser-based text zoom or user-set defaults.
@@ -31,11 +33,11 @@ $include-html-global-classes: $include-html-classes;
 
 // Grid
 
-//$include-html-grid-classes: $include-html-classes;
-//$include-xl-html-grid-classes: false;
-
 $row-width: 100%; //rem-calc(1000);
 //$total-columns: 12;
+
+// $include-html-grid-classes: $include-html-classes;
+// $include-xl-html-grid-classes: false;
 
 // Global
 
@@ -46,8 +48,10 @@ $row-width: 100%; //rem-calc(1000);
 // We use these to control various global styles
 // $body-bg: #fff;
 // $body-font-color: #222;
+
 //$body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $body-font-family: "Montserrat", Arial, sans-serif;
+
 $font-weight-normal:normal;
 $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
@@ -69,7 +73,9 @@ $primary-color: #008CBA;
 // $info-color: #a0d3e8;
 
 // We use these to make sure border radius matches unless we want it different.
+
 $global-radius: 10px;
+
 // $global-rounded: 1000px;
 
 // We use these to control inset shadow shiny edges and depressions.
@@ -80,6 +86,7 @@ $global-radius: 10px;
 // $column-gutter: rem-calc(30);
 
 // Media Query Ranges
+
 $small-range: (0em, 40em);
 $medium-range: (40.063em, 64em);
 $large-range: (64.063em, 90em);
@@ -88,8 +95,10 @@ $large-range: (64.063em, 90em);
 
 $screen: "only screen";
 
+
 // $landscape: "#{$screen} and (orientation: landscape)";
 // $portrait: "#{$screen} and (orientation: portrait)";
+
 
 $small-up: $screen;
 $small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})";
@@ -128,6 +137,7 @@ $large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-w
 // $header-font-family: $body-font-family;
 // $header-font-weight: $font-weight-normal;
 // $header-font-style: normal;
+
 $header-font-color: #495159;
 // $header-line-height: 1.4;
 // $header-top-margin: .2rem;
@@ -152,7 +162,9 @@ $h6-font-size: 1rem;
 
 // These control how subheaders are styled.
 // $subheader-line-height: 1.4;
+
 $subheader-font-color: scale-color($header-font-color, $lightness: 35%);
+
 // $subheader-font-weight: $font-weight-normal;
 // $subheader-top-margin: .2rem;
 // $subheader-bottom-margin: .5rem;
@@ -241,8 +253,8 @@ $hr-border-width: 2px;
 
 // $include-html-accordion-classes: $include-html-classes;
 
-// $accordion-navigation-padding: rem-calc(16);
-// $accordion-navigation-bg-color: #efefef  ;
+ $accordion-navigation-padding: rem-calc(10);
+ $accordion-navigation-bg-color: #d2dce7  ;
 // $accordion-navigation-hover-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -5%);
 // $accordion-navigation-active-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -3%);
 // $accordion-navigation-font-color: #222;
@@ -250,7 +262,7 @@ $hr-border-width: 2px;
 // $accordion-navigation-font-family: $body-font-family;
 
 // $accordion-content-padding: $column-gutter/2;
-// $accordion-content-active-bg-color: #fff;
+$accordion-content-active-bg-color: #d2dce7;
 
 // Alert Boxes
 
@@ -345,9 +357,11 @@ $hr-border-width: 2px;
 
 // We use these to build padding for buttons.
 // $button-tny: rem-calc(10);
+
 $button-sml: rem-calc(14);
 $button-med: rem-calc(16);
 $button-lrg: rem-calc(18);
+
 
 // We use this to control the display property.
 // $button-display: inline-block;
@@ -365,12 +379,16 @@ $button-lrg: rem-calc(18);
 // $button-font-align: center;
 
 // We use these to control various hover effects.
+
 $button-function-factor: -20%;
+
 
 // We use these to control button border styles.
 // $button-border-width: 0px;
 // $button-border-style: solid;
+
 $button-bg: #445d76; //$primary-color;
+
 // $button-border-color: scale-color($button-bg, $lightness: $button-function-factor);
 
 // We use this to set the default radius used throughout the core.
@@ -742,11 +760,11 @@ $magellan-padding: 0 !important;
 
 // Orbit
 
-// $include-html-orbit-classes: $include-html-classes;
+ $include-html-orbit-classes: $include-html-classes;
 
 // We use these to control the caption styles
 // $orbit-container-bg: none;
-// $orbit-caption-bg: rgba(51,51,51, 0.8);
+ $orbit-caption-bg: #8F9EAD;
 // $orbit-caption-font-color: #fff;
 // $orbit-caption-font-size: rem-calc(14);
 // $orbit-caption-position: "bottom"; // Supported values: "bottom", "under"
@@ -755,9 +773,9 @@ $magellan-padding: 0 !important;
 
 // We use these to control the left/right nav styles
 // $orbit-nav-bg: transparent;
-// $orbit-nav-bg-hover: rgba(0,0,0,0.3);
-// $orbit-nav-arrow-color: #fff;
-// $orbit-nav-arrow-color-hover: #fff;
+ $orbit-nav-bg-hover: rgba(0,0,0,0.3);
+ $orbit-nav-arrow-color: #fff;
+ $orbit-nav-arrow-color-hover: #fff;
 
 // We use these to control the timer styles
 // $orbit-timer-bg: rgba(255,255,255,0.3);
@@ -1191,6 +1209,7 @@ $sub-nav-active-cursor: default;
 // TOP BAR
 //
 
+
 /*nav.top-bar {
   text-align:center;
 }
@@ -1206,6 +1225,7 @@ $topbar-bg: $topbar-bg-color;
 
 // Height and margin
 $topbar-height: 45px;
+
 // $topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
@@ -1213,6 +1233,9 @@ $topbar-height: 45px;
 // $topbar-title-font-size: rem-calc(17);
 
 // Style the top bar dropdown elements
+
+
+
 $topbar-dropdown-bg: #859ead;
 $topbar-dropdown-link-color: #fff;
 $topbar-dropdown-link-bg: #859ead;
@@ -1237,6 +1260,7 @@ $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
 $topbar-link-font-family: $body-font-family;
 $topbar-link-text-transform: none;
 $topbar-link-padding: $topbar-height / 3;
+
 
 // $topbar-button-font-size: 0.75rem;
 // $topbar-button-top: 7px;
@@ -1329,6 +1353,7 @@ $topbar-link-padding: $topbar-height / 3;
 // $range-slider-handle-cursor: pointer;
 
 @import 'foundation';
+
 
 //
 // RESPONSIVE DESIGN MEDIA QUERIES
@@ -1449,3 +1474,4 @@ $topbar-link-padding: $topbar-height / 3;
 
 // @media #{$xxlarge-up} { }
 // @media #{$xxlarge-only} { }
+
