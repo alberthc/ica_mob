@@ -1,5 +1,59 @@
 /* IMAGES */
 
+// CAMPUS
+
+#UCLA-main {
+  background: asset-url('ucla_campus.jpg') no-repeat;
+}
+#UCLA-group {
+  background: asset-url('ucla_group.jpg') no-repeat;
+  
+  .img-bg1 {
+    background-position: center !important;
+    background-size: cover !important;
+  }
+}
+
+// HOMEPAGE
+
+#home-main {
+  background-image: asset-url('landscapeSmall2.jpg');
+}
+
+#home-2 {
+  background-image: asset-url('group_pic.jpg');
+}
+
+#ucb-statue {
+  background: asset-url('ucb_statue.jpg') no-repeat;
+  background-position: center center;
+  background-size: auto 100%;
+}
+
+#uci-statue {
+  background: asset-url('uci_statue.jpg') no-repeat;
+  background-position: center center;
+  background-size: auto 100%;
+}
+
+#ucla-statue {
+  background: asset-url('ucla_statue.jpg') no-repeat;
+  background-position: center center;
+  background-size: auto 100%;
+}
+
+#usc-statue {
+  background: asset-url('usc_statue.jpg') no-repeat;
+  background-position: center center;
+  background-size: auto 100%;
+}
+
+// Leaders
+
+#UCLAlead-main {
+  background: asset-url('servants.jpg') no-repeat;
+}
+
 // STP
 
 #stp-main {
