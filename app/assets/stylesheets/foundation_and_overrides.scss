@@ -255,8 +255,8 @@ $subheader-font-color: scale-color($header-font-color, $lightness: 35%);
 
 // $include-html-accordion-classes: $include-html-classes;
 
-// $accordion-navigation-padding: rem-calc(16);
-// $accordion-navigation-bg-color: #efefef  ;
+ $accordion-navigation-padding: rem-calc(10);
+ $accordion-navigation-bg-color: #d2dce7  ;
 // $accordion-navigation-hover-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -5%);
 // $accordion-navigation-active-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -3%);
 // $accordion-navigation-font-color: #222;
@@ -264,7 +264,7 @@ $subheader-font-color: scale-color($header-font-color, $lightness: 35%);
 // $accordion-navigation-font-family: $body-font-family;
 
 // $accordion-content-padding: $column-gutter/2;
-// $accordion-content-active-bg-color: #fff;
+$accordion-content-active-bg-color: #d2dce7;
 
 // Alert Boxes
 
@@ -381,7 +381,7 @@ $button-lrg: rem-calc(18);
 // $button-font-align: center;
 
 // We use these to control various hover effects.
-=
+
 $button-function-factor: -20%;
 
 
@@ -762,11 +762,11 @@ $magellan-padding: 0 !important;
 
 // Orbit
 
-// $include-html-orbit-classes: $include-html-classes;
+ $include-html-orbit-classes: $include-html-classes;
 
 // We use these to control the caption styles
 // $orbit-container-bg: none;
-// $orbit-caption-bg: rgba(51,51,51, 0.8);
+ $orbit-caption-bg: #8F9EAD;
 // $orbit-caption-font-color: #fff;
 // $orbit-caption-font-size: rem-calc(14);
 // $orbit-caption-position: "bottom"; // Supported values: "bottom", "under"
@@ -775,9 +775,9 @@ $magellan-padding: 0 !important;
 
 // We use these to control the left/right nav styles
 // $orbit-nav-bg: transparent;
-// $orbit-nav-bg-hover: rgba(0,0,0,0.3);
-// $orbit-nav-arrow-color: #fff;
-// $orbit-nav-arrow-color-hover: #fff;
+ $orbit-nav-bg-hover: rgba(0,0,0,0.3);
+ $orbit-nav-arrow-color: #fff;
+ $orbit-nav-arrow-color-hover: #fff;
 
 // We use these to control the timer styles
 // $orbit-timer-bg: rgba(255,255,255,0.3);

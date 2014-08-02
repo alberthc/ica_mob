@@ -89,6 +89,21 @@
   background-size: cover !important;
 }
 
+/* Leaders */
+
+#UCLAlead-main {
+  background: asset-url('servants.jpg') no-repeat;
+}
+
+/* Campus */
+
+#UCLA-main {
+  background: asset-url('ucla_campus.jpg') no-repeat; 
+}
+#UCLA-group {
+  background: asset-url('ucla_group.jpg') no-repeat; 
+}
+
 .separation-1 {
   height: 25px;
 }
