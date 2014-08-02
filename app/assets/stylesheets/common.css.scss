@@ -58,6 +58,22 @@
   background-color: rgba($primary-color, .1);
 }
 
+
+.img-overlay {
+  width: 20%;
+  min-width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  text-align: center;
+  top: 150px; right: 0; bottom: 0; left: 0;
+  z-index: 0;
+}
+
+
+/* BACKGROUND IMAGES */
+
 .img-bg {
   background-position: center bottom !important;
   background-size: cover !important;
@@ -67,11 +83,15 @@
   margin: 0 0 50px 0;
 }
 
+
 // homepage
 
 #home-main {
   background: asset-url('landscapeSmall2.jpg') no-repeat;
 }
+
+
+
 
 #home-second {
   background: asset-url('group_pic.jpg') no-repeat fixed;
@@ -120,6 +140,11 @@
 }
 #UCLA-group {
   background: asset-url('ucla_group.jpg') no-repeat; 
+
+  .img-bg1 {
+    background-position: center !important;
+    background-size: cover !important;
+  }
 }
 
 .separation-1 {
