@@ -2,15 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body 
-{
-	Display:block;
-	text-align: center;
-}
-p
-{
-	margin:0 auto;
-}
 #header
 {
 	max-width: none;
@@ -206,22 +197,6 @@ p
 }
 
 /* images */
-
-.circular {
-  width: 280px;
-  height: 250px;
-  border-radius: 100px;
-  -webkit-border-radius: 125px;
-  -moz-border-radius: 125px;
-  border: 1px solid transparent;
-  margin: 0 0 50px 0;
-  transition: opacity .5s;
-  -webkit-transition: opacity .5s; /* For Safari 3.1 to 6.0 */
-}
-
-.circular:hover {
-  opacity: .7;
-}
 
 #sgBear, #leadBear
 {

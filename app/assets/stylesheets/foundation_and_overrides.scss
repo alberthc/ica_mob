@@ -1398,6 +1398,16 @@ $topbar-link-padding: $topbar-height / 3;
     position: relative;
     top: 60px; right: 0; bottom: 100px; left: 0;
   }
+
+  .temp2-main-bg {
+    height: 175px;
+  }
+
+  #stp-1,
+  #stp-2,
+  #stp-3 {
+    height: 250px;
+  }
 }
 
 // @media #{$medium-up} { }
@@ -1433,6 +1443,22 @@ $topbar-link-padding: $topbar-height / 3;
     position: relative;
     top: 70px; right: 0; bottom: 0; left: 0;
   }
+
+  .temp2-main-bg {
+    height: 500px;
+  }
+
+  #stp-1 {
+    height: 350px;
+  }
+
+  #stp-2 {
+    height: 450px
+  }
+
+  #stp-3 {
+    height: 500px;
+  }
 }
 
 @media #{$large-up} {
@@ -1466,6 +1492,19 @@ $topbar-link-padding: $topbar-height / 3;
     margin: 0 auto;
     position: relative;
     top: 90px; right: 0; bottom: 0; left: 0;
+  }
+
+  .temp2-main-bg {
+    height: 800px;
+  }
+
+  #stp-1,
+  #stp-2 {
+    height: 400px;
+  }
+
+  #stp-3 {
+    height: 500px;
   }
 }
 // @media #{$large-only} { }
