@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   match '/about/church_leadership', to: 'navbar#church_leadership', via: 'get'
   match '/about/discipleship',	to: 'navbar#discipleship', via: 'get'
   match '/contact', to: 'navbar#contact', via: 'get'
+  match '/special_events', to: 'navbar#special_events', via: 'get'
+  match '/stp', to: 'navbar#stp', via: 'get'
 
   # ucla controller
   match '/ucla',  to: 'ucla#home',    via: 'get'

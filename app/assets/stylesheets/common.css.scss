@@ -7,10 +7,34 @@
   src: local('Montserrat-Regular'), url(http://themes.googleusercontent.com/static/fonts/montserrat/v4/zhcz-_WihjSQC0oHJ9TCYBsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
 }
 
+/* BOX MODEL SELECTORS */
+
+.border-bottom {
+  border-bottom: 2px solid;
+}
+
+.text-padding {
+  padding: 20px 20px 20px 20px !important;
+}
+
 /* ELEMENT DISPLAY CONVERSIONS */
 
 .inline-block {
   display: inline-block;
+}
+
+/* GRID LAYOUT */
+
+.block-spacing {
+  padding: 50px 0 50px 0 !important;
+}
+
+.block-spacing-bottom {
+  padding: 0 0 50px 0 !important;
+}
+
+.block-spacing-top {
+  padding: 50px 0 0 0 !important;
 }
 
 /* IMAGES */
@@ -28,7 +52,11 @@
   opacity: .7;
 }
 
-// Background Images
+// Background
+
+.bg-header-opaque {
+  background-color: rgba($primary-color, .1);
+}
 
 .img-bg {
   background-position: center bottom !important;
@@ -47,6 +75,10 @@
 
 #home-second {
   background: asset-url('group_pic.jpg') no-repeat fixed;
+}
+
+#test-iphone {
+  background: asset-url('group_pic.jpg') no-repeat;
 }
 
 #usc-statue {
@@ -130,7 +162,16 @@ p.default {
   color: $grey5;
 }
 
+p.indent {
+  text-indent: 50px;
+}
+
 p.serif {
   font-family: Georgia, serif;
   color: $grey4;
+}
+
+p.serif-black {
+  font-family: Georgia, serif;
+  color: black;
 }
