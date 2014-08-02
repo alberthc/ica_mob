@@ -1,0 +1,23 @@
+.white-border {
+  border: 5px solid white;
+}
+
+.info-box {
+  background-color:#e0e2e4;
+  text-align:center;
+}
+
+.contact-box {
+  background-color:#e0e2e4;
+  text-align:left;
+}
+
+.img-centered-vertical {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
