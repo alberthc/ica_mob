@@ -56,3 +56,5 @@ gem 'spring',        group: :development
 
 gem 'foundation-rails'
 gem 'tzinfo-data', platform: [:mingw, :mswin]
+gem 'jquery-turbolinks'
+

@@ -1,4 +1,5 @@
 <header>
+
   <!-- <nav id="navbar">
     <ul id="navbar-top">
       <li><%#= link_to "HOME", root_path, class: "nav-link-1" %></li>
@@ -36,6 +37,8 @@
   <div class="row">
     <div class="small-12"
     <div class"contain-to-grid">
+
+
   <nav class="top-bar" data-topbar>
     <ul class="title-area">
       <li class="name">
@@ -44,34 +47,34 @@
       </li>
     </ul>
     <section class="top-bar-section">
-      <!-- Left Nav Section -->
+      <!-- Nav Section -->
       <ul class="right">
-	<li><%= link_to "HOME", root_path %></li>
+	<li><%= link_to "HOME", root_path, class: "fast-color-trans" %></li>
 	<li class="has-dropdown">
 	  <%= link_to "ABOUT", about_path %>
 	  <ul class="dropdown">
 	    <li><%= link_to "Vision/Mission", about_path %></li>
 	    <li><%= link_to "Discipleship", about_discipleship_path %></li>
-	    <li><%= link_to "History", "#" %></li>
+	    <li><%= link_to "History", "javascript:;" %></li>
 	    <li><%= link_to "Church Leadership", about_church_leadership_path %></li>
-	    <li><%= link_to "Church", "#" %></li>
+	    <li><%= link_to "Church", "javascript:;" %></li>
 	  </ul>
 	</li>
         <li class="has-dropdown">
-          <%= link_to "MINISTRIES", about_path %>
+          <%= link_to "MINISTRIES", "javascript:;" %>
           <ul class="dropdown">
-            <li><%= link_to "USC", "#" %></li>
+            <li><%= link_to "USC", ucla_path %></li>
             <li><%= link_to "UCLA", ucla_path %></li>
-            <li><%= link_to "UCI", "#" %></li>
-            <li><%= link_to "UCB", "#" %></li>
+            <li><%= link_to "UCI", ucla_path %></li>
+            <li><%= link_to "UCB", ucla_path %></li>
           </ul>
         </li>
         <li class="has-dropdown">
-          <%= link_to "PROGRAMS", about_path %>
+          <%= link_to "PROGRAMS", "javascript:;" %>
           <ul class="dropdown">
-            <li><%= link_to "Summer Training Program", "#" %></li>
-            <li><%= link_to "VSET", "#" %></li>
-            <li><%= link_to "Special Events", "#" %></li>
+            <li><%= link_to "Summer Training Program", "javascript:;" %></li>
+            <li><%= link_to "VSET", "javascript:;" %></li>
+            <li><%= link_to "Special Events", "javascript:;" %></li>
           </ul>
         </li>
 	<li><%= link_to "CONTACT US", contact_path %></li>

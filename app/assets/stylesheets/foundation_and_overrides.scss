@@ -34,9 +34,14 @@ $include-html-global-classes: $include-html-classes;
 $include-html-grid-classes: $include-html-classes;
 $include-xl-html-grid-classes: false;
 
+
 //$row-width: rem-calc(1000);
 $row-width: 100%;
 $total-columns: 12;
+
+$row-width: 100%; //rem-calc(1000);
+//$total-columns: 12;
+
 
 // Global
 
@@ -136,12 +141,12 @@ $header-font-color: #495159;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-// $h1-font-size: rem-calc(44);
-// $h2-font-size: rem-calc(37);
-// $h3-font-size: rem-calc(27);
-// $h4-font-size: rem-calc(23);
-// $h5-font-size: rem-calc(18);
-// $h6-font-size: 1rem;
+$h1-font-size: rem-calc(44);
+$h2-font-size: rem-calc(37);
+$h3-font-size: rem-calc(27);
+$h4-font-size: rem-calc(23);
+$h5-font-size: rem-calc(18);
+$h6-font-size: 1rem;
 
 // We use these to control header size reduction on small screens
 // $h1-font-reduction: rem-calc(10) !default;
@@ -163,7 +168,7 @@ $subheader-font-color: scale-color($header-font-color, $lightness: 35%);
 // $small-font-color: scale-color($header-font-color, $lightness: 35%);
 
 // We use these to style paragraphs
-// $paragraph-font-family: inherit;
+$paragraph-font-family: Arial, sans-serif; //inherit;
 // $paragraph-font-weight: $font-weight-normal;
 // $paragraph-font-size: 1rem;
 // $paragraph-line-height: 1.6;
@@ -349,7 +354,7 @@ $subheader-font-color: scale-color($header-font-color, $lightness: 35%);
 $button-sml: rem-calc(14);
 $button-med: rem-calc(16);
 $button-lrg: rem-calc(18);
-$button-xlrg: rem-calc(25);
+$button-xlrg: rem-calc(40);
 
 // We use this to control the display property.
 // $button-display: inline-block;
@@ -357,7 +362,7 @@ $button-xlrg: rem-calc(25);
 
 // We use these to control button text styles.
 // $button-font-family: $body-font-family;
-// $button-font-color: #fff;
+ $button-font-color: #fff;
 // $button-font-color-alt: #333;
 // $button-font-tny: rem-calc(11);
 // $button-font-sml: rem-calc(13);
@@ -531,13 +536,13 @@ $button-bg: #445d76; //$primary-color;
 // $form-label-bottom-margin: 0;
  $input-font-family: Georgia;
  $input-font-color: scale-color(#626c76, $lightness: 0%);;
- $input-font-size: rem-calc(14);
+// $input-font-size: rem-calc(14);
  $input-bg-color: #fff;
  $input-focus-bg-color: scale-color(#fff, $lightness: 0%);
- $input-border-color: scale-color(#b6b9bd, $lightness: -0%);
+ $input-border-color: scale-color(#b6b9bd, $lightness: 0%);
  $input-focus-border-color: scale-color(#626c76, $lightness: 20%);
  $input-border-style: solid;
- $input-border-width: 2px;
+ $input-border-width: 3px;
 // $input-border-radius: 10px;
 // $input-disabled-bg: #ddd;
 // $input-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
@@ -1221,7 +1226,7 @@ $topbar-dropdown-link-bg: #859ead;
 $topbar-dropdown-link-weight: $font-weight-normal;
 $topbar-dropdown-toggle-size: 5px;
 $topbar-dropdown-toggle-color: #fff;
-$topbar-dropdown-toggle-alpha: 0.4;
+//$topbar-dropdown-toggle-alpha: 0.4;
 
 // Set the link colors and styles for top-level nav
 $topbar-link-color: #fff;
@@ -1259,7 +1264,7 @@ $topbar-link-padding: $topbar-height / 3;
 // $topbar-menu-icon-color-toggled: #888;
 
 // Transitions and breakpoint styles
-$topbar-transition-speed: 300ms;
+// $topbar-transition-speed: 300ms;
 // Using rem-calc for the below breakpoint causes issues with top bar
 // $topbar-breakpoint: #{lower-bound($medium-range)}; // Change to 9999px for always mobile layout
 // $topbar-media-query: $medium-up;
@@ -1338,8 +1343,8 @@ $topbar-transition-speed: 300ms;
 
 @media #{$small-up} {
   .responsive-button {
-    -webkit-transition: background 1s; /* Safari */
     transition: background 1s;
+    -webkit-transition: background 1s; /* Safari */
   }
 }
 @media #{$small-only} {
@@ -1354,12 +1359,25 @@ $topbar-transition-speed: 300ms;
     );
   }
 
+  html {
+    font-size: .8em;
+  }
+
   .main-photo {
     height: 300px;
   }
 
   .fixed-photo {
     height: 200px;
+  }
+
+  .img-overlay {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 60px; right: 0; bottom: 100px; left: 0;
   }
 }
 
@@ -1376,12 +1394,25 @@ $topbar-transition-speed: 300ms;
     );
   }
 
+  html {
+    //font-size: .79em;
+  }
+
   .main-photo {
     height: 400px;
   }
 
   .fixed-photo {
     height: 300px;
+  }
+
+  .img-overlay {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 70px; right: 0; bottom: 0; left: 0;
   }
 }
 
@@ -1397,12 +1428,25 @@ $topbar-transition-speed: 300ms;
     );
   }
 
+  html {
+    //font-size: 1em;
+  }
+
   .main-photo {
     height: 300px;
   }
 
   .fixed-photo {
     height: 400px;
+  }
+
+  .img-overlay {
+    width: 400px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 90px; right: 0; bottom: 0; left: 0;
   }
 }
 // @media #{$large-only} { }

@@ -10,13 +10,7 @@
   text-align: left;
 }
 
-.css-select {
-   -moz-appearance:window !important;
-//   background-image: url('images/select_arrow.gif');
-//   background-repeat: no-repeat;
-//   background-position: right center;
-//   padding-right: 20px;
-}
+
 
 .margin-1{
 
@@ -45,9 +39,6 @@
   .form2 {
 
   background: #b6b9bd;
-
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
  
   }
 
@@ -56,12 +47,40 @@
 
     padding: 13px 13px 13px 54px !important;
 
-  }
+    font-size: 18px !important;
+    font-family: Helvetica, Arial, sans-serif !important;
+    color:#626c76 !important;
 
-textarea {
+}
+
+textarea#comment {
     padding: 13px 13px 13px 54px !important;
 
-    resize:vertical !important;
+  
+    font-size: 18px !important;
+    font-family: Helvetica, Arial, sans-serif !important;
+    color:#626c76 !important;
+}
+
+
+
+
+::-webkit-input-placeholder {
+   color: #626c76 !important;
+   }
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #626c76 !important;
+    opacity:1 !important;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #626c76 !important;
+   opacity:1 !important;  
+}
+
+:-ms-input-placeholder {  
+   color: #626c76 !important;  
 }
 
 
@@ -96,10 +115,23 @@ textarea {
   background-image: asset-url('home.png') !important;
 // background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg) !important;
   background-size: 24px 24px  !important;
-  background-position: 11px 8px !important;
-  background-repeat: no-repeat !important;
+  background-position: 11px 9px !important;
+ // background-repeat: no-repeat !important;
 }
 
+
+.roundbox2
+{
+  -moz-border-radius:10px; 
+  -webkit-border-radius:10px !important; 
+  -khtml-border-radius: 10px; 
+  border-radius: 10px !important;
+  outline-style:none;
+  -webkit-appearance: none;
+box-shadow:none;
+border-color:transparent;
+
+}
 
 .roundbox
 {
@@ -111,8 +143,13 @@ textarea {
   -webkit-appearance: none;
 box-shadow:none;
 border-color:transparent;
+height:50px !important;
 
-resize: none;
+}
+
+textarea{
+  
+  resize:vertical !important;
 
 }
 
@@ -120,10 +157,5 @@ resize: none;
   height: 10px;
 }
 
-select{
-  
-    -webkit-appearance: none !important;
-    -moz-appearance: none !important;
-    appearance: none !important;
 
-}
+

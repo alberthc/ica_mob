@@ -1,57 +1,16 @@
-<!--<div class="row">
-  <section class="main-photo" id="home-main">
-  <%#= image_tag "landscapeSmall2.jpg", class: "img-max" %>
-    <%#= image_tag "ica_logo.png", class: "img-overlay" %>
-  </section>
-</div>
-
-<div class="row">
-  <section class="no-photo">
-    <section class="separation-1"></section>
-    <h2>To Worship God and to<br>
-      Make Christ's Love Known</h2>
-    <section class="separation-1"></section>
-    <h3>In Christ Alone (ICA) is a ministry commited to loving God,<br>
-      loving our neighbors as ourselves, and making disciples of all nations</h3>
-    <section class="separation-1"></section>
-    <%#= link_to "Learn More", about_path, class: "button button-default" %>
-    <section class="separation-2"></section>
-  </section>
-</div>
-
-<div class="row">
-  <section class="mid-photo" id="home-second">
-  </section>
-</div>
-
-<div class="row">
-  <section class="no-photo">
-    <section class="separation-2"></section>
-    <h2>Our Campus Ministries</h2>
-    <section class="separation-2"></section>
-    <section class="center">
-      <%#= link_to "", "#", id: "usc-statue", class: "circular inline-block" %>
-      <%#= link_to "", ucla_path, id: "ucla-statue", class: "circular inline-block" %>
-      <%#= link_to "", "#", id: "uci-statue", class: "circular inline-block" %>
-      <%#= link_to "", "#", id: "ucb-statue", class: "circular inline-block" %>
-    </section>
-    <section class="separation-2"></section>
-    <%#= link_to "Get Connected", "#", class: "button button-default" %>
-    <section class="separation-2"></section>
-  </section>
-</div>-->
-
 <div class="small-12">
-  <section class="main-photo img-bg" id="home-main"></section>
+  <section class="main-photo img-bg fast-height-trans" id="home-main">
+    <%= image_tag "ica_logo.png", class: "img-overlay" %>
+  </section>
 </div>
 
 <div class="row text-center">
   <section class="no-photo">
     <section class="separation-1"></section>
-    <h2>To Worship God and to<br>
-      Make Christ's Love Known</h2>
+    <h2><strong>To Worship God and to</strong><br>
+      <strong>Make Christ's Love Known</strong></h2>
     <section class="separation-1"></section>
-    <h3 class="subheader">In Christ Alone (ICA) is a ministry commited to loving God,<br>
+    <h3 class="subheader">In Christ Alone (ICA) is a ministry committed to loving God,<br>
       loving our neighbors as ourselves, and making disciples of all nations</h3>
     <section class="separation-1"></section>
     <%= link_to "Learn More", about_path, class: "responsive-button" %>
@@ -60,26 +19,38 @@
 </div>
 
 <div class="small-12">
-  <section class="fixed-photo img-bg" id="home-second">
+  <section class="fixed-photo img-bg fast-height-trans" id="home-second">
   </section>
 </div>
 
 <section class="row separation-2"></section>
 <div class="row text-center">
-  <h2>Our Campus Ministries</h2>
+  <h2><strong>Our Campus Ministries</strong></h2>
 </div>
 <section class="row separation-2"></section>
 <div class="small-12 medium-6 large-3 columns text-center">
-      <%= link_to "", "#", id: "usc-statue", class: "circular inline-block" %>
+  <figure class="fig-link">
+    <%= link_to "", "#", id: "usc-statue", class: "circular inline-block fast-opacity-trans" %>
+    <h3><strong>USC</strong></h3>
+  </figure>
 </div>
 <div class="small-12 medium-6 large-3 columns text-center">
-      <%= link_to "", ucla_path, id: "ucla-statue", class: "circular inline-block" %>
+  <figure class="fig-link">
+    <%= link_to "", ucla_path, id: "ucla-statue", class: "circular inline-block fast-opacity-trans" %>
+    <h3><strong>UCLA</strong></h3>
+  </figure>
 </div>
 <div class="small-12 medium-6 large-3 columns text-center">
-      <%= link_to "", "#", id: "uci-statue", class: "circular inline-block" %>
+  <figure class="fig-link">
+    <%= link_to "", "#", id: "uci-statue", class: "circular inline-block fast-opacity-trans" %>
+    <h3><strong>UCI</strong></h3>
+  </figure>
 </div>
 <div class="small-12 medium-6 large-3 columns text-center">
-      <%= link_to "", "#", id: "ucb-statue", class: "circular inline-block" %>
+  <figure class="fig-link">
+    <%= link_to "", "#", id: "ucb-statue", class: "circular inline-block fast-opacity-trans" %>
+    <h3><strong>UCB</strong></h3>
+  </figure>
 </div>
 <div class="row text-center">
   <div class="small-12 columns">
