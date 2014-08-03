@@ -1369,7 +1369,7 @@ $topbar-link-padding: $topbar-height / 3;
 @media #{$small-only} {
   .responsive-button {
     @include button(
-      $button-xlrg,
+      $button-sml,
       $button-bg,
       $global-radius,
       false,
