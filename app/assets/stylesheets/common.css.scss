@@ -19,8 +19,32 @@
 
 /* ELEMENT DISPLAY CONVERSIONS */
 
+.block {
+  display: block;
+}
+
 .inline-block {
   display: inline-block;
+}
+
+/* FOUNDATION */
+
+.tabs.centered {
+  width: 850px;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+.tabs-content {
+  padding-top: 15px;
+
+  .content {
+    background-color: $grey9;
+
+    p {
+      padding: 15px;
+    }
+  }
 }
 
 /* GRID LAYOUT */
@@ -35,6 +59,11 @@
 
 .block-spacing-top {
   padding: 50px 0 0 0 !important;
+
+.bg-img {
+  background-position: center bottom;
+  background-size: cover !important;
+  background-repeat: no-repeat;
 }
 
 /* IMAGES */
@@ -56,6 +85,33 @@
 
 .bg-header-opaque {
   background-color: rgba($primary-color, .1);
+
+.circular-active {
+  width: 250px;
+  height: 250px;
+  border-radius: 125px;
+  -webkit-border-radius: 125px;
+  -moz-border-radius: 125px;
+  border: 1px solid transparent;
+  opacity: 1;
+}
+
+.circular-opaque {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border: 1px solid transparent;
+  opacity: .7;
+}
+
+.circular-opaque:hover {
+  opacity: 1;
+}
+
+.fig-link {
+  margin: 0 0 50px 0;
 }
 
 
@@ -167,6 +223,11 @@
 .fast-height-trans {
   transition: height 300ms;
   -webkit-transition: height 300ms; /* Safari */
+}
+
+.fast-width-trans {
+  transition: width 300ms;
+  -webkit-transition: width 300ms; /* Safari */
 }
 
 .fast-opacity-trans {
