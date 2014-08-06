@@ -30,6 +30,18 @@
   opacity: .7;
 }
 
+.rectangular {
+  width: 300px;
+  height: 400px;
+  hspacing: 15px;
+  transition: opacity .5s;
+  -webkit-transition: opacity .5s; /* For Safari 3.1 to 6.0 */
+}
+
+.rectangular:hover {
+  opacity: .7;
+}
+
 .img-max {
   width: 100%;
   height: auto;
