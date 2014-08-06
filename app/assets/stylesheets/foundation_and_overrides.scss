@@ -441,7 +441,7 @@ $button-bg: #445d76; //$primary-color;
 // $include-html-dropdown-classes: $include-html-classes;
 
 // We use these to controls height and width styles.
-// $f-dropdown-max-width: 200px;
+$f-dropdown-max-width: 500px;
 // $f-dropdown-height: auto;
 // $f-dropdown-max-height: none;
 
@@ -1147,7 +1147,7 @@ $sub-nav-active-cursor: default;
 
 // $include-html-tabs-classes: $include-html-classes;
 
-// $tabs-navigation-padding: rem-calc(16);
+$tabs-navigation-padding: 0; //rem-calc(16);
 // $tabs-navigation-bg-color: #efefef  ;
 // $tabs-navigation-active-bg-color: #fff;
 // $tabs-navigation-hover-bg-color: scale-color($tabs-navigation-bg-color, $lightness: -6%);
