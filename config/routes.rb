@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  get 'navbar/home'
-
-  get 'navbar/contact'
-
   # navbar controller
   match '/about', to: 'navbar#about', via: 'get'
   match '/about/church_leadership', to: 'navbar#church_leadership', via: 'get'
@@ -15,6 +11,19 @@ Rails.application.routes.draw do
   match '/ucla',  to: 'ucla#home',    via: 'get'
   match '/ucla/leaders',  to: 'ucla#leaders',    via: 'get'
   match '/ucla/small_groups',  to: 'ucla#small_groups',    via: 'get'
+
+  # usc controller
+  match '/usc',  to: 'usc#home',    via: 'get'
+  match '/usc/leaders',  to: 'usc#leaders',    via: 'get'
+  match '/usc/smallgroups',  to: 'usc#smallgroups',    via: 'get'
+
+  # uci controller
+  match '/uci',  to: 'uci#home',    via: 'get'
+  match '/uci/leaders',  to: 'uci#leaders',    via: 'get'
+  match '/uci/smallgroups',  to: 'uci#smallgroups',    via: 'get'
+
+  # cal controller
+  match '/ucb',  to: 'cal#home',    via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
