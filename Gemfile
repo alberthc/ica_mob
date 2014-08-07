@@ -52,4 +52,3 @@ gem 'foundation-rails'
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 gem 'jquery-turbolinks'
-gem 'tzinfo-data', platform: [:mingw, :mswin]
