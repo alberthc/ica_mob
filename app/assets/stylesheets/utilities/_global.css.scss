@@ -5,18 +5,18 @@ $gold: #dcb95f;
 $grey: #262222; //#373d43;
 $red: #6C2424;
 
-$primary-color: $blue;
+$ica-primary-color: $blue;
 $text-color: $grey;
 
-$primary1: lighten($primary-color, 10%); //#103459;
-$primary2: lighten($primary-color, 20%); //#445d76;
-$primary3: lighten($primary-color, 30%); //#6b7392;
-$primary4: lighten($primary-color, 40%); //#8ea8c3;
-$primary5: lighten($primary-color, 50%); //#8f9ead;
-$primary6: lighten($primary-color, 60%); //#a5bacf;
-$primary7: lighten($primary-color, 70%); //#bbcbdb;
-$primary8: lighten($primary-color, 80%); //#d2dce7;
-$primary9: lighten($primary-color, 90%); //#e8eef3;
+$primary1: lighten($ica-primary-color, 10%); //#103459;
+$primary2: lighten($ica-primary-color, 20%); //#445d76;
+$primary3: lighten($ica-primary-color, 30%); //#6b7392;
+$primary4: lighten($ica-primary-color, 40%); //#8ea8c3;
+$primary5: lighten($ica-primary-color, 50%); //#8f9ead;
+$primary6: lighten($ica-primary-color, 60%); //#a5bacf;
+$primary7: lighten($ica-primary-color, 70%); //#bbcbdb;
+$primary8: lighten($ica-primary-color, 80%); //#d2dce7;
+$primary9: lighten($ica-primary-color, 90%); //#e8eef3;
 
 // BLUE
 $blue1: lighten($blue, 10%); //#103459
