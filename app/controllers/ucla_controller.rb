@@ -5,6 +5,6 @@ class UclaController < ApplicationController
   def leaders
   end
 
-  def small_groups
+  def smallgroups
   end
 end
