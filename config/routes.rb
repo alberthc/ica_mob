@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   # ucla controller
   match '/ucla',  to: 'ucla#home',    via: 'get'
   match '/ucla/leaders',  to: 'ucla#leaders',    via: 'get'
-  match '/ucla/small-groups',  to: 'ucla#small_groups',    via: 'get'
+  match '/ucla/small-groups',  to: 'ucla#smallgroups',    via: 'get'
 
   # usc controller
   match '/usc',  to: 'usc#home',    via: 'get'
