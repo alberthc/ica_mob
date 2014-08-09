@@ -1,3 +1,5 @@
+@import "utilities/global";
+
 #home-third {
   background: asset-url('contact_us_banner.jpg') no-repeat fixed;
 }
@@ -6,35 +8,28 @@
   font-family: 'Montserrat', Arial;
   font-weight: bold;
   font-size: 24pt;
-  color: #495159;
+  color: $grey1;
   text-align: left;
 }
 
-
-
 .margin-1{
-
   margin-left:50px;
-
 }
 
 .subheader-about {
   font-family: 'Georgia', Arial;
   font-weight: normal;
   font-size: 14pt;
-  color: #626c76;
+  color: $grey2;
   text-align: left;
-
 }
 
 .form {
-
-  background: #b6b9bd;
+  background: $grey10;
   border-radius: 15px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
- 
-  }
+}
 
   .form2 {
 
