@@ -1,63 +1,42 @@
 <div class="row">
-  <section class="main-photo bg-img fast-height-trans" id="programs-main">
-  </section>
+  <section class="main-photo bg-img fast-height-trans show-for-medium-up" id="programs-main"></section>
+  <section class="main-photo bg-img fast-height-trans show-for-small-only" id="programs-main-sml"></section>
 </div>
 
-<div class="row block-spacing">
-  <div class="small-12 large-6 small-centered columns">
-    <p class="indent serif-black">In Christ Alone hosts a variety of special programs and conferences throughout each year to teach and encourage our
-    students, as well as give those who are new to Christianity an opportunity to learn more about Christ. Though each program is 
-    vastly different in terms of purpose, time, and scope, all of them are highly memorable.</p>
+<div class="row text-center">
+  <div class="small-12 columns bg-header-opaque">
+    <h1>Special Events</h1>
   </div>
 </div>
 
-<div class="row block-spacing-bottom">
-  <section class="fixed-photo bg-img fast-height-trans" id="home-2">
-  </section>
-</div>
-
-<div class="row block-spacing-bottom">
-  <div class="small-12 large-9 large-offset-3 columns">
-    <h2><strong>Fall Conference</strong></h2>
-  </div>
-  <div class="small-12 large-6 small-centered columns">
-    <p class="indent serif-black">Held every October in Los Angeles, Fall Conference is a one-day conference among the SoCal ICA ministries with a special focus
-    on living a Christ-centered life. The messages, workshops, and small group time are designed to be accessible to anyone, no matter
-    how familiar they are with the Gospel.</p>
-  </div>
-</div>
-
-<div class="row block-spacing-bottom">
-  <section class="fixed-photo bg-img fast-height-trans" id="home-2">
-  </section>
-</div>
-
-<div class="row block-spacing-bottom">
-  <div class="small-12 large-9 large-offset-3 columns">
-    <h2><strong>Winter Conference<strong></h2>
-  </div>
-  <div class="small-12 large-6 small-centered columns">
-    <p class="indent serif-black">Our annual Winter Conference brings all four of our ICA ministries from USC, UCLA, UCI, and Cal for a special four-day weekend
-    away from Los Angeles, jam-packed with powerful worship sessions, inspiring guest speakers, insightful practical workshops,
-    and deep one-to-one fellowship times. Many of our brothers and sisters first have deepened their commitment to Christ or have
-    even come to salvation over the course of Winter Conference.</p>
-  </div>
-</div>
-
-<div class="row block-spacing-bottom">
-  <section class="fixed-photo bg-img fast-height-trans" id="home-2">
-  </section>
-</div>
-
-<div class="row block-spacing-bottom">
-  <div class="small-12 large-9 large-offset-3 columns">
-    <h2><strong>Easter Training Program (ETP)</strong></h2>
-  </div>
-  <div class="small-12 large-6 small-centered columns">
-    <p class="indent serif-black">ETP is held separately by each ministry over its campus' spring break, with a special focus on teaching and reinforcing the
-    fundamentals of a devoted life for Jesus. There are separate programs for guys and girls, led by the campus men's and women's leaders,
-    respectively. In this three to four day program, participants of ETP will live together, study the Bible together, work together, and
-    evangelize together. This is a great way to get to know your fellow brothers/sisters in your own campus, with plenty of opportunities
-    to share and pray with one another.</p>
+<div class="row block-spacing" data-equalizer>
+  <div class="medium-10 small-12 small-centered columns">
+    <ul class="small-block-grid-1">
+      <li>
+	<div class="info-box-pad panel" data-equalizer-watch>
+	  <h3><strong>Fall Conference</strong></h3>
+	  <p>Held every October in Los Angeles, Fall Conference is a one-day conference among the SoCal ICA ministries with a special focus on living a Christ-centered life. The messages, workshops, and small group time are designed to be accessible to anyone, no matter how familiar they are with the Gospel.</p>
+	  <%= link_to "Pictures", "#", class: "open-clearing responsive-button", data: {thumb_index: 0} %>
+	  <ul class="clearing-thumbs clearing-feature" data-clearing>
+	    <li><a href="<%= image_path('fallcon/fallcon-1.JPG') %>"><img src="<%= image_path('fallcon/fallcon-1.JPG') %>"></a></li>
+	    <li><a href="<%= image_path('fallcon/fallcon-2.JPG') %>"><img src="<%= image_path('fallcon/fallcon-2.JPG') %>"></a></li>
+	    <li><a href="<%= image_path('fallcon/fallcon-3.JPG') %>"><img src="<%= image_path('fallcon/fallcon-3.JPG') %>"></a></li>
+	    <li><a href="<%= image_path('fallcon/fallcon-4.JPG') %>"><img src="<%= image_path('fallcon/fallcon-4.JPG') %>"></a></li>
+	  </ul>
+	</div>
+      </li>
+      <li>
+	<div class="info-box-pad panel" data-equalizer-watch>
+	  <h3><strong>Winter Conference</strong></h3>
+	  <p>Our annual Winter Conference brings all four of our ICA ministries from USC, UCLA, UCI, and Cal for a special four-day weekend away from Los Angeles, jam-packed with powerful worship sessions, inspiring guest speakers, insightful practical workshops, and deep one-to-one fellowship times. Many of our brothers and sisters first have deepened their commitment to Christ or have even come to salvation over the course of Winter Conference.</p>
+	</div>
+      </li>
+      <li>
+        <div class="info-box-pad panel" data-equalizer-watch>
+	  <h3><strong>Easter Training Program (ETP)</strong></h3>
+          <p>ETP is held separately by each ministry over its campus' spring break, with a special focus on teaching and reinforcing the fundamentals of a devoted life for Jesus. There are separate programs for guys and girls, led by the campus men's and women's leaders, respectively. In this three to four day program, participants of ETP will live together, study the Bible together, work together, and evangelize together. This is a great way to get to know your fellow brothers/sisters in your own campus, with plenty of opportunities to share and pray with one another.</p>
+        </div>
+      </li>
+    </ul>
   </div>
 </div>

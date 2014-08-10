@@ -28,3 +28,9 @@ original = $(this);
         $(".accordion dd.active").not(original).removeClass("active");
   });
   });*/
+
+// Open clearing lightbox from text link
+$('.open-clearing').on('click', function(e) {
+  e.preventDefault();
+  $('[data-clearing] li img').eq($(this).data('thumb-index')).trigger('click');
+});
