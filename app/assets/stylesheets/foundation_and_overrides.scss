@@ -370,8 +370,8 @@ $button-xlrg: rem-calc(40);
 
 // We use these to control button text styles.
 // $button-font-family: $body-font-family;
- $button-font-color: #fff;
-// $button-font-color-alt: #333;
+$button-font-color: $grey5; //#fff;
+$button-font-color-alt: $grey5; //#333;
 // $button-font-tny: rem-calc(11);
 // $button-font-sml: rem-calc(13);
 // $button-font-med: rem-calc(16);
@@ -381,19 +381,19 @@ $button-xlrg: rem-calc(40);
 
 // We use these to control various hover effects.
 
-$button-function-factor: -20%;
+// $button-function-factor: -20%;
 
 
 // We use these to control button border styles.
-// $button-border-width: 0px;
-// $button-border-style: solid;
+$button-border-width: 2px;
+$button-border-style: solid;
 
-$button-bg: #445d76; //$primary-color;
+$button-bg: white; //#445d76; //$primary-color;
 
-// $button-border-color: scale-color($button-bg, $lightness: $button-function-factor);
+// $button-border-color: black; //scale-color($button-bg, $lightness: $button-function-factor);
 
 // We use this to set the default radius used throughout the core.
-// $button-radius: $global-radius;
+$button-radius: 5px; //$global-radius;
 // $button-round: $global-rounded;
 
 // We use this to set default opacity for disabled buttons.
@@ -1351,8 +1351,15 @@ $topbar-link-padding: $topbar-height / 3;
 
 @media #{$small-up} {
   .responsive-button {
-    transition: background 1s;
-    -webkit-transition: background 1s; /* Safari */
+    background-color: transparent !important;
+    border-color: $grey6 !important;
+    transition: border-color .5s !important;
+    -webkit-transition: border-color .5s !important; /* Safari */
+  }
+
+  .responsive-button:hover {
+    //background-color: transparent;
+    border-color: $grey4 !important;
   }
 }
 @media #{$small-only} {
@@ -1360,7 +1367,7 @@ $topbar-link-padding: $topbar-height / 3;
     @include button(
       $button-sml,
       $button-bg,
-      $global-radius,
+      $button-radius,
       false,
       false,
       false
@@ -1417,7 +1424,7 @@ $topbar-link-padding: $topbar-height / 3;
     @include button(
       $button-med,
       $button-bg,
-      $global-radius,
+      $button-radius,
       false,
       false,
       false
@@ -1480,7 +1487,7 @@ $topbar-link-padding: $topbar-height / 3;
     @include button(
       $button-lrg,
       $button-bg,
-      $global-radius,
+      $button-radius,
       false,
       false,
       false
