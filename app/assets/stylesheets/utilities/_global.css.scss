@@ -2,38 +2,46 @@
 
 $blue: #3c4753;
 $gold: #dcb95f;
-$grey: #373d43;
+$grey: #262222; //#373d43;
 $red: #6C2424;
 
-$primary-color: $blue;
+$ica-primary-color: $blue;
 $text-color: $grey;
 
-$primary1: lighten($primary-color, 5%); //#103459;
-$primary2: lighten($primary-color, 10%); //#445d76;
-$primary3: lighten($primary-color, 15%); //#6b7392;
-$primary4: lighten($primary-color, 20%); //#8ea8c3;
-$primary5: lighten($primary-color, 25%); //#8f9ead;
-$primary6: lighten($primary-color, 30%); //#a5bacf;
-$primary7: lighten($primary-color, 35%); //#bbcbdb;
-$primary8: lighten($primary-color, 40%); //#d2dce7;
-$primary9: lighten($primary-color, 45%); //#e8eef3;
+$primary1: lighten($ica-primary-color, 10%); //#103459;
+$primary2: lighten($ica-primary-color, 20%); //#445d76;
+$primary3: lighten($ica-primary-color, 30%); //#6b7392;
+$primary4: lighten($ica-primary-color, 40%); //#8ea8c3;
+$primary5: lighten($ica-primary-color, 50%); //#8f9ead;
+$primary6: lighten($ica-primary-color, 60%); //#a5bacf;
+$primary7: lighten($ica-primary-color, 70%); //#bbcbdb;
+$primary8: lighten($ica-primary-color, 80%); //#d2dce7;
+$primary9: lighten($ica-primary-color, 90%); //#e8eef3;
 
 // BLUE
-$blue1: lighten($blue, 5%); //#103459
-$blue2: lighten($blue, 10%); //#445d76
-$blue3: lighten($blue, 15%); //#6b7392
-$blue4: lighten($blue, 20%); //#8ea8c3
-$blue5: lighten($blue, 25%); //#8f9ead
+$blue1: lighten($blue, 10%); //#103459
+$blue2: lighten($blue, 20%); //#445d76
+$blue3: lighten($blue, 30%); //#6b7392
+$blue4: lighten($blue, 40%); //#8ea8c3
+$blue5: lighten($blue, 50%); //#8f9ead
+$blue6: lighten($blue, 60%);
+$blue7: lighten($blue, 70%);
+$blue8: lighten($blue, 80%);
+$blue9: lighten($blue, 90%);
 
 // GOLD
-$gold1: lighten($gold, 5%); //#e3c77f;
+$gold1: lighten($gold, 10%); //#e3c77f;
 
 // GREY
-$grey1: lighten($grey, 5%); //#4a5159; // OR #495159
-$grey2: lighten($grey, 10%); //#626c76;
-$grey3: lighten($grey, 15%); //#818991;
-$grey4: lighten($grey, 20%); //#b6b9bd;
-$grey5: lighten($grey, 25%); //#e0e2e4;
+$grey1: lighten($grey, 10%); //#4a5159; // OR #495159
+$grey2: lighten($grey, 20%); //#626c76;
+$grey3: lighten($grey, 30%); //#818991;
+$grey4: lighten($grey, 40%); //#b6b9bd;
+$grey5: lighten($grey, 50%); //#e0e2e4;
+$grey6: lighten($grey, 60%);
+$grey7: lighten($grey, 70%);
+$grey8: lighten($grey, 80%);
+$grey9: lighten($grey, 90%);
 
 /* PAGE COLORS */
 

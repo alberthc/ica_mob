@@ -19,8 +19,32 @@
 
 /* ELEMENT DISPLAY CONVERSIONS */
 
+.block {
+  display: block;
+}
+
 .inline-block {
   display: inline-block;
+}
+
+/* FOUNDATION */
+
+.tabs.centered {
+  width: 850px;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+.tabs-content {
+  padding-top: 15px;
+
+  .content {
+    background-color: $grey9;
+
+    p {
+      padding: 15px;
+    }
+  }
 }
 
 /* GRID LAYOUT */
@@ -28,7 +52,7 @@
 /* IMAGES & BACKGROUND */
 
 .bg-header-opaque {
-  background-color: rgba($primary-color, .1);
+  background-color: rgba($ica-primary-color, .1);
 }
 
 .bg-img {
@@ -36,6 +60,14 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.bg-img {
+  background-position: center bottom;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+}
+
+/* IMAGES */
 
 .circular {
   width: 200px;
@@ -50,9 +82,52 @@
   opacity: .7;
 }
 
+.circular-active {
+  width: 250px;
+  height: 250px;
+  border-radius: 125px;
+  -webkit-border-radius: 125px;
+  -moz-border-radius: 125px;
+  border: 1px solid transparent;
+  opacity: 1;
+}
+  
+.circular-opaque {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border: 1px solid transparent;
+  opacity: .7;
+}
+
+.circular-opaque:hover {
+  opacity: 1;
+}
+
 .fig-link {
   margin: 0 0 50px 0;
 }
+
+.rectangular {
+  width: 300px;
+  height: 400px;
+  hspacing: 15px;
+  transition: opacity .5s;
+  -webkit-transition: opacity .5s; /* For Safari 3.1 to 6.0 */
+}
+
+.rectangular:hover {
+  opacity: .7;
+}
+
+.img-max {
+  width: 100%;
+  height: auto;
+}
+
+/* BACKGROUND IMAGES */
 
 .img-overlay {
   width: 20%;
@@ -92,6 +167,11 @@
   -webkit-transition: height 300ms; /* Safari */
 }
 
+.fast-width-trans {
+  transition: width 300ms;
+  -webkit-transition: width 300ms; /* Safari */
+}
+
 .fast-opacity-trans {
   transition: opacity 300ms;
   -webkit-transition: opacity 300ms; /* Safari */
@@ -103,18 +183,11 @@ h3.arial {
   font-family: Arial, sans-serif;
 }
 
-h3.serif {
-  font-family: Georgia, serif;
-}
-
-h4.serif {
-  font-family: Georgia, serif;
-}
-
-h5.serif {
-  font-family: Georgia, serif;
-}
-
+h1.serif,
+h2.serif,
+h3.serif,
+h4.serif,
+h5.serif,
 h6.serif {
   font-family: Georgia, serif;
 }
