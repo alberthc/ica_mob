@@ -51,6 +51,10 @@
 
 /* IMAGES & BACKGROUND */
 
+.bg-gold {
+  background-color: $gold1;
+}
+
 .bg-header-opaque {
   background-color: rgba($ica-primary-color, .1);
 }
@@ -66,6 +70,11 @@
   background-size: cover !important;
   background-repeat: no-repeat;
 }
+
+.bg-ucla-blue {
+  background-color: $blue5;
+}
+
 
 /* IMAGES */
 
