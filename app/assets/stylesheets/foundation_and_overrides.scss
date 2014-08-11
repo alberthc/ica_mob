@@ -1378,6 +1378,10 @@ $topbar-link-padding: $topbar-height / 3;
     font-size: .8em;
   }
 
+  p.responsive-indent {
+    //text-indent: 10px;
+  }
+
   .block-spacing {
     padding: 25px 0 25px 0 !important;
   }
@@ -1437,6 +1441,10 @@ $topbar-link-padding: $topbar-height / 3;
 
   html {
     //font-size: .79em;
+  }
+
+  p.responsive-indent {
+    text-indent: 35px;
   }
 
   .block-spacing {
@@ -1504,6 +1512,10 @@ $topbar-link-padding: $topbar-height / 3;
 
   html {
     //font-size: 1em;
+  }
+
+  p.responsive-indent {
+    text-indent: 50px;
   }
 
   .block-spacing {
