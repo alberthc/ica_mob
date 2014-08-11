@@ -76,9 +76,10 @@
   background-repeat: no-repeat;
 }
 
-.img-vertical {
-  max-height: 100%;
-  width: auto;
+.bg-img-center {
+  background-position: center center;
+  background-size: cover !important;
+  background-repeat: no-repeat;
 }
 
 /* IMAGES */
