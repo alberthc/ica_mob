@@ -33,29 +33,6 @@
 
 /* FOUNDATION */
 
-.tab-title {
-  margin: 0 20px;
-}
-
-.tabs.centered {
-  width: 960px;
-  margin: 0 auto !important;
-  text-align: center !important;
-}
-
-.tabs-content {
-  .content {
-    background-color: $grey7;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-
-    p {
-      padding: 15px;
-    }
-  }
-}
-
 /* GRID LAYOUT */
 
 /* IMAGES & BACKGROUND */
@@ -85,11 +62,11 @@
 /* IMAGES */
 
 .circular {
-  width: 200px;
-  height: 200px;
-  border-radius: 100px;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  -webkit-border-radius: 75px;
+  -moz-border-radius: 75px;
   border: 1px solid transparent;
 }
 
@@ -97,22 +74,12 @@
   opacity: .7;
 }
 
-.circular-active {
-  width: 250px;
-  height: 250px;
-  border-radius: 125px;
-  -webkit-border-radius: 125px;
-  -moz-border-radius: 125px;
-  border: 1px solid transparent;
-  opacity: 1;
-}
-  
 .circular-opaque {
-  width: 200px;
-  height: 200px;
-  border-radius: 100px;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  -webkit-border-radius: 75px;
+  -moz-border-radius: 75px;
   border: 1px solid transparent;
   opacity: .7;
 }
