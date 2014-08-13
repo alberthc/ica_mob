@@ -33,11 +33,13 @@ $include-html-global-classes: $include-html-classes;
 
 // Grid
 
+
 $row-width: 100%; //rem-calc(1000);
 $total-columns: 12;
 
 // $include-html-grid-classes: $include-html-classes;
 // $include-xl-html-grid-classes: false;
+
 
 // Global
 
@@ -364,6 +366,7 @@ $button-lrg: rem-calc(18);
 $button-xlrg: rem-calc(40);
 
 
+
 // We use this to control the display property.
 // $button-display: inline-block;
 // $button-margin-bottom: rem-calc(20);
@@ -381,7 +384,9 @@ $button-font-color-alt: $ica-primary-color; //#333;
 
 // We use these to control various hover effects.
 
+
 // $button-function-factor: -20%;
+
 
 
 // We use these to control button border styles.
@@ -391,6 +396,7 @@ $button-border-style: solid;
 $button-bg: white; //#445d76; //$primary-color;
 
 // $button-border-color: black; //scale-color($button-bg, $lightness: $button-function-factor);
+
 
 // We use this to set the default radius used throughout the core.
 $button-radius: 5px; //$global-radius;
@@ -772,8 +778,8 @@ $magellan-padding: 0 !important;
 // $orbit-timer-show-progress-bar: true;
 
 // We use these to control the bullet nav styles
-// $orbit-bullet-nav-color: #ccc;
-// $orbit-bullet-nav-color-active: #999;
+ $orbit-bullet-nav-color: $blue1;
+ $orbit-bullet-nav-color-active: yellow;
 // $orbit-bullet-radius: rem-calc(9);
 
 // We use these to controls the style of slide numbers
@@ -1271,7 +1277,9 @@ $topbar-link-padding: $topbar-height / 3;
 // $topbar-menu-icon-color-toggled: #888;
 
 // Transitions and breakpoint styles
+
 // $topbar-transition-speed: 300ms;
+
 // Using rem-calc for the below breakpoint causes issues with top bar
 // $topbar-breakpoint: #{lower-bound($medium-range)}; // Change to 9999px for always mobile layout
 // $topbar-media-query: $medium-up;
@@ -1350,17 +1358,20 @@ $topbar-link-padding: $topbar-height / 3;
 //
 
 @media #{$small-up} {
-  .responsive-button {
+  .responsive-button, .set-button {
     background-color: transparent !important;
     border-color: $primary2 !important;
     transition: border-color .5s !important;
     -webkit-transition: border-color .5s !important; /* Safari */
   }
 
-  .responsive-button:hover {
+  .responsive-button:hover, .set-button:hover {
     //background-color: transparent;
     border-color: $ica-primary-color !important;
   }
+
+ 
+  
 }
 @media #{$small-only} {
   .responsive-button {
@@ -1372,6 +1383,10 @@ $topbar-link-padding: $topbar-height / 3;
       false,
       false
     );
+  }
+  
+  .responsive-button.set-width {
+  	width: 200px;
   }
 
   html {
@@ -1462,6 +1477,10 @@ $topbar-link-padding: $topbar-height / 3;
       false,
       false
     );
+  }
+
+  .responsive-button.set-width {
+  	width: 200px;
   }
 
   html {
@@ -1558,6 +1577,10 @@ $topbar-link-padding: $topbar-height / 3;
       false,
       false
     );
+  }
+
+  .responsive-button.set-width {
+  	width: 240px;
   }
 
   html {
