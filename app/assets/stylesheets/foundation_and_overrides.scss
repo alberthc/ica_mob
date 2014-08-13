@@ -1421,6 +1421,11 @@ $topbar-link-padding: $topbar-height / 3;
     height: 200px;
   }
 
+   .fixed-photo2 {
+    height: 200px;
+  }
+
+
   .img-overlay {
     width: 200px;
     height: auto;
@@ -1516,6 +1521,10 @@ $topbar-link-padding: $topbar-height / 3;
     background-attachment: fixed;
   }
 
+  .fixed-photo2 {
+    height: 300px;
+    background-attachment: fixed;
+  }
   .img-overlay {
     width: 300px;
     height: auto;
@@ -1613,6 +1622,11 @@ $topbar-link-padding: $topbar-height / 3;
 
   .fixed-photo {
     height: 400px;
+    background-attachment: fixed;
+  }
+
+   .fixed-photo2 {
+    height: 450px;
     background-attachment: fixed;
   }
 
