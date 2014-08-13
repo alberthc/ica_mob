@@ -3,10 +3,10 @@
 // CAMPUS
 
 #UCLA-main {
-  background: asset-url('ucla_campus.jpg') no-repeat;
+  background-image: asset-url('ucla_campus.jpg');
 }
 #UCLA-group {
-  background: asset-url('ucla_group.jpg') no-repeat;
+  background-image: asset-url('ucla_group.jpg');
   
   .img-bg1 {
     background-position: center !important;
@@ -49,7 +49,7 @@
 // Leaders
 
 #UCLAlead-main {
-  background: asset-url('servants.jpg') no-repeat;
+  background-image: asset-url('servants.jpg');
 }
 
 // Programs

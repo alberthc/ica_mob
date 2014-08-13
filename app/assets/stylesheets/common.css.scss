@@ -43,6 +43,10 @@
   background-size: auto 100% !important;
 }
 
+.bg-gold {
+  background-color: $gold1;
+}
+
 .bg-header-opaque {
   background-color: rgba($ica-primary-color, .2);
 }
@@ -70,6 +74,11 @@
   background-size: cover !important;
   background-repeat: no-repeat;
 }
+
+.bg-ucla-blue {
+  background-color: $blue4;
+}
+
 
 /* IMAGES */
 
@@ -188,6 +197,7 @@ h3.arial {
   font-family: Arial, sans-serif;
 }
 
+
 h1.serif,
 h2.serif,
 h3.serif,
@@ -195,6 +205,16 @@ h4.serif,
 h5.serif,
 h6.serif {
   font-family: Georgia, serif;
+}
+
+h1.white,
+h2.white,
+h3.white,
+h4.white,
+h5.white,
+h6.white, 
+p.white {
+  color: white;
 }
 
 p.default {
