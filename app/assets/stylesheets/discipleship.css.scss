@@ -1,30 +1,31 @@
 //Discipleship
 
-#david-alan {
-  background:asset-url('david_alan.jpg');
-  width: 100%;
+.transbox {
+	height: 120px;
+	padding-top:25px;	
+	background-color: #C0C0C0;
+	opacity:0.6;
 }
 
-#bern-sarah {
-  background: asset-url('bern_sarah.jpg');
+.span-allow-transbox { 	
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
+																						
+.div-allow-transbox
+{
+	position: relative;	
 }
 
-#david{
-  background: asset-url('david.jpg') center;
+.span-text-across
+{
+	padding-left:50px;
+	padding-right:50px;
 }
 
-#jdc{
-  background: asset-url('jdc.jpg');
-}
-
-#jen{
-  background: asset-url('jen.jpg');
-}
-
-#elaine{
-  background: asset-url('elaine.jpg');
-}
-
-#spiritual-gen{
-  background: asset-url('spiritual_generations.jpg');
+.discipleship-arial
+{
+	font-family: arial;
+	color:#373D43;
 }

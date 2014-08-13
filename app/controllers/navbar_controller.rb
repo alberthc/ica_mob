@@ -19,4 +19,8 @@ class NavbarController < ApplicationController
 
   def stp
   end
+
+  def whec
+  end
+  
 end
