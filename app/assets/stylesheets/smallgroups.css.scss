@@ -5,13 +5,25 @@
 }
 
 .info-box {
-  background-color:$grey5;
+  background-color:$grey8;
   text-align:left;
 }
 
+// Same as "serif" class
+.info-box p {
+  font-family: Georgia, serif;
+  color: $grey2 !important;
+}
+
 .contact-box {
-  background-color:$grey5;
+  background-color:$grey8;
   text-align:left;
+}
+
+// Same as "serif" class
+.contact-box p {
+  font-family: Georgia, serif;
+  color: $grey2 !important;
 }
 
 .img-centered-horizontal {
@@ -27,5 +39,4 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-
 
