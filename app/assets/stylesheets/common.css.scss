@@ -37,6 +37,12 @@
 
 /* IMAGES & BACKGROUND */
 
+.bg-circular {
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: auto 100% !important;
+}
+
 .bg-header-opaque {
   background-color: rgba($ica-primary-color, .2);
 }
@@ -195,7 +201,7 @@ p.indent {
 
 p.serif {
   font-family: Georgia, serif;
-  color: $grey4;
+  color: $grey2 !important;
 }
 
 p.serif-black {
