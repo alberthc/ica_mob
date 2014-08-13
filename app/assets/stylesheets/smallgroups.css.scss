@@ -5,13 +5,21 @@
 }
 
 .info-box {
-  background-color:$grey5;
+  background-color:$grey8;
   text-align:left;
 }
 
+.info-box p {
+  font-family: Georgia, "Montserrat", Arial, sans-serif
+}
+
 .contact-box {
-  background-color:$grey5;
+  background-color:$grey8;
   text-align:left;
+}
+
+.contact-box p {
+  font-family: Georgia, "Montserrat", Arial, sans-serif
 }
 
 .img-centered-horizontal {
@@ -27,5 +35,7 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-
+p.georgia {
+  font-family: Georgia, "Montserrat", Arial, sans-serif
+}
 
