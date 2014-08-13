@@ -10,3 +10,13 @@
   bottom:0;
   right:0.9375rem;
 }
+
+.accordion .DownTri
+{
+	display:inline;
+}
+
+.accordion .active .DownTri
+{
+	display: none;
+}

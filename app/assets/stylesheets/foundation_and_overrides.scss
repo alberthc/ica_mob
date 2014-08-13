@@ -1350,17 +1350,20 @@ $topbar-link-padding: $topbar-height / 3;
 //
 
 @media #{$small-up} {
-  .responsive-button {
+  .responsive-button, .set-button {
     background-color: transparent !important;
     border-color: $grey6 !important;
     transition: border-color .5s !important;
     -webkit-transition: border-color .5s !important; /* Safari */
   }
 
-  .responsive-button:hover {
+  .responsive-button:hover, .set-button:hover {
     //background-color: transparent;
     border-color: $grey4 !important;
   }
+
+ 
+  
 }
 @media #{$small-only} {
   .responsive-button {
@@ -1372,6 +1375,10 @@ $topbar-link-padding: $topbar-height / 3;
       false,
       false
     );
+  }
+  
+  .responsive-button.set-width {
+  	width: 200px;
   }
 
   html {
@@ -1429,6 +1436,10 @@ $topbar-link-padding: $topbar-height / 3;
       false,
       false
     );
+  }
+
+  .responsive-button.set-width {
+  	width: 200px;
   }
 
   html {
@@ -1492,6 +1503,10 @@ $topbar-link-padding: $topbar-height / 3;
       false,
       false
     );
+  }
+
+  .responsive-button.set-width {
+  	width: 240px;
   }
 
   html {

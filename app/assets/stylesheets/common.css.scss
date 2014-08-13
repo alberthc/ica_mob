@@ -72,7 +72,7 @@
 }
 
 .bg-ucla-blue {
-  background-color: $blue5;
+  background-color: $blue4;
 }
 
 
@@ -199,6 +199,16 @@ h4.serif,
 h5.serif,
 h6.serif {
   font-family: Georgia, serif;
+}
+
+h1.white,
+h2.white,
+h3.white,
+h4.white,
+h5.white,
+h6.white, 
+p.white {
+  color: white;
 }
 
 p.default {

@@ -1,3 +1,5 @@
+/*
+$(function(){ 
 $(document).foundation({
   orbit: {
       animation: 'slide', // Sets the type of animation used for transitioning between slides, can also be 'fade'
@@ -7,7 +9,7 @@ $(document).foundation({
       next_on_click: true, // Advance to next slide on click
       animation_speed: 500, // Sets the amount of time in milliseconds the transition between slides will last
       stack_on_small: false,
-      navigation_arrows: true,
+      navigation_arrows: false,
       slide_number: false,
       slide_number_text: 'of',
       container_class: 'orbit-container',
@@ -35,3 +37,6 @@ $(document).foundation({
       after_slide_change: noop // Execute a function after the slide changes
   }
 });
+
+}
+*/
