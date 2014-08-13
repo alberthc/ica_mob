@@ -21,31 +21,23 @@
 }
 
 #home-2 {
-  background-image: asset-url('group_pic.jpg');
+  background-image: asset-url('programs/programs-wc-group.jpg');
 }
 
 #cal-statue {
-  background: asset-url('ucb_statue.jpg') no-repeat;
-  background-position: center center;
-  background-size: auto 100%;
+  background: asset-url('ucb_statue.jpg');
 }
 
 #uci-statue {
-  background: asset-url('uci_statue.jpg') no-repeat;
-  background-position: center center;
-  background-size: auto 100%;
+  background: asset-url('anteater.png');
 }
 
 #ucla-statue {
-  background: asset-url('ucla_statue.jpg') no-repeat;
-  background-position: center center;
-  background-size: auto 100%;
+  background: asset-url('bruinbear.png');
 }
 
 #usc-statue {
-  background: asset-url('usc_statue.jpg') no-repeat;
-  background-position: center center;
-  background-size: auto 100%;
+  background: asset-url('tommytrojan.png');
 }
 
 // Leaders
@@ -57,12 +49,12 @@
 // Programs
 
 #programs-main {
-  background-image: asset-url('programs-collage-2.jpg');
+  background-image: asset-url('programs/programs-collage.jpg');
   background-position: left top !important;
 }
 
 #programs-main-sml {
-  background-image: asset-url('programs-wc-group.jpg');
+  background-image: asset-url('programs/programs-wc-group.jpg');
   background-position: center bottom !important;
 }
 
@@ -95,3 +87,76 @@
 #stp-nelly-1 {
   background-image: asset-url('stp/stp-nelly.png');
 }
+
+
+// Discipleship
+#david-alan {
+  background-image:asset-url('discipleship/david_alan.jpg');
+}
+
+#bern-sarah {
+  background-image: asset-url('discipleship/bern_sarah.jpg');
+}
+
+#david{
+  background-image: asset-url('discipleship/david.jpg') center;
+}
+
+#jdc{
+  background-image: asset-url('discipleship/jdc.jpg');
+}
+
+#jen{
+  background-image: asset-url('discipleship/jen.jpg');
+}
+
+#elaine{
+  background-image: asset-url('discipleship/elaine.jpg');
+}
+
+#spiritual-gen{
+  background-image: asset-url('discipleship/spiritual_generations.jpg');
+}
+
+// WHEC
+#albert_jeremy_worship{
+  background-image: asset-url('whec/albert_jeremy_worship.jpg');
+}
+
+#elaine_worship.jpg{
+  background-image: asset-url('whec/elaine_worship.jpg');
+}
+
+#worship2{
+  background-image: asset-url('whec/worship2.jpg');
+}
+
+#baptism_prayer{
+  background-image: asset-url('whec/baptism_prayer.jpg');
+}
+
+#baptism_UCLA{
+  background-image: asset-url('whec/baptism_UCLA.jpg');
+}
+
+#baptism_UCLAguys{
+  background-image: asset-url('whec/baptism_UCLAguys.jpg');
+}
+
+#baptism_UCLAgirls{
+  background-image: asset-url('whec/baptism_UCLAgirls.jpg');
+}
+
+#baptism_USC{
+  background-image:asset-url('whec/baptism_USC.jpg');
+}
+
+
+#cross 
+{
+  background-image:asset-url('whec/cross1.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center; 
+}
+
