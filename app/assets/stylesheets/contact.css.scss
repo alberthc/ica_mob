@@ -1,9 +1,5 @@
 @import "utilities/global";
 
-#home-third {
-  background: asset-url('contact_us_banner.jpg') no-repeat fixed;
-}
-
 .header-about {
   font-family: 'Montserrat', Arial;
   font-weight: bold;
@@ -137,9 +133,11 @@ border-color:transparent;
   border-radius: 10px !important;
   outline-style:none;
   -webkit-appearance: none;
-box-shadow:none;
-border-color:transparent;
-height:50px !important;
+  box-shadow:none;
+  border-color:transparent;
+  height:50px !important;
+  font-family: Georgia, serif !important;
+  font-size: 20px !important;
 
 }
 
@@ -151,6 +149,11 @@ textarea{
 
 .separation-0 {
   height: 10px;
+}
+
+select#entry_199442306{ 
+  font-family: Georgia, serif !important;
+  font-size: 20px !important;
 }
 
 

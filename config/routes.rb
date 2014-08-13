@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   match '/contact', to: 'navbar#contact', via: 'get'
   match '/special-events', to: 'navbar#special_events', via: 'get'
   match '/stp', to: 'navbar#stp', via: 'get'
-
+  match '/whec', to: 'navbar#whec', via: 'get'
+  
   # ucla controller
   match '/ucla',  to: 'ucla#home',    via: 'get'
   match '/ucla/leaders',  to: 'ucla#leaders',    via: 'get'

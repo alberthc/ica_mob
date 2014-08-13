@@ -33,11 +33,13 @@ $include-html-global-classes: $include-html-classes;
 
 // Grid
 
+
 $row-width: 100%; //rem-calc(1000);
 $total-columns: 12;
 
 // $include-html-grid-classes: $include-html-classes;
 // $include-xl-html-grid-classes: false;
+
 
 // Global
 
@@ -138,7 +140,7 @@ $large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-w
 // $header-font-weight: $font-weight-normal;
 // $header-font-style: normal;
 
-$header-font-color: #495159;
+$header-font-color: $ica-primary-color; //#495159;
 // $header-line-height: 1.4;
 // $header-top-margin: .2rem;
 // $header-bottom-margin: .5rem;
@@ -364,14 +366,15 @@ $button-lrg: rem-calc(18);
 $button-xlrg: rem-calc(40);
 
 
+
 // We use this to control the display property.
 // $button-display: inline-block;
 // $button-margin-bottom: rem-calc(20);
 
 // We use these to control button text styles.
 // $button-font-family: $body-font-family;
- $button-font-color: #fff;
-// $button-font-color-alt: #333;
+$button-font-color: $ica-primary-color; //#fff;
+$button-font-color-alt: $ica-primary-color; //#333;
 // $button-font-tny: rem-calc(11);
 // $button-font-sml: rem-calc(13);
 // $button-font-med: rem-calc(16);
@@ -381,19 +384,22 @@ $button-xlrg: rem-calc(40);
 
 // We use these to control various hover effects.
 
-$button-function-factor: -20%;
+
+// $button-function-factor: -20%;
+
 
 
 // We use these to control button border styles.
-// $button-border-width: 0px;
-// $button-border-style: solid;
+$button-border-width: 2px;
+$button-border-style: solid;
 
-$button-bg: #445d76; //$primary-color;
+$button-bg: white; //#445d76; //$primary-color;
 
-// $button-border-color: scale-color($button-bg, $lightness: $button-function-factor);
+// $button-border-color: black; //scale-color($button-bg, $lightness: $button-function-factor);
+
 
 // We use this to set the default radius used throughout the core.
-// $button-radius: $global-radius;
+$button-radius: 5px; //$global-radius;
 // $button-round: $global-rounded;
 
 // We use this to set default opacity for disabled buttons.
@@ -772,8 +778,8 @@ $magellan-padding: 0 !important;
 // $orbit-timer-show-progress-bar: true;
 
 // We use these to control the bullet nav styles
-// $orbit-bullet-nav-color: #ccc;
-// $orbit-bullet-nav-color-active: #999;
+ $orbit-bullet-nav-color: $blue1;
+ $orbit-bullet-nav-color-active: yellow;
 // $orbit-bullet-radius: rem-calc(9);
 
 // We use these to controls the style of slide numbers
@@ -1271,7 +1277,9 @@ $topbar-link-padding: $topbar-height / 3;
 // $topbar-menu-icon-color-toggled: #888;
 
 // Transitions and breakpoint styles
+
 // $topbar-transition-speed: 300ms;
+
 // Using rem-calc for the below breakpoint causes issues with top bar
 // $topbar-breakpoint: #{lower-bound($medium-range)}; // Change to 9999px for always mobile layout
 // $topbar-media-query: $medium-up;
@@ -1350,29 +1358,51 @@ $topbar-link-padding: $topbar-height / 3;
 //
 
 @media #{$small-up} {
-  .responsive-button {
-    transition: background 1s;
-    -webkit-transition: background 1s; /* Safari */
+  .responsive-button, .set-button {
+    background-color: transparent !important;
+    border-color: $primary2 !important;
+    transition: border-color .5s !important;
+    -webkit-transition: border-color .5s !important; /* Safari */
   }
+
+  .responsive-button:hover, .set-button:hover {
+    //background-color: transparent;
+    border-color: $ica-primary-color !important;
+  }
+
+ 
+  
 }
 @media #{$small-only} {
   .responsive-button {
     @include button(
       $button-sml,
       $button-bg,
-      $global-radius,
+      $button-radius,
       false,
       false,
       false
     );
+  }
+  
+  .responsive-button.set-width {
+  	width: 200px;
   }
 
   html {
     font-size: .8em;
   }
 
+  p.responsive-indent {
+    text-indent: 15px;
+  }
+
   .block-spacing {
     padding: 25px 0 25px 0 !important;
+  }
+
+  .block-spacing-sml {
+    padding: 15px 0 15px 0 !important;
   }
 
   .block-spacing-bottom {
@@ -1391,6 +1421,11 @@ $topbar-link-padding: $topbar-height / 3;
     height: 200px;
   }
 
+   .fixed-photo2 {
+    height: 200px;
+  }
+
+
   .img-overlay {
     width: 200px;
     height: auto;
@@ -1402,6 +1437,31 @@ $topbar-link-padding: $topbar-height / 3;
 
   .temp2-main-bg {
     height: 175px;
+  }
+
+  /* TABS */
+
+  .tab-title {
+    //margin: 0 20px;
+  }
+
+  .tabs.centered {
+    //width: 960px;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+
+  .tabs-content {
+    .content {
+      background-color: $grey7;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+
+      p {
+	padding: 5px;
+      }
+    }
   }
 
   #stp-1,
@@ -1417,19 +1477,31 @@ $topbar-link-padding: $topbar-height / 3;
     @include button(
       $button-med,
       $button-bg,
-      $global-radius,
+      $button-radius,
       false,
       false,
       false
     );
   }
 
+  .responsive-button.set-width {
+  	width: 200px;
+  }
+
   html {
     //font-size: .79em;
   }
 
+  p.responsive-indent {
+    text-indent: 35px;
+  }
+
   .block-spacing {
     padding: 50px 0 50px 0 !important;
+  }
+
+  .block-spacing-sml {
+    padding: 20px 0 20px 0 !important;
   }
 
   .block-spacing-bottom {
@@ -1449,6 +1521,10 @@ $topbar-link-padding: $topbar-height / 3;
     background-attachment: fixed;
   }
 
+  .fixed-photo2 {
+    height: 300px;
+    background-attachment: fixed;
+  }
   .img-overlay {
     width: 300px;
     height: auto;
@@ -1460,6 +1536,31 @@ $topbar-link-padding: $topbar-height / 3;
 
   .temp2-main-bg {
     height: 500px;
+  }
+
+  /* TABS */
+
+  .tab-title {
+    margin: 0 5px;
+  }
+
+  .tabs.centered {
+    width: 640px;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+
+  .tabs-content {
+    .content {
+      background-color: $grey7;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+
+      p {
+        padding: 15px;
+      }
+    }
   }
 
   #stp-1 {
@@ -1480,19 +1581,31 @@ $topbar-link-padding: $topbar-height / 3;
     @include button(
       $button-lrg,
       $button-bg,
-      $global-radius,
+      $button-radius,
       false,
       false,
       false
     );
   }
 
+  .responsive-button.set-width {
+  	width: 240px;
+  }
+
   html {
     //font-size: 1em;
   }
 
+  p.responsive-indent {
+    text-indent: 50px;
+  }
+
   .block-spacing {
     padding: 50px 0 50px 0 !important;
+  }
+
+  .block-spacing-sml {
+    padding: 25px 0 25px 0 !important;
   }
 
   .block-spacing-bottom {
@@ -1512,6 +1625,11 @@ $topbar-link-padding: $topbar-height / 3;
     background-attachment: fixed;
   }
 
+   .fixed-photo2 {
+    height: 450px;
+    background-attachment: fixed;
+  }
+
   .img-overlay {
     width: 400px;
     height: auto;
@@ -1523,6 +1641,33 @@ $topbar-link-padding: $topbar-height / 3;
 
   .temp2-main-bg {
     height: 800px;
+  }
+
+  /* TABS */
+
+  .tab-title {
+    //margin: 0 20px; //for circular with width of 200px
+    margin: 0 50px;
+  }
+    
+  .tabs.centered {
+    //width: 960px; //for circular with width of 200px
+    width: 1000px;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+
+  .tabs-content {
+    .content {
+      background-color: $grey7;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+
+      p {
+        padding: 15px;
+      }
+    }
   }
 
   #stp-1,
