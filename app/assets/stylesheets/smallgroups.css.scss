@@ -9,8 +9,10 @@
   text-align:left;
 }
 
+// Same as "serif" class
 .info-box p {
-  font-family: Georgia, "Montserrat", Arial, sans-serif
+  font-family: Georgia, serif;
+  color: $grey2 !important;
 }
 
 .contact-box {
@@ -18,8 +20,10 @@
   text-align:left;
 }
 
+// Same as "serif" class
 .contact-box p {
-  font-family: Georgia, "Montserrat", Arial, sans-serif
+  font-family: Georgia, serif;
+  color: $grey2 !important;
 }
 
 .img-centered-horizontal {
@@ -34,8 +38,5 @@
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-}
-p.georgia {
-  font-family: Georgia, "Montserrat", Arial, sans-serif
 }
 
