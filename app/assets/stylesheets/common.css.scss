@@ -27,46 +27,45 @@
   display: inline-block;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 /* FOUNDATION */
-
-.tabs.centered {
-  width: 850px;
-  margin: 0 auto !important;
-  text-align: center !important;
-}
-
-.tabs-content {
-  padding-top: 15px;
-
-  .content {
-    background-color: $grey9;
-
-    p {
-      padding: 15px;
-    }
-  }
-}
 
 /* GRID LAYOUT */
 
 /* IMAGES & BACKGROUND */
 
+
 .bg-gold {
   background-color: $gold1;
+
+.bg-circular {
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: auto 100% !important;
+
 }
 
 .bg-header-opaque {
-  background-color: rgba($ica-primary-color, .1);
+  background-color: rgba($ica-primary-color, .2);
 }
 
 .bg-img {
   background-position: center bottom;
-  background-size: cover;
+  background-size: cover !important;
   background-repeat: no-repeat;
 }
 
-.bg-img {
-  background-position: center bottom;
+.bg-img-top {
+  background-position: center top;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+}
+
+.bg-img-center {
+  background-position: center center;
   background-size: cover !important;
   background-repeat: no-repeat;
 }
@@ -79,11 +78,11 @@
 /* IMAGES */
 
 .circular {
-  width: 200px;
-  height: 200px;
-  border-radius: 100px;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  -webkit-border-radius: 75px;
+  -moz-border-radius: 75px;
   border: 1px solid transparent;
 }
 
@@ -91,22 +90,12 @@
   opacity: .7;
 }
 
-.circular-active {
-  width: 250px;
-  height: 250px;
-  border-radius: 125px;
-  -webkit-border-radius: 125px;
-  -moz-border-radius: 125px;
-  border: 1px solid transparent;
-  opacity: 1;
-}
-  
 .circular-opaque {
-  width: 200px;
-  height: 200px;
-  border-radius: 100px;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  -webkit-border-radius: 75px;
+  -moz-border-radius: 75px;
   border: 1px solid transparent;
   opacity: .7;
 }
@@ -162,6 +151,17 @@
 
 .separation-3 {
   height: 75px;
+}
+
+/* SHAPES */
+
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 15px solid $grey7;
+  //margin: 0 auto !important;
 }
 
 /* TRANSITIONS */
@@ -223,7 +223,7 @@ p.indent {
 
 p.serif {
   font-family: Georgia, serif;
-  color: $grey4;
+  color: $grey2 !important;
 }
 
 p.serif-black {
