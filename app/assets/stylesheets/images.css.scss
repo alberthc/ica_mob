@@ -107,23 +107,27 @@
 }
 
 #discipleship-david{
-  background-image: asset-url('discipleship/david.jpg') center;
-}
-
-#discipleship-jdc{
-  background-image: asset-url('discipleship/jdc.jpg');
+  background-image: asset-url('discipleship/david.jpg');
+  background-position: 32% 28%;
 }
 
 #discipleship-jen{
   background-image: asset-url('discipleship/jen.jpg');
+  background-position: center 20%;
 }
 
 #discipleship-elaine{
   background-image: asset-url('discipleship/elaine.jpg');
+  background-position: center 15%;
+  background-repeat: no-repeat;
+}
+
+#discipleship-elaine-top{
+  background-image: asset-url('discipleship/elaine_top.jpg')
 }
 
 #discipleship-spiritual-gen{
-  background-image: asset-url('discipleship/spiritual_generations.jpg');
+  background-image: asset-url('discipleship/4gen-banner.jpg');
 }
 
 // WHEC
@@ -135,7 +139,7 @@
   background-image: asset-url('whec/elaine_worship.jpg');
 }
 
-#whec-worship2{
+#whec-worship{
   background-image: asset-url('whec/worship2.jpg');
 }
 
@@ -164,7 +168,7 @@
 {
   background-image:asset-url('whec/cross1.jpg');
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 100%;
   background-position: center center; 
 }
 
