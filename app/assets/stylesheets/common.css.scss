@@ -187,10 +187,14 @@
 
 /* TYPOGRAPHY */
 
+p {
+  font-family: Georgia, serif !important;
+  color: $grey2 !important;
+}
+
 h3.arial {
   font-family: Arial, sans-serif;
 }
-
 
 h1.serif,
 h2.serif,
@@ -211,20 +215,7 @@ p.white {
   color: white;
 }
 
-p.default {
-  color: $grey5;
-}
-
-p.indent {
-  text-indent: 50px;
-}
-
-p.serif {
-  font-family: Georgia, serif;
-  color: $grey2 !important;
-}
-
-p.serif-black {
-  font-family: Georgia, serif;
-  color: black;
+p.alt-font {
+  font-family: Arial, sans-serif !important;
+  color: $grey5 !important;
 }
