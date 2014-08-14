@@ -37,6 +37,7 @@
 
 /* IMAGES & BACKGROUND */
 
+<<<<<<< HEAD
 
 .bg-gold {
   background-color: $gold1;
@@ -46,11 +47,20 @@
   background-color: $red;
 }
 
+=======
+>>>>>>> upstream/master
 .bg-circular {
   background-position: center center !important;
   background-repeat: no-repeat !important;
   background-size: auto 100% !important;
+<<<<<<< HEAD
 
+=======
+}
+
+.bg-gold {
+  background-color: $gold1;
+>>>>>>> upstream/master
 }
 
 .bg-header-opaque {
@@ -133,7 +143,7 @@
 /* BACKGROUND IMAGES */
 
 .img-overlay {
-  width: 20%;
+  max-width: 35%;
   min-width: 200px;
   height: auto;
   display: block;
@@ -193,10 +203,14 @@
 
 /* TYPOGRAPHY */
 
+p {
+  font-family: Georgia, serif !important;
+  color: $grey2 !important;
+}
+
 h3.arial {
   font-family: Arial, sans-serif;
 }
-
 
 h1.serif,
 h2.serif,
@@ -205,7 +219,6 @@ h4.serif,
 h5.serif,
 h6.serif {
   font-family: Georgia, serif;
-
 }
 
 h1.white,
@@ -218,20 +231,7 @@ p.white {
   color: white;
 }
 
-p.default {
-  color: $grey5;
-}
-
-p.indent {
-  text-indent: 50px;
-}
-
-p.serif {
-  font-family: Georgia, serif;
-  color: $grey2 !important;
-}
-
-p.serif-black {
-  font-family: Georgia, serif;
-  color: black;
+p.alt-font {
+  font-family: Arial, sans-serif !important;
+  color: $grey5 !important;
 }

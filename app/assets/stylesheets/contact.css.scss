@@ -1,14 +1,6 @@
 @import "utilities/global";
 
-#home-third {
-  background: asset-url('contact_us_banner.jpg') no-repeat fixed;
-}
-
 .header-about {
-  font-family: 'Montserrat', Arial;
-  font-weight: bold;
-  font-size: 24pt;
-  color: $grey1;
   text-align: left;
 }
 
@@ -17,11 +9,7 @@
 }
 
 .subheader-about {
-  font-family: 'Georgia', Arial;
-  font-weight: normal;
-  font-size: 14pt;
-
-  color: $grey2;
+  
   text-align: left;
 }
 
@@ -137,9 +125,11 @@ border-color:transparent;
   border-radius: 10px !important;
   outline-style:none;
   -webkit-appearance: none;
-box-shadow:none;
-border-color:transparent;
-height:50px !important;
+  box-shadow:none;
+  border-color:transparent;
+  height:50px !important;
+  font-family: Georgia, serif !important;
+  font-size: 20px !important;
 
 }
 
@@ -149,8 +139,20 @@ textarea{
 
 }
 
+textarea#entry_1657491740{
+  
+  font-family: Georgia, serif !important;
+  font-size: 20px !important;
+
+}
+
 .separation-0 {
   height: 10px;
+}
+
+select#entry_199442306{ 
+  font-family: Georgia, serif !important;
+  font-size: 20px !important;
 }
 
 
