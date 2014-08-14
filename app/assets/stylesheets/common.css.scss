@@ -216,6 +216,6 @@ p.white {
 }
 
 p.alt-font {
-  font-family: Arial, sans-serif;
-  color: $grey5;
+  font-family: Arial, sans-serif !important;
+  color: $grey5 !important;
 }
