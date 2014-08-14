@@ -45,6 +45,11 @@ $(window).resize(function() {
 		arrow = $('.arrow-up');
 	}
 
+  // Check if elements exists before proceeding
+  if (activeTab.length == 0 || arrow.length == 0) {
+    return;
+  }
+
 	// Move the arrow to the correct position when browser is resized
 	var adjustedArrowPos = centerX(activeTab);
 	$(arrow).css('margin-left', adjustedArrowPos);

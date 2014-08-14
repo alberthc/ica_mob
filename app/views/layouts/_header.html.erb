@@ -1,50 +1,48 @@
 <header>
   <div class="row">
-    <div class="small-12">
-      <div class"contain-to-grid">
-        <nav class="top-bar" data-topbar>
-          <ul class="title-area">
-            <li class="name">
-              <h1><%= link_to "ICA", root_path %></h1>
-              <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    <div class"contain-to-grid">
+      <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+            <h1><%= link_to "ICA", root_path %></h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+        <section class="top-bar-section">
+          <!-- Nav Section -->
+          <ul class="right">
+            <li><%= link_to "HOME", root_path, class: "fast-color-trans" %></li>
+            <li class="has-dropdown">
+              <%= link_to "ABOUT", "javascript:;" %>
+              <ul class="dropdown">
+                <li><%= link_to "Vision/Mission", about_path %></li>
+                <li><%= link_to "Discipleship", discipleship_path %></li>
+                <!--<li><%#= link_to "History", "javascript:;" %></li>-->
+                <li><%= link_to "Church Leadership", church_leadership_path %></li>
+                <li><%= link_to "Church", whec_path %></li>
+              </ul>
             </li>
+            <li class="has-dropdown">
+              <%= link_to "MINISTRIES", "javascript:;" %>
+              <ul class="dropdown">
+                <li><%= link_to "USC", usc_path %></li>
+                <li><%= link_to "UCLA", ucla_path %></li>
+                <li><%= link_to "UCI", uci_path %></li>
+                <li><%= link_to "CAL", ucb_path, target: "_blank" %></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <%= link_to "PROGRAMS", "javascript:;" %>
+              <ul class="dropdown">
+                <li><%= link_to "Summer Training Program", stp_path %></li>
+                <!--<li><%#= link_to "VSET", "javascript:;" %></li>-->
+                <li><%= link_to "Special Events", special_events_path %></li>
+              </ul>
+            </li>
+            <li><%= link_to "CONTACT US", contact_path %></li>
           </ul>
-          <section class="top-bar-section">
-            <!-- Nav Section -->
-            <ul class="right">
-              <li><%= link_to "HOME", root_path, class: "fast-color-trans" %></li>
-              <li class="has-dropdown">
-                <%= link_to "ABOUT", "javascript:;" %>
-                <ul class="dropdown">
-                  <li><%= link_to "Vision/Mission", about_path %></li>
-                  <li><%= link_to "Discipleship", discipleship_path %></li>
-                  <!--<li><%#= link_to "History", "javascript:;" %></li>-->
-                  <li><%= link_to "Church Leadership", church_leadership_path %></li>
-                  <li><%= link_to "Church", whec_path %></li>
-                </ul>
-              </li>
-              <li class="has-dropdown">
-                <%= link_to "MINISTRIES", "javascript:;" %>
-                <ul class="dropdown">
-                  <li><%= link_to "USC", usc_path %></li>
-                  <li><%= link_to "UCLA", ucla_path %></li>
-                  <li><%= link_to "UCI", uci_path %></li>
-                  <li><%= link_to "CAL", ucb_path, target: "_blank" %></li>
-                </ul>
-              </li>
-              <li class="has-dropdown">
-                <%= link_to "PROGRAMS", "javascript:;" %>
-                <ul class="dropdown">
-                  <li><%= link_to "Summer Training Program", stp_path %></li>
-                  <!--<li><%#= link_to "VSET", "javascript:;" %></li>-->
-                  <li><%= link_to "Special Events", special_events_path %></li>
-                </ul>
-              </li>
-              <li><%= link_to "CONTACT US", contact_path %></li>
-            </ul>
-          </section>
-        </nav>
-      </div>
+        </section>
+      </nav>
     </div>
   </div>
 </header>
