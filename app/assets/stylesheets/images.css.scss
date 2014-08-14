@@ -96,73 +96,77 @@
 
 
 // Discipleship
-#david-alan {
+#discipleship-david-alan {
   background-image:asset-url('discipleship/david_alan.jpg');
 }
 
-#bern-sarah {
+#discipleship-bern-sarah {
   background-image: asset-url('discipleship/bern_sarah.jpg');
 }
 
-#david{
-  background-image: asset-url('discipleship/david.jpg') center;
+#discipleship-david{
+  background-image: asset-url('discipleship/david.jpg');
+  background-position: 32% 28%;
 }
 
-#jdc{
-  background-image: asset-url('discipleship/jdc.jpg');
-}
-
-#jen{
+#discipleship-jen{
   background-image: asset-url('discipleship/jen.jpg');
+  background-position: center 20%;
 }
 
-#elaine{
+#discipleship-elaine{
   background-image: asset-url('discipleship/elaine.jpg');
+  background-position: center 15%;
+  background-repeat: no-repeat;
 }
 
-#spiritual-gen{
-  background-image: asset-url('discipleship/spiritual_generations.jpg');
+#discipleship-elaine-top{
+  background-image: asset-url('discipleship/elaine_top.jpg')
+}
+
+#discipleship-spiritual-gen{
+  background-image: asset-url('discipleship/4gen-banner.jpg');
 }
 
 // WHEC
-#albert_jeremy_worship{
+#whec-albert_jeremy_worship{
   background-image: asset-url('whec/albert_jeremy_worship.jpg');
 }
 
-#elaine_worship.jpg{
+#whec-elaine_worship.jpg{
   background-image: asset-url('whec/elaine_worship.jpg');
 }
 
-#worship2{
+#whec-worship{
   background-image: asset-url('whec/worship2.jpg');
 }
 
-#baptism_prayer{
+#whec-baptism_prayer{
   background-image: asset-url('whec/baptism_prayer.jpg');
 }
 
-#baptism_UCLA{
+#whec-baptism_UCLA{
   background-image: asset-url('whec/baptism_UCLA.jpg');
 }
 
-#baptism_UCLAguys{
+#whec-baptism_UCLAguys{
   background-image: asset-url('whec/baptism_UCLAguys.jpg');
 }
 
-#baptism_UCLAgirls{
+#whec-baptism_UCLAgirls{
   background-image: asset-url('whec/baptism_UCLAgirls.jpg');
 }
 
-#baptism_USC{
+#whec-baptism_USC{
   background-image:asset-url('whec/baptism_USC.jpg');
 }
 
 
-#cross 
+#whec-cross 
 {
   background-image:asset-url('whec/cross1.jpg');
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 100%;
   background-position: center center; 
 }
 
