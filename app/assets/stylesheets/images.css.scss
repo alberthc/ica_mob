@@ -3,9 +3,21 @@
 // CAMPUS
 
 #UCLA-main {
-  background-image: asset-url('ucla_campus.jpg');
+  background-image: asset-url('UCLA-Royce.jpg');
 }
 #UCLA-group {
+  background-image: asset-url('ucla_group.jpg');
+  
+  .img-bg1 {
+    background-position: center !important;
+    background-size: cover !important;
+  }
+}
+
+#USC-main {
+  background-image: asset-url('usc-campus.jpg');
+}
+#USC-group {
   background-image: asset-url('ucla_group.jpg');
   
   .img-bg1 {
