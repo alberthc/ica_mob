@@ -1415,6 +1415,7 @@ $topbar-link-padding: $topbar-height / 3;
 
   .main-photo {
     height: 300px;
+    position: relative;
   }
 
   .fixed-photo {
@@ -1425,14 +1426,13 @@ $topbar-link-padding: $topbar-height / 3;
     height: 200px;
   }
 
-
   .img-overlay {
-    width: 200px;
+    min-width: 200px;
+    width: 40%; //200px;
     height: auto;
-    display: block;
-    margin: 0 auto;
-    position: relative;
-    top: 60px; right: 0; bottom: 100px; left: 0;
+    margin: auto; 
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
   }
 
   .temp2-main-bg {
@@ -1514,6 +1514,7 @@ $topbar-link-padding: $topbar-height / 3;
 
   .main-photo {
     height: 400px;
+    position: relative;
   }
 
   .fixed-photo {
@@ -1525,13 +1526,14 @@ $topbar-link-padding: $topbar-height / 3;
     height: 300px;
     background-attachment: fixed;
   }
+
   .img-overlay {
-    width: 300px;
+    min-width: 300px;
+    width: 40%; //300px;
     height: auto;
-    display: block;
-    margin: 0 auto;
-    position: relative;
-    top: 70px; right: 0; bottom: 0; left: 0;
+    margin: auto; 
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
   }
 
   .temp2-main-bg {
@@ -1618,6 +1620,7 @@ $topbar-link-padding: $topbar-height / 3;
 
   .main-photo {
     height: 500px;
+    position: relative;
   }
 
   .fixed-photo {
@@ -1631,12 +1634,12 @@ $topbar-link-padding: $topbar-height / 3;
   }
 
   .img-overlay {
-    width: 400px;
+    max-width: 400px;
+    width: 40%; //400px;
     height: auto;
-    display: block;
-    margin: 0 auto;
-    position: relative;
-    top: 90px; right: 0; bottom: 0; left: 0;
+    margin: auto;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
   }
 
   .temp2-main-bg {
