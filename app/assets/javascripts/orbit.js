@@ -1,4 +1,4 @@
-/*
+
 $(function(){ 
 $(document).foundation({
   orbit: {
@@ -39,4 +39,3 @@ $(document).foundation({
 });
 
 }
-*/

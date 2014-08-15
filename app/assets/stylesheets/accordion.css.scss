@@ -1,3 +1,14 @@
+.accordion .content {
+  display: none;
+  background-color: #d2dce7;
+  padding: 0.9375em; 
+}
+
+.accordion .content.active {
+  background-color: #d2dce7;
+  display: block;
+  }
+
 .DownTri {
   width: 0; 
   height: 0; 

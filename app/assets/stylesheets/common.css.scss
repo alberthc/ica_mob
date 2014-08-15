@@ -37,15 +37,25 @@
 
 /* IMAGES & BACKGROUND */
 
-.bg-circular {
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  background-size: auto 100% !important;
-}
+
 
 .bg-gold {
   background-color: $gold1;
 }
+
+.bg-red {
+  background-color: $red;
+}
+
+
+.bg-circular {
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: auto 100% !important;
+
+}
+
+
 
 .bg-header-opaque {
   background-color: rgba($ica-primary-color, .2);
