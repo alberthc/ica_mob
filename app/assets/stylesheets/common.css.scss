@@ -37,7 +37,13 @@
 
 /* IMAGES & BACKGROUND */
 
+.bg-footer-1 {
+  background-color: $blue3;
+}
 
+.bg-footer-2 {
+    background-color: $grey8;
+}
 
 .bg-gold {
   background-color: $gold1;
@@ -47,15 +53,12 @@
   background-color: $red;
 }
 
-
 .bg-circular {
   background-position: center center !important;
   background-repeat: no-repeat !important;
   background-size: auto 100% !important;
 
 }
-
-
 
 .bg-header-opaque {
   background-color: rgba($ica-primary-color, .2);
