@@ -1,5 +1,4 @@
-
-$(function(){ 
+/*
 $(document).foundation({
   orbit: {
       animation: 'slide', // Sets the type of animation used for transitioning between slides, can also be 'fade'
@@ -37,5 +36,4 @@ $(document).foundation({
       after_slide_change: noop // Execute a function after the slide changes
   }
 });
-
-}
+*/
