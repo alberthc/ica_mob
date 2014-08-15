@@ -3,48 +3,45 @@
 // CAMPUS
 
 #UCLA-main {
-  background-image: asset-url('UCLA-main.jpg');
+  background-image: asset-url('ucla_campus.jpg');
 }
 #UCLA-group {
   background-image: asset-url('ucla_group.jpg');
-  
-  .img-bg1 {
-    background-position: center !important;
-    background-size: cover !important;
-  }
-}
-
-
-#USC-main {
-  background-image: asset-url('USC-main.jpg');
-}
-#USC-group {
-  background-image: asset-url('usc-group.jpg');
-  
-  .img-bg1 {
-    background-position: center !important;
-    background-size: cover !important;
-  }
-}
-
-#UCI-main {
-  background-image: asset-url('UCI-main.jpg');
-}
-#UCI-group {
-  background-image: asset-url('uci-group.jpg');
-  
-  .img-bg1 {
-    background-position: center !important;
-    background-size: cover !important;
-  }
 }
 
 // CONTACT
 
-#contact {
-  background: asset-url('contact_us.JPG') no-repeat;
-
+#contact{
+  background-image: asset-url('contact/contact_us.JPG');
+  }
+  
+#name{
+  background-image: asset-url('contact/user.png') !important;
+  background-size: 24px 24px !important;
+  background-position: 11px 8px !important;
+  background-repeat: no-repeat !important;
 }
+
+#email{
+  background-image: asset-url('contact/mail.png') !important;
+  background-size: 24px 24px  !important;
+  background-position: 11px 8px !important;
+  background-repeat: no-repeat !important;
+}
+
+#comment{
+  background-image: asset-url('contact/edit.png') !important;
+  background-size: 24px 24px !important;
+  background-position: 11px 8px !important;
+  background-repeat: no-repeat !important;
+}
+
+#school{
+  background-image: asset-url('contact/home.png') !important;
+  background-size: 24px 24px  !important;
+  background-position: 11px 9px !important;
+}
+
 
 // HOMEPAGE
 
@@ -52,9 +49,9 @@
   background-image: asset-url('home/home-landscape.jpg');
 }
 
-#home-2 {
-  background-image: asset-url('wc/wc-group-photo.jpg');
-}
+//#home-2 {
+//  background-image: asset-url('programs/programs-wc-group.jpg');
+//}
 
 #cal-statue {
   background: asset-url('ucb_statue.jpg');
@@ -86,7 +83,7 @@
 }
 
 #programs-main-sml {
-  background-image: asset-url('wc/wc-group-photo.jpg');
+  background-image: asset-url('programs/programs-wc-group.jpg');
   background-position: center bottom !important;
 }
 
@@ -122,77 +119,73 @@
 
 
 // Discipleship
-#discipleship-david-alan {
+#david-alan {
   background-image:asset-url('discipleship/david_alan.jpg');
 }
 
-#discipleship-bern-sarah {
+#bern-sarah {
   background-image: asset-url('discipleship/bern_sarah.jpg');
 }
 
-#discipleship-david{
-  background-image: asset-url('discipleship/david.jpg');
-  background-position: 32% 28%;
+#david{
+  background-image: asset-url('discipleship/david.jpg') center;
 }
 
-#discipleship-jen{
+#jdc{
+  background-image: asset-url('discipleship/jdc.jpg');
+}
+
+#jen{
   background-image: asset-url('discipleship/jen.jpg');
-  background-position: center 20%;
 }
 
-#discipleship-elaine{
+#elaine{
   background-image: asset-url('discipleship/elaine.jpg');
-  background-position: center 15%;
-  background-repeat: no-repeat;
 }
 
-#discipleship-elaine-top{
-  background-image: asset-url('discipleship/elaine_top.jpg')
-}
-
-#discipleship-spiritual-gen{
-  background-image: asset-url('discipleship/4gen-banner.jpg');
+#spiritual-gen{
+  background-image: asset-url('discipleship/spiritual_generations.jpg');
 }
 
 // WHEC
-#whec-albert_jeremy_worship{
+#albert_jeremy_worship{
   background-image: asset-url('whec/albert_jeremy_worship.jpg');
 }
 
-#whec-elaine_worship.jpg{
+#elaine_worship.jpg{
   background-image: asset-url('whec/elaine_worship.jpg');
 }
 
-#whec-worship{
+#worship2{
   background-image: asset-url('whec/worship2.jpg');
 }
 
-#whec-baptism_prayer{
+#baptism_prayer{
   background-image: asset-url('whec/baptism_prayer.jpg');
 }
 
-#whec-baptism_UCLA{
+#baptism_UCLA{
   background-image: asset-url('whec/baptism_UCLA.jpg');
 }
 
-#whec-baptism_UCLAguys{
+#baptism_UCLAguys{
   background-image: asset-url('whec/baptism_UCLAguys.jpg');
 }
 
-#whec-baptism_UCLAgirls{
+#baptism_UCLAgirls{
   background-image: asset-url('whec/baptism_UCLAgirls.jpg');
 }
 
-#whec-baptism_USC{
+#baptism_USC{
   background-image:asset-url('whec/baptism_USC.jpg');
 }
 
 
-#whec-cross 
+#cross 
 {
   background-image:asset-url('whec/cross1.jpg');
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
   background-position: center center; 
 }
 

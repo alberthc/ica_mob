@@ -68,42 +68,6 @@ textarea#comment {
 }
 
 
-
-  #name{
-  background-image: asset-url('user.png') !important;
-
- //background-image: url(http://rexkirby.com/kirbyandson/images/name.svg) !important;
-  background-size: 24px 24px !important;
-  background-position: 11px 8px !important;
-  background-repeat: no-repeat !important;
-}
-
-#email{
-  background-image: asset-url('mail.png') !important;
-
- //background-image: url(http://rexkirby.com/kirbyandson/images/email.svg) !important;
-  background-size: 24px 24px  !important;
-  background-position: 11px 8px !important;
-  background-repeat: no-repeat !important;
-}
-
-#comment{
-  background-image: asset-url('edit.png') !important;
-//  background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg) !important;
-  background-size: 24px 24px !important;
-  background-position: 11px 8px !important;
-  background-repeat: no-repeat !important;
-}
-
-#school{
-  background-image: asset-url('home.png') !important;
-// background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg) !important;
-  background-size: 24px 24px  !important;
-  background-position: 11px 9px !important;
- // background-repeat: no-repeat !important;
-}
-
-
 .roundbox2
 {
   -moz-border-radius:10px; 
