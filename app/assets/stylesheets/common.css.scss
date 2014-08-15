@@ -37,15 +37,25 @@
 
 /* IMAGES & BACKGROUND */
 
-.bg-circular {
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  background-size: auto 100% !important;
-}
+
 
 .bg-gold {
   background-color: $gold1;
 }
+
+.bg-red {
+  background-color: $red;
+}
+
+
+.bg-circular {
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: auto 100% !important;
+
+}
+
+
 
 .bg-header-opaque {
   background-color: rgba($ica-primary-color, .2);
@@ -110,7 +120,7 @@
 .rectangular {
   width: 300px;
   height: 400px;
-  hspacing: 15px;
+  hspacing: 10px;
   transition: opacity .5s;
   -webkit-transition: opacity .5s; /* For Safari 3.1 to 6.0 */
 }
