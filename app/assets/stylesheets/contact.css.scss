@@ -70,7 +70,7 @@ textarea#comment {
 
 
   #name{
-  background-image: asset-url('user.png') !important;
+  background-image: asset-url('contact/user.png') !important;
 
  //background-image: url(http://rexkirby.com/kirbyandson/images/name.svg) !important;
   background-size: 24px 24px !important;
@@ -79,7 +79,7 @@ textarea#comment {
 }
 
 #email{
-  background-image: asset-url('mail.png') !important;
+  background-image: asset-url('contact/mail.png') !important;
 
  //background-image: url(http://rexkirby.com/kirbyandson/images/email.svg) !important;
   background-size: 24px 24px  !important;
@@ -88,7 +88,7 @@ textarea#comment {
 }
 
 #comment{
-  background-image: asset-url('edit.png') !important;
+  background-image: asset-url('contact/edit.png') !important;
 //  background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg) !important;
   background-size: 24px 24px !important;
   background-position: 11px 8px !important;
@@ -96,7 +96,7 @@ textarea#comment {
 }
 
 #school{
-  background-image: asset-url('home.png') !important;
+  background-image: asset-url('contact/home.png') !important;
 // background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg) !important;
   background-size: 24px 24px  !important;
   background-position: 11px 9px !important;

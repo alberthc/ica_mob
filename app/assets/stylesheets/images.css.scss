@@ -7,12 +7,8 @@
 }
 #UCLA-group {
   background-image: asset-url('ucla_group.jpg');
-  
-  .img-bg1 {
-    background-position: center !important;
-    background-size: cover !important;
   }
-}
+
 
 
 #USC-main {
@@ -20,31 +16,52 @@
 }
 #USC-group {
   background-image: asset-url('usc-group.jpg');
-  
-  .img-bg1 {
-    background-position: center !important;
-    background-size: cover !important;
   }
-}
+  
+
 
 #UCI-main {
   background-image: asset-url('UCI-main.jpg');
 }
 #UCI-group {
   background-image: asset-url('uci-group.jpg');
-  
-  .img-bg1 {
-    background-position: center !important;
-    background-size: cover !important;
   }
-}
 
 // CONTACT
 
 #contact {
-  background: asset-url('contact_us.JPG') no-repeat;
+  background: asset-url('contact/contact_us.JPG');
+  }
 
+
+#name{
+  background-image: asset-url('contact/user.png') !important;
+  background-size: 24px 24px !important;
+  background-position: 11px 8px !important;
+  background-repeat: no-repeat !important;
 }
+
+#email{
+  background-image: asset-url('contact/mail.png') !important;
+  background-size: 24px 24px  !important;
+  background-position: 11px 8px !important;
+  background-repeat: no-repeat !important;
+}
+
+#comment{
+  background-image: asset-url('contact/edit.png') !important;
+  background-size: 24px 24px !important;
+  background-position: 11px 8px !important;
+  background-repeat: no-repeat !important;
+}
+
+#school{
+  background-image: asset-url('contact/home.png') !important;
+
+  background-size: 24px 24px  !important;
+  background-position: 11px 9px !important;
+}
+
 
 // HOMEPAGE
 
@@ -122,6 +139,7 @@
 
 
 // Discipleship
+
 #discipleship-david-alan {
   background-image:asset-url('discipleship/david_alan.jpg');
 }
