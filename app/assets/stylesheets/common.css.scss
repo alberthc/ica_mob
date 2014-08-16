@@ -141,6 +141,29 @@
 
 /* MISC. */
 
+/* NAVBAR & FOOTER */
+
+footer {
+  a {
+    color: $grey2;
+    font-family: Georgia, serif;
+  }
+
+  a:hover {
+    color: $grey5;
+  }
+
+  h6 {
+    color: $grey2;
+    margin: 0;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+}
+
 .separation-1 {
   height: 25px;
 }

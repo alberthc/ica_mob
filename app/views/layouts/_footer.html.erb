@@ -12,21 +12,41 @@
       </section>
     </div>
   </div>
-  <div class="row bg-footer-2" data-equalizer>
+  <div class="row bg-footer-2 block-spacing-top" data-equalizer>
     <div class="medium-3 columns" data-equalizer-watch>
       <ul>
-        <li><h6>ABOUT</h6></li>
-        <li><p>Vision/Mission</p></li>
-        <li><p>One-to-One Discipleship</p></li>
-        <li><p>Church Leadership</p></li>
-        <li><p>Church</p></li>
+        <li><%= image_tag "footer/cross2.png" %></li>
+        <li class="header"><h6>ABOUT</h6></li>
+        <li><%= link_to "Vision/Mission", about_path %></li>
+        <li><%= link_to "One-to-One Discipleship", discipleship_path %></li>
+        <li><%= link_to "Church Leadership", church_leadership_path %></li>
+        <li><%= link_to "Church", whec_path %></li>
       </ul>
     </div>
     <div class="medium-3 columns" data-equalizer-watch>
+      <ul>
+        <li><%= image_tag "footer/church.png" %></li>
+        <li class="header"><h6>MINISTRIES</h6></li>
+        <li><%= link_to "Cal", "" %></li>
+        <li><%= link_to "UCI", uci_path %></li>
+        <li><%= link_to "UCLA", ucla_path %></li>
+        <li><%= link_to "USC", usc_path %></li>
+      </ul>
     </div>
     <div class="medium-3 columns" data-equalizer-watch>
+      <ul>
+        <li><%= image_tag "footer/alpha-fish.png" %></li>
+        <li class="header"><h6>PROGRAMS</h6></li>
+        <li><%= link_to "Special Events/Programs", special_events_path %></li>
+        <li><%= link_to "Summer Training Program", stp_path %></li>
+      </ul>
     </div>
     <div class="medium-3 columns" data-equalizer-watch>
+      <ul>
+        <li><%= image_tag "footer/envelope.png" %></li>
+        <li class="header"><h6>CONTACT US</h6></li>
+        <li><%= link_to "Contact Us", contact_path %></li>
+      </ul>
     </div>
   </div>
 </footer>
