@@ -12,7 +12,7 @@
       </section>
     </div>
   </div>
-  <div class="row bg-footer-2 block-spacing-top" data-equalizer>
+  <div class="row bg-footer-2 block-spacing-sml" data-equalizer>
     <div class="medium-3 columns" data-equalizer-watch>
       <ul>
         <li><%= image_tag "footer/cross2.png" %></li>
@@ -27,10 +27,10 @@
       <ul>
         <li><%= image_tag "footer/church.png" %></li>
         <li class="header"><h6>MINISTRIES</h6></li>
-        <li><%= link_to "Cal", "" %></li>
-        <li><%= link_to "UCI", uci_path %></li>
-        <li><%= link_to "UCLA", ucla_path %></li>
         <li><%= link_to "USC", usc_path %></li>
+        <li><%= link_to "UCLA", ucla_path %></li>
+        <li><%= link_to "UCI", uci_path %></li>
+        <li><%= link_to "Cal", "" %></li>
       </ul>
     </div>
     <div class="medium-3 columns" data-equalizer-watch>
@@ -46,6 +46,19 @@
         <li><%= image_tag "footer/envelope.png" %></li>
         <li class="header"><h6>CONTACT US</h6></li>
         <li><%= link_to "Contact Us", contact_path %></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<footer class="show-for-small-only">
+  <div class="row text-center bg-footer-2 block-spacing-sml">
+    <div class="small-12 columns">
+      <ul>
+        <li><%= image_tag "footer/cross2.png" %></li>
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "Contact Us", contact_path %></li>
+        <li><%= image_tag "footer/mobile-up-arrow.png", size: "32x32", style: "padding-top: 10px;", class: "mobile-scroll-top" %></li>
       </ul>
     </div>
   </div>

@@ -48,3 +48,10 @@ $('.open-clearing').on('click', function(e) {
   //$('[data-clearing] li img').eq($(this).data('thumb-index')).trigger('click');
   $(selector).eq($(this).data('thumb-index')).trigger('click');
 });
+
+  /* MOBILE UP ARROW */
+
+$(document).on('click', '.mobile-scroll-top', function() {
+  $('html, body').animate({
+    scrollTop: 0}, 300);
+});

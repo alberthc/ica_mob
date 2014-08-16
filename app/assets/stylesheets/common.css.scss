@@ -37,14 +37,6 @@
 
 /* IMAGES & BACKGROUND */
 
-.bg-footer-1 {
-  background-color: $blue3;
-}
-
-.bg-footer-2 {
-    background-color: $grey8;
-}
-
 .bg-gold {
   background-color: $gold1;
 }
@@ -158,10 +150,21 @@ footer {
     margin: 0;
   }
 
+  img {
+    padding-bottom: 10px;
+  }
+
   ul {
     list-style-type: none;
   }
 
+  .bg-footer-1 {
+      background-color: $blue3;
+  }
+
+  .bg-footer-2 {
+        background-color: $grey8;
+  }
 }
 
 .separation-1 {
