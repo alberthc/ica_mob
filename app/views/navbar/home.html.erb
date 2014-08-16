@@ -9,7 +9,7 @@
 </div>
 
 <div class="row text-center">
-  <section class="no-photo">
+  <div class="small-12 columns">
     <section class="separation-1"></section>
     <h2><strong>To Worship God and to</strong><br>
       <strong>Make Christ's Love Known</strong></h2>
@@ -19,18 +19,22 @@
     <section class="separation-1"></section>
     <%= link_to "Learn More", about_path, class: "responsive-button" %>
     <section class="separation-2"></section>
-  </section>
+  </div>
 </div>
 
-<div class="row">
-  <section class="fixed-photo bg-img fast-height-trans" id="home-2">
-  </section>
+<div class="row collapse">
+  <div class="small-12 columns">
+    <section class="fixed-photo bg-img fast-height-trans" id="home-2">
+    </section>
+  </div>
 </div>
 
 <section class="row separation-2"></section>
 
 <div class="row text-center">
-  <h2><strong>Our Campus Ministries</strong></h2>
+  <div class="small-12 columns">
+    <h2><strong>Our Campus Ministries</strong></h2>
+  </div>
 </div>
 
 <section class="row separation-2"></section>
@@ -60,10 +64,8 @@
       <h3><strong>CAL</strong></h3>
     </figure>
   </div>
-  <div class="row text-center">
-    <div class="small-12 columns">
-      <%= link_to "Get Connected", contact_path, class: "responsive-button" %>
-    </div>
+  <div class="small-12 columns text-center">
+    <%= link_to "Get Connected", contact_path, class: "responsive-button" %>
   </div>
 </div>
 
