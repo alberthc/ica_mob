@@ -1370,10 +1370,8 @@ $topbar-link-padding: $topbar-height / 3;
     //background-color: transparent;
     border-color: $ica-primary-color !important;
   }
-
- 
-  
 }
+
 @media #{$small-only} {
   .responsive-button {
     @include button(
@@ -1388,6 +1386,12 @@ $topbar-link-padding: $topbar-height / 3;
   
   .responsive-button.set-width {
   	width: 200px;
+  }
+
+  footer {
+    .bg-footer-2 {
+      background-color: $grey8;
+    }
   }
 
   html {
@@ -1488,6 +1492,14 @@ $topbar-link-padding: $topbar-height / 3;
 
   .responsive-button.set-width {
   	width: 200px;
+  }
+
+  footer {
+    .bg-footer-2 {
+      background-color: $grey8;
+      padding-left: 50px !important;
+      padding-right: 50px !important;
+    }
   }
 
   html {
@@ -1594,6 +1606,14 @@ $topbar-link-padding: $topbar-height / 3;
 
   .responsive-button.set-width {
   	width: 240px;
+  }
+
+  footer {
+    .bg-footer-2 {
+      background-color: $grey8;
+      padding-left: 100px !important;
+      padding-right: 50px !important;
+    }
   }
 
   html {
