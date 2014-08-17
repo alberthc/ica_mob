@@ -29,12 +29,12 @@ $('.tab-title').click(function () {
   }, 300, 'swing');
 
   // Handle scrolling user to content after content is displayed
-  setTimeout(function() {
+  /*setTimeout(function() {
     var content = $(newActiveTab).attr('href');
     $('html, body').animate({
       scrollTop: $(content).offset().top
     }, 300);
-  }, 10);
+  }, 10);*/
 });
 
 //Handle browser resizing

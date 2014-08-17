@@ -1,62 +1,22 @@
-@import "utilities/global";
-
-@font-face {
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: 400;
-	src: local('Montserrat-Regular'), url(http://themes.googleusercontent.com/static/fonts/montserrat/v4/zhcz-_WihjSQC0oHJ9TCYBsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
-}
-
-/* element display conversions */
-
-.inline-block {
-	display: inline-block;
-}
-
-// text
-.leadername {
-	text-align: left;
-	font-family: Georgia;
-	font-size: 24pt;
-	color: #103459;
-}
-
-.leadertitle {
-	text-align: left;
-	font-family: Georgia;
-	font-size: 18pt;
-	color: #626C76;
-}
-
-.leaderbio {
-	text-align: left;
-	text-indent: 20px;
-	font-family: Georgia;
-	font-size: 12pt;
-	color: #4A5159;
-}
-
 // images 
 
-.rectangular {
-	width: 400px;
-	height: 400px;
-	transition: opacity .5s;
-	-webkit-transition: opacity .5s;
-}
-
-.rectangular:hover {
-	opacity: 0.7;
-}
-
 #pastormin {
-	background: asset-url('pmin.jpg') no-repeat;
+	background-image: asset-url('pmin.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: auto 100%;
+}
+
+#pastorgreer{
+	background-image: asset-url('jgreer.jpg');
+	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: auto 100%;
 }
 
 #mikewong {
-	background: asset-url('mgw.jpg') no-repeat;
+	background-image: asset-url('mgw.jpg');
+	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: auto 100%;
 }

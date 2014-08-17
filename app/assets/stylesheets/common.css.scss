@@ -37,8 +37,6 @@
 
 /* IMAGES & BACKGROUND */
 
-
-
 .bg-gold {
   background-color: $gold1;
 }
@@ -47,15 +45,12 @@
   background-color: $red;
 }
 
-
 .bg-circular {
   background-position: center center !important;
   background-repeat: no-repeat !important;
   background-size: auto 100% !important;
 
 }
-
-
 
 .bg-header-opaque {
   background-color: rgba($ica-primary-color, .2);
@@ -120,7 +115,7 @@
 .rectangular {
   width: 300px;
   height: 400px;
-  hspacing: 15px;
+  hspacing: 10px;
   transition: opacity .5s;
   -webkit-transition: opacity .5s; /* For Safari 3.1 to 6.0 */
 }
@@ -137,6 +132,36 @@
 /* BACKGROUND IMAGES */
 
 /* MISC. */
+
+/* NAVBAR & FOOTER */
+
+footer {
+  a {
+    color: $grey2;
+    font-family: Georgia, serif;
+  }
+
+  a:hover {
+    color: $grey5;
+  }
+
+  h6 {
+    color: $grey2;
+    margin: 0;
+  }
+
+  img {
+    padding-bottom: 10px;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  .bg-footer-1 {
+    background-color: $blue3;
+  }
+}
 
 .separation-1 {
   height: 25px;
