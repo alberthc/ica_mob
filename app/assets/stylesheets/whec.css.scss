@@ -1,10 +1,16 @@
 
 @import "foundation/components/buttons";
+.cross_size
+{
+  height: 500px;
+  width:425px;
+}
+
 /*Fade Stuff*/
 
 #cf {
   position:relative;
-  height:325px;
+  height:515px;
   width:98%;
   margin:0 auto;
 }
@@ -27,11 +33,11 @@
 
 .verse
 {
-	padding-right: 25px;
+	padding-right: 50px;
 	font-family: arial;
 	font-weight: bold;
 	font-style: italic;
-	font-size: 20pt;
+	font-size: 24pt;
 	color: #495159;
 }
 
@@ -55,16 +61,17 @@ p.psalms
 	color: #373D43;
 }
 
-p.foundational
-{
-  font-family: montserrat;
-  font-size: 16pt;
-}
 
 h2.foundational
 {
   font-family: montserrat;
   font-size: 18pt;
+}
+
+h3.foundational
+{
+  font-family: montserrat;
+  font-size: 16pt;
 }
 
 /*Buttons*/
@@ -77,8 +84,8 @@ h2.foundational
 
 .square{
 	width:100%;
-	height:305px;
-	padding-top: 10%;
+	height:495px;
+	padding-top: 15%;
 	padding-bottom: 10%;
 	padding-left: 10%;
 	padding-right: 10%;
