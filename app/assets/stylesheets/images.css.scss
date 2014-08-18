@@ -106,17 +106,26 @@
   background-image: asset-url('discipleship/bern_sarah.jpg');
 }
 
-#discipleship-david{
+#discipleship-david,
+#discipleship-david-1{
   background-image: asset-url('discipleship/david.jpg');
   background-position: 32% 28%;
 }
 
-#discipleship-jen{
+#discipleship-david_placeholder,
+#discipleship-david_placeholder-1{
+  background-image: asset-url('discipleship/david.jpg');
+  background-position: 32% 28%;
+}
+
+#discipleship-jen,
+#discipleship-jen-1{
   background-image: asset-url('discipleship/jen.jpg');
   background-position: center 20%;
 }
 
-#discipleship-elaine{
+#discipleship-elaine,
+#discipleship-elaine-1{
   background-image: asset-url('discipleship/elaine.jpg');
   background-position: center 15%;
   background-repeat: no-repeat;
@@ -140,7 +149,11 @@
 }
 
 #whec-worship{
-  background-image: asset-url('whec/worship2.jpg');
+  background-image: asset-url('whec/praise-night2.jpg');
+}
+
+#whec-worship-jack{
+  background-image: asset-url('whec/praise-night-jack.jpg');
 }
 
 #whec-baptism_prayer{
@@ -164,9 +177,9 @@
 }
 
 
-#whec-cross 
+#whec-cross
 {
-  background-image:asset-url('whec/cross1.jpg');
+  background-image:asset-url('whec/cross.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center center; 
