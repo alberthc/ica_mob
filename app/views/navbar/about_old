@@ -1,18 +1,60 @@
 <div class="row">
-  <div class="small-12 small-centered small-centered columns text-center">
-    <section class="row separation-2"></section>
-    <h2><em>Our Mission:</em></h2>
-    <h2><em>to worship God and to make Christ's love known!</em></h2> 
+  <div class="hide-for-small-only small-8 medium-12 large-8 small-centered large-centered medium-centered columns text-center">
+    <section class="row separation-3"></section>
+    <h1><em>To worship God and to make Christ's love known!</em>
+    </h1> 
 </div>
 
 </div>
 
 <section class="row separation-1"></section>
+
+<div class="row">
+  <div class= "visible-for-medium-up margin-1 medium-12 large-12 misstitle" >
+    <h2>Our Mission</h2>
+  </div>
+
+
+  <div class= "visible-for-small-only small-12 misstitle text-center">
+    <section class="row separation-1"></section>
+    <h2>Our Mission</h2>
+  </div>
+</div>
+
 <section class="row separation-0"></section>
 
 <div class="row">
-  <div class= "medium-11 small-12 medium-centered columns" >
-    <p>Our purpose here on Earth is to worship God and to make Christ’s love known. Our mission is to advance the gospel of Jesus and His Kingdom into all the nations, by establishing and equipping laborers and disciple-makers to be sent out to build up generations of disciples of Christ everywhere.</p>
+  <div class= "large-11 small-12 large-centered columns" >
+      <div class="misstateleft large-6 small-12 columns">
+        <p>
+          In Christ Alone Ministry is an non-denominational, non-profit organization whose purpose has simply been "to worship God and make Christ's love known." We love Jesus, we love each other, we love studying the Bible and praying together as a family of believers, and we love proclaiming our witness to the power and goodness of the Word and Jesus' name to others.
+        </p>    
+        <p>
+          Our mission is this: To advance the gospel of Jesus
+          and His Kingdom into the nations, mainly through equipping
+          spiritual generations of labourers living among those who do
+          not know Christ so they can be disciples and disciple-
+          makers anywhere. 
+        </p>
+      </div>
+  
+    <div class="misstateright large-6 small-12 columns">
+      <p>
+          We are compelled by the love we've experienced from
+        Jesus to go out and invite more people to share in our joy of
+        fellowship with Christ. Through discipleship and unity in faith,
+        we desire to make true followers after Jesus who would demonstrate Christ's character and devotion and bring glory and
+        worship to God.
+      </p>
+      <p>
+          As we learn to be faithful followers of Jesus in our daily
+        lives, we want to pass on the knowledge and wisdom of what
+        we've learned to younger generations, to also see them
+        become spiritual leaders and genuine disciples and continue
+        passing on the knowledge of Christ wherever they go. We want
+        to make Christ's love known to all the nations.   
+      </p>
+    </div>
   </div>
 </div>
 
