@@ -22,5 +22,4 @@ class NavbarController < ApplicationController
 
   def whec
   end
-  
 end

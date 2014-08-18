@@ -1,47 +1,37 @@
-/*Flip Stuff */
 
-#f1_container {
-  position: relative;
-  margin: 10px auto;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
+@import "foundation/components/buttons";
+/*Fade Stuff*/
+
+#cf {
+  position:relative;
+  height:325px;
+  width:98%;
+  margin:0 auto;
 }
-#f1_container {
-  perspective: 1000;
+
+#cf div {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
-#f1_card {
-  width: 100%;
-  height: 350px;
-  transform-style: preserve-3d;
-  transition: all 1.0s linear;
+
+#cf div.top:hover {
+  opacity:0;
 }
-#f1_container:hover #f1_card {
-  transform: rotateY(180deg);
-}
-.face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-.face.back {
-  display: block;
-  transform: rotateY(180deg);
-  box-sizing: border-box;
-  padding: 10px;
-  color: white;
-  text-align: center;
-}
+
 
 /*Typography */
 
 .verse
 {
+	padding-right: 25px;
 	font-family: arial;
 	font-weight: bold;
 	font-style: italic;
-	font-size: 24pt;
+	font-size: 20pt;
 	color: #495159;
 }
 
@@ -65,50 +55,32 @@ p.psalms
 	color: #373D43;
 }
 
-/*Background images*/
-.cross
+p.foundational
 {
-	background-image:asset-url('whec/cross1.jpg');
+  font-family: montserrat;
+  font-size: 16pt;
+}
+
+h2.foundational
+{
+  font-family: montserrat;
+  font-size: 18pt;
 }
 
 /*Buttons*/
 
-.whec_buttons {
-	background-color:#445D76;
-	-webkit-border-top-left-radius:10px;
-	-moz-border-radius-topleft:10px;
-	-webkit-border-top-right-radius:10px;
-	-moz-border-radius-topright:10px;
-	-webkit-border-bottom-right-radius:10px;
-	-moz-border-radius-bottomright:10px;
-	-webkit-border-bottom-left-radius:10px;
-	-moz-border-radius-bottomleft:10px;
-	text-indent:0;
-	display:inline-block;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:12px;
-	font-weight:bold;
-	font-style:normal;
-	height:40px;
-	width:100%;
-	text-decoration:none;
-	text-align:center;
-}.whec_buttons:hover {
-	opacity: .7;
-}.whec_buttons:active {
-	position:relative;
-	top:1px;
+.whec_button{
+	@include button($button-med, #445D76, 40px, false, false, false);
 }
 
 /* Square */
 
 .square{
 	width:100%;
-	height:100%;
-	padding-top: 15%;
-	padding-bottom: 15%;
-	padding-left: 15%;
-	padding-right: 15%;
+	height:305px;
+	padding-top: 10%;
+	padding-bottom: 10%;
+	padding-left: 10%;
+	padding-right: 10%;
 }
 

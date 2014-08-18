@@ -1,36 +1,47 @@
 <% provide(:title, 'WHEC') %>
 <section class = "separation-1"> </section>
-<h1 class = "text-center"> <strong> White Harvest Evangelical Church </strong> </h1>
+<h1 class = "text-center"> White Harvest Evangelical Church</h1>
 		<section class = "separation-1"></section>
 		<div class = "row" >
-  		<div class = "medium-9 medium-centered columns" >
+  		<div class = "medium-10 medium-centered columns" >
 				<div class = "row" data equalizer>
-					<div class = "medium-5 columns" data-equalizer-watch>
-						<section class = "separation-3"></section>
-						<p class = "verse text-right">
-							“Do you not say, ‘There are yet four months more, and then comes the harvest?’ Behold, I say to you, lift up your eyes and look on the fields, they are <white_harvest> white for harvest.” </white_harvest> <br> <br>
+					<div class = "medium-5 columns">
+						<div class = "row">	
+							<section class = "separation-1"></section>
+							<p class = "verse text-right">
+								“Do you not say, ‘There are yet four months more, and then comes the harvest?’ Behold, I say to you, lift up your eyes and look on the fields, they are <white_harvest> white for harvest.” </white_harvest>
+							</p>
+							<section class = "separation-1"> </section>
+							<p class = "verse text-right">
 								- John 4:35 (NASB)
-						</p>
+							</p>
+						</div>
 					</div>
-					<div class = "medium-7 columns" id = "cross" data-equalizer-watch>
-						<section class = "main-photo" > </section>
+					<div class = "medium-7 columns" id = "whec-cross" >
+						<div class = "row">	
+							<section class = "main-photo" > </section>
+						</div>
 					</div>
 				</div>
 				<div class = "row" data-equalizer>
 					<div class = "medium-5 columns" style = "background-color:#E0E2E4;" data-equalizer-watch>
-						<p class = "invite text-center"> 
-							<br>
-							Come fellowship with us this Sunday morning! <br><br>
-							9:45 a.m. <br>
-							USC Campus, SGM 101 <br>
-						</p>
+						<div class = "row">	
+							<p class = "invite text-center"> 
+								<br>
+								Come fellowship with us this Sunday morning! <br><br>
+								9:45 a.m. <br>
+								USC Campus, SGM 101 <br>
+							</p>
+						</div>
 					</div>
 					<div class = "medium-7 columns" style = "background-color:#C9D2DB;" data-equalizer-watch>
-						<p class = "invite text-center"> 
-							<br>
-							UPCOMING EVENT <br>
-							INFO (ie. conferences, lunches) <br>
-						</p>
+						<div class = "row">
+							<p class = "invite text-center"> 
+								<br>
+								UPCOMING EVENT <br>
+								INFO (ie. conferences, lunches) <br>
+							</p>
+						</div>
 					</div>
 				</div>
 		</div>
@@ -39,16 +50,33 @@
 <div class = "medium-3 medium-centered columns">
 	<div class = "row">
 		<div class = "medium-6  columns">
-			<input type = "button" class = "whec_buttons" value = "Church Leaders"> </input>
+			<%= link_to "Church Leaders", "#", class: "responsive-button" %>
 		</div>
 		<div class = "medium-6 columns">
-			<input type = "button" class = "whec_buttons" value = "Faith Statement"> </input>
+			<%= link_to "Faith Statement", "#", class: "responsive-button" %>
 		</div>
 	</div>
 </div>
 <section class = "separation-2"></section>
 <h2 style = "text-indent: 50px;"> <strong>Praise and Prayer Night </strong></h2>
-<section class = "main-photo" id = "worship2"> </section>
+<div class = "row">
+	<div class = "medium-12 columns">
+		<div class = "row">
+			<div class = "medium-6 columns">
+				<div class = "row">
+					<section class = "main-photo bg-img-top " id = "whec-worship">
+					</section>
+				</div>
+			</div>
+			<div class = "medium-6 columns">
+				<div class = "row">
+					<section class = "main-photo bg-img-top fast-height-trans " id = "whec-worship">
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 <section class = "separation-1"></section>
 <div class = "row">	
 	<div class = "medium-11 medium-centered columns">
@@ -78,7 +106,7 @@
 						<br><br>
 						<div class = "row">
 							<div class = "medium-3 medium-centered columns">
-								<input type = "button" class = "whec_buttons" value = "Request a Ride"> </input>
+								<%= link_to "Request a Ride", "#", class: "responsive-button" %>
 							</div>
 							<section class = "separation-3"> </section>
 						</div>
@@ -90,26 +118,14 @@
 </div>
 <section class = "separation-3"> </section>
 <h2 style = "text-indent: 50px;"> Our Foundational Beliefs </h2>
-<section class = "separation-3"></section>
+<section class = "separation-1"></section>
 <div class = "row">
-	<div class = "medium-10 medium-centered columns">
+	<div class = "medium-8 medium-centered columns">
 		<div class = "row">
 			<div class = "medium-4 columns">
-				<div id="f1_container">
-				<div id="f1_card" class="shadow">
-				  <div class="front face">
-				    <div class="square">
-					    <h2 class = "text-center invite">
-					    	<strong>One God
-					    	existing in three
-					    	persons: Father, 
-					    	Son and Holy Spirit</strong>
-					    </h2>	
-				    </div>
-				  </div>
-				  <div class="back face center">
-					   <div class = "square">
-					    <p class = "invite text-center">
+				<div class = "row" id = "cf">
+						<div class="square" style= "background-color: #E8EEF3">
+					    <p class = "text-center foundational">
 						    We believe that there is
 								one God (Deuteronomy 
 								6:4), eternally existing in 
@@ -119,56 +135,74 @@
 								the heavens and the 
 								earth (Gen. 1:1).
 							</p>
-						</div>
-				  </div>
+					  </div>
+						<div class="top square" style= "background-color: #E8EEF3">
+				    	<section class = "separation-2"></section>
+					    <h2 class = "text-center foundational">
+					    	<strong>One God
+					    	existing in three
+					    	persons: Father, 
+					    	Son and Holy Spirit</strong>
+					    </h2>
+					   </div>
 				</div>
+			</div>			
+			<div class = "medium-4 columns">
+				<div class = "row" id = "cf">
+					<div class="square" style= "background-color: #D2DCE7">
+			    <p class = "text-center foundational">
+						We believe that Jesus
+				    Christ is the Lamb of 
+				    God who died for sins 
+				    once for all (1 Peter 3:18-
+				    19) and rose from death 
+				    in three days, according 
+				    to the Scriptures 
+				    (1 Cor. 15:3-4).
+					</p>
+			  </div>
+				<div class="top square" style= "background-color: #D2DCE7">
+		    	<section class = "separation-2"></section>
+			    <h2 class = "text-center foundational">
+		    	<strong>Life, death and 
+		    	resurrection of 
+		    	Jesus Christ, who 
+		    	is the Lamb of God</strong>
+			    </h2>
+			   </div>
+				</div>
+			</div>			
+			<div class = "medium-4 columns">
+				<div class = "row" id = "cf">
+					<div class="square" style= "background-color: #BBCBDB">
+			    <p class = "text-center foundational">
+				    We believe that there is
+						one God (Deuteronomy 
+						6:4), eternally existing in 
+						three persons—Father, 
+						Son, and Holy Spirit (2 
+						Cor. 13:14)—who created 
+						the heavens and the 
+						earth (Gen. 1:1).
+					</p>
+			  </div>
+				<div class="top square" style= "background-color: #BBCBDB">
+		    	<section class = "separation-2"></section>
+			    <h2 class = "text-center foundational">
+			    	<strong>One God
+			    	existing in three
+			    	persons: Father, 
+			    	Son and Holy Spirit</strong>
+			    </h2>
+			   </div>
 				</div>
 			</div>
+		</div>
+		<div class = "row">
 			<div class = "medium-4 columns">
-				<div id="f1_container">
-				<div id="f1_card" class="shadow">
-				  <div class="front face">
-				    <div class="square">
-				    	<h2 class = "text-center invite">
-				    	<strong>Life, death and 
-				    	resurrection of 
-				    	Jesus Christ, who 
-				    	is the Lamb of God</strong>
-				    	</h2>	
-				    </div>
-				  </div>
-				  <div class="back face center">
-				    <div class = "square">
-					    <p class = "invite text-center">
-						    We believe that Jesus
-						    Christ is the Lamb of 
-						    God who died for sins 
-						    once for all (1 Peter 3:18-
-						    19) and rose from death 
-						    in three days, according 
-						    to the Scriptures 
-						    (1 Cor. 15:3-4).
-							</p>
-						</div>
-				  </div>
-				</div>
-				</div>
-			</div>
-			<div class = "medium-4 columns">
-				<div id="f1_container">
-				<div id="f1_card" class="shadow">
-				  <div class="front face">
-				    <div class="square">
-					    <h2 class = "text-center invite">
-					    	<strong>Jesus saved us 
-								from sin and 
-								eternal death. </strong>
-							</h2>
-				    </div>
-				  </div>
-				  <div class="back face center">
-				    <div class = "square">
-					    <p class = "invite text-center">
+				<div class = "row" id = "cf">
+						<div class="square" style= "background-color: #A5BACF">
+					    <p class = "text-center foundational">
 						    We believe that Jesus
 						    Christ (as fully God and 
 						    fully man) is our Lord 
@@ -177,89 +211,73 @@
 						    from sin and eternal 
 						    death (Eph. 1:7).
 							</p>
-						</div>
-				  </div>
+					  </div>
+						<div class="top square" style= "background-color: #A5BACF">
+				    	<section class = "separation-2"></section>
+					    <h2 class = "text-center foundational">
+					    	<strong>Jesus saved us 
+								from sin and 
+								eternal death. </strong>
+					    </h2>
+					   </div>
 				</div>
+			</div>			
+			<div class = "medium-4 columns">
+				<div class = "row" id = "cf">
+					<div class="square" style= "background-color: #8EA8C3">
+			    <p class = "text-center foundational"style = "color:#FFFFFF">
+				    We believe that it is by 
+				    God's mercy and grace 
+				    that we have been saved 
+				    through faith (Titus 3:5), 
+				    and this salvation is a 
+				    completely free gift from 
+				    God (Eph. 2:8-9).
+					</p>
+			  </div>
+				<div class="top square" style= "background-color: #8EA8C3">
+		    	<section class = "separation-2"></section>
+			    <h2 class = "text-center foundational" style = "color:#FFFFFF">
+			    	<strong>Salvation is by 
+			    		God’s mercy and 
+			    		grace and is a 
+			    		completely free 
+			    		gift.</strong>
+			    </h2>
+			   </div>
+				</div>
+			</div>			<div class = "medium-4 columns">
+				<div class = "row" id = "cf">
+					<div class="square" style= "background-color: #6B7E92">
+			    <p class = "text-center foundational"style = "color:#FFFFFF">
+				    We believe in the Holy
+				    Spirit who indwells in 
+				    those who believe (1 Cor. 
+				    3:16), and that he intercedes 
+				    for us (Ro. 8:26-27) 
+				    and sanctifies us (2 Thes. 
+				    2:13) to be conformed to 
+				    the image of Christ 
+				    (Ro. 8:29).
+					</p>
+			  </div>
+				<div class="top square" style= "background-color: #6B7E92">
+		    	<section class = "separation-2"></section>
+			    <h2 class = "text-center foundational"style = "color:#FFFFFF">
+		    	<strong>The Holy Spirit
+		    		dwells in us, 
+		    		intercedes for us 
+		    		and sanctifies us.</strong>
+			    </h2>
+			   </div>
 				</div>
 			</div>
 		</div>
 		<div class = "row">
 			<div class = "medium-4 columns">
-				<div id="f1_container">
-				<div id="f1_card" class="shadow">
-				  <div class="front face">
-				    <div class="square">
-					    <h2 class = "text-center invite">
-					    	<strong>Salvation is by 
-					    		God’s mercy and 
-					    		grace and is a 
-					    		completely free 
-					    		gift.</strong>
-					    </h2>	
-				    </div>
-				  </div>
-				  <div class="back face center">
-					   <div class = "square">
-					    <p class = "invite text-center">
-						    We believe that it is by 
-						    God's mercy and grace 
-						    that we have been saved 
-						    through faith (Titus 3:5), 
-						    and this salvation is a 
-						    completely free gift from 
-						    God (Eph. 2:8-9).
-							</p>
-						</div>
-				  </div>
-				</div>
-				</div>
-			</div>
-			<div class = "medium-4 columns">
-				<div id="f1_container">
-				<div id="f1_card" class="shadow">
-				  <div class="front face">
-				    <div class="square">
-				    	<h2 class = "text-center invite">
-				    	<strong>The Holy Spirit
-				    		dwells in us, 
-				    		intercedes for us 
-				    		and sanctifies us.</strong>
-				    	</h2>	
-				    </div>
-				  </div>
-				  <div class="back face center">
-				    <div class = "square">
-					    <p class = "invite text-center">
-						    We believe in the Holy
-						    Spirit who indwells in 
-						    those who believe (1 Cor. 
-						    3:16), and that he inter-
-						    cedes for us (Ro. 8:26-27) 
-						    and sanctifies us (2 Thes. 
-						    2:13) to be conformed to 
-						    the image of Christ 
-						    (Ro. 8:29).
-							</p>
-						</div>
-				  </div>
-				</div>
-				</div>
-			</div>
-			<div class = "medium-4 columns">
-				<div id="f1_container">
-				<div id="f1_card" class="shadow">
-				  <div class="front face">
-				    <div class="square">
-					    <h2 class = "text-center invite">
-					    	<strong>The Bible is the
-					    		eternal Word of 
-					    		God. </strong>
-							</h2>
-				    </div>
-				  </div>
-				  <div class="back face center">
-				    <div class = "square">
-					    <p class = "invite text-center">
+				<div class = "row" id = "cf">
+						<div class="square" style= "background-color: #505F6E">
+					    <p class = "text-center foundational"style = "color:#FFFFFF">
 						    We believe in the Holy 
 						    Scripture (the Bible) as 
 						    the only authoritative, 
@@ -267,71 +285,65 @@
 						    and eternal Word of God 
 						    (2 Tim. 3:16; 2 Pet. 1:21).
 							</p>
-						</div>
-				  </div>
+					  </div>
+						<div class="top square" style= "background-color: #505F6E">
+				    	<section class = "separation-2"></section>
+					    <h2 class = "text-center foundational"style = "color:#FFFFFF">
+					    	<strong>The Bible is the
+					    		eternal Word of 
+					    		God. </strong>
+					    </h2>
+					   </div>
 				</div>
-				</div>
-			</div>
-		</div>
-				<div class = "row">
+			</div>			
 			<div class = "medium-4 columns">
-				<div id="f1_container">
-				<div id="f1_card" class="shadow">
-				  <div class="front face">
-				    <div class="square">
-					    <h2 class = "text-center invite">
-					    	<strong>Christ will come
-					    		again.</strong>
-					    </h2>	
-				    </div>
+				<div class = "row" id = "cf">
+					<div class="square" style= "background-color: #505F6E">
+				    <p class = "text-center foundational"style = "color:#FFFFFF">
+					    We believe in Christ's 
+					    Second Coming, and 
+					    that on that day, those 
+					    who were dead in Christ 
+					    will rise first. Then those 
+					    who are alive will be 
+					    lifted together in the 
+					    cloud to be with God 
+					    forever (1 Thess. 4:16-17).
+						</p>
 				  </div>
-				  <div class="back face center">
-					   <div class = "square">
-					    <p class = "invite text-center">
-						    We believe in Christ's 
-						    Second Coming, and 
-						    that on that day, those 
-						    who were dead in Christ 
-						    will rise first. Then those 
-						    who are alive will be 
-						    lifted together in the 
-						    cloud to be with God 
-						    forever (1 Thess. 4:16-17).
+					<div class="top square" style= "background-color: #505F6E">
+			    	<section class = "separation-2"></section>
+				    <h2 class = "text-center foundational"style = "color:#FFFFFF">
+				    	<strong>Christ will come
+				    		again.</strong>
+				    </h2>
+				  </div>
+				</div>
+			</div>			
+			<div class = "medium-4 columns">
+				<div class = "row" id = "cf">
+							<div class="square" style= "background-color: #3C4753">
+					    <p class = "invite foundational"style = "color:#FFFFFF">
+							   We believe in the eternal 
+							   life and relationship with 
+							   God, and, as God's elect, 
+							   that this life is eternally 
+							   secure and will never be 
+							   lost (Jn. 10:27-29; 
+							   1 Pet. 1:3-5).
 							</p>
-						</div>
-				  </div>
-				</div>
-				</div>
-			</div>
-			<div class = "medium-4 columns">
-				<div id="f1_container">
-				<div id="f1_card" class="shadow">
-				  <div class="front face">
-				    <div class="square">
-				    	<h2 class = "text-center invite">
-				    	<strong>As God’s elect, we 
-				    		have an eternal life 
-				    		that can never be 
-				    		lost.</strong>
-				    	</h2>	
-				    </div>
-				  </div>
-				  <div class="back face center">
-				    <div class = "square">
-					    <p class = "invite text-center">
-						   We believe in the eternal 
-						   life and relationship with 
-						   God, and, as God's elect, 
-						   that this life is eternally 
-						   secure and will never be 
-						   lost (Jn. 10:27-29; 
-						   1 Pet. 1:3-5).
-							</p>
-						</div>
-				  </div>
-				</div>
+					  </div>
+						<div class="top square" style= "background-color: #3C4753">
+				    	<section class = "separation-2"></section>
+					    <h2 class = "text-center foundational"style = "color:#FFFFFF">
+					    	<strong>As God’s elect, we 
+					    		have an eternal life 
+					    		that can never be 
+					    		lost.</strong>
+					    </h2>
+					   </div>
 				</div>
 			</div>
-			<div class = "medium-4 columns">
-			</div>
-		</div>
+		</div>	
+	</div>
+</div>

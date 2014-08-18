@@ -1,31 +1,18 @@
 //Discipleship
 
-.transbox {
-	height: 120px;
-	padding-top:25px;	
-	background-color: #C0C0C0;
-	opacity:0.6;
-}
-
-.span-allow-transbox { 	
-	width: 100%;
-	position: absolute;
-	bottom: 0;
-}
-																						
-.div-allow-transbox
-{
-	position: relative;	
-}
-
-.span-text-across
-{
-	padding-left:50px;
-	padding-right:50px;
-}
 
 .discipleship-arial
 {
 	font-family: arial;
 	color:#373D43;
+}
+
+
+
+/*Circle things*/
+
+.tabs.centered-3 {
+  width: 720px;
+  margin: 0 auto !important;
+  text-align: center !important;
 }

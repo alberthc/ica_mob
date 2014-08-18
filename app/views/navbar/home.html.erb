@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <% provide(:title, 'Home') %>
 
 <div class="row">
@@ -66,3 +67,78 @@
 </div>
 
 <section class="row separation-2"></section>
+=======
+<% provide(:title, 'Home') %>
+
+<div class="row collapse">
+  <div class="small-12 columns">
+    <section class="main-photo bg-img fast-height-trans" id="home-main">
+      <%= image_tag "ica-logo.png", class: "img-overlay" %>
+    </section>
+  </div>
+</div>
+
+<div class="row text-center">
+  <div class="small-12 columns">
+    <section class="separation-1"></section>
+    <h2><strong>To Worship God and to</strong><br>
+      <strong>Make Christ's Love Known</strong></h2>
+    <section class="separation-1"></section>
+    <h3 class="subheader">In Christ Alone (ICA) is a ministry committed to loving God,<br>
+      loving our neighbors as ourselves, and making disciples of all nations</h3>
+    <section class="separation-1"></section>
+    <%= link_to "Learn More", about_path, class: "responsive-button" %>
+    <section class="separation-2"></section>
+  </div>
+</div>
+
+<div class="row collapse">
+  <div class="small-12 columns">
+    <!--<section class="fixed-photo bg-img fast-height-trans" id="home-2">
+    </section>-->
+    <section class="fixed-photo bg-img fast-height-trans" data-interchange="[<%= image_path('wc/wc-group-photo-sml.jpg') %>, (default)], [<%= image_path('wc/wc-group-photo.jpg') %>, (medium)]"></section>
+  </div>
+</div>
+
+<section class="row separation-2"></section>
+
+<div class="row text-center">
+  <div class="small-12 columns">
+    <h2><strong>Our Campus Ministries</strong></h2>
+  </div>
+</div>
+
+<section class="row separation-2"></section>
+
+<div class="row">
+  <div class="small-12 medium-6 large-3 columns text-center">
+    <figure class="fig-link">
+      <%= link_to "", usc_path, id: "usc-statue", class: "circular bg-circular inline-block fast-opacity-trans" %>
+      <h3><strong>USC</strong></h3>
+    </figure>
+  </div>
+  <div class="small-12 medium-6 large-3 columns text-center">
+    <figure class="fig-link">
+      <%= link_to "", ucla_path, id: "ucla-statue", class: "circular bg-circular inline-block fast-opacity-trans" %>
+      <h3><strong>UCLA</strong></h3>
+    </figure>
+  </div>
+  <div class="small-12 medium-6 large-3 columns text-center">
+    <figure class="fig-link">
+      <%= link_to "", uci_path, id: "uci-statue", class: "circular bg-circular inline-block fast-opacity-trans" %>
+      <h3><strong>UCI</strong></h3>
+    </figure>
+  </div>
+  <div class="small-12 medium-6 large-3 columns text-center">
+    <figure class="fig-link">
+      <%= link_to "", ucb_path, target: "_blank", id: "cal-statue", class: "circular bg-circular inline-block fast-opacity-trans" %>
+      <h3><strong>CAL</strong></h3>
+    </figure>
+  </div>
+  <div class="small-12 columns text-center">
+    <%= link_to "Get Connected", contact_path, class: "responsive-button" %>
+  </div>
+</div>
+
+<section class="row separation-2"></section>
+>>>>>>> upstream/master

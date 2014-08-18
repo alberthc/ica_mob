@@ -1,14 +1,6 @@
 @import "utilities/global";
 
-#home-third {
-  background: asset-url('contact_us_banner.jpg') no-repeat fixed;
-}
-
 .header-about {
-  font-family: 'Montserrat', Arial;
-  font-weight: bold;
-  font-size: 24pt;
-  color: $grey1;
   text-align: left;
 }
 
@@ -17,11 +9,7 @@
 }
 
 .subheader-about {
-  font-family: 'Georgia', Arial;
-  font-weight: normal;
-  font-size: 14pt;
-
-  color: $grey2;
+  
   text-align: left;
 }
 
@@ -82,7 +70,7 @@ textarea#comment {
 
 
   #name{
-  background-image: asset-url('user.png') !important;
+  background-image: asset-url('contact/user.png') !important;
 
  //background-image: url(http://rexkirby.com/kirbyandson/images/name.svg) !important;
   background-size: 24px 24px !important;
@@ -91,7 +79,7 @@ textarea#comment {
 }
 
 #email{
-  background-image: asset-url('mail.png') !important;
+  background-image: asset-url('contact/mail.png') !important;
 
  //background-image: url(http://rexkirby.com/kirbyandson/images/email.svg) !important;
   background-size: 24px 24px  !important;
@@ -100,7 +88,7 @@ textarea#comment {
 }
 
 #comment{
-  background-image: asset-url('edit.png') !important;
+  background-image: asset-url('contact/edit.png') !important;
 //  background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg) !important;
   background-size: 24px 24px !important;
   background-position: 11px 8px !important;
@@ -108,7 +96,7 @@ textarea#comment {
 }
 
 #school{
-  background-image: asset-url('home.png') !important;
+  background-image: asset-url('contact/home.png') !important;
 // background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg) !important;
   background-size: 24px 24px  !important;
   background-position: 11px 9px !important;
@@ -137,9 +125,11 @@ border-color:transparent;
   border-radius: 10px !important;
   outline-style:none;
   -webkit-appearance: none;
-box-shadow:none;
-border-color:transparent;
-height:50px !important;
+  box-shadow:none;
+  border-color:transparent;
+  height:50px !important;
+  font-family: Georgia, serif !important;
+  font-size: 20px !important;
 
 }
 
@@ -149,8 +139,20 @@ textarea{
 
 }
 
+textarea#entry_1657491740{
+  
+  font-family: Georgia, serif !important;
+  font-size: 20px !important;
+
+}
+
 .separation-0 {
   height: 10px;
+}
+
+select#entry_199442306{ 
+  font-family: Georgia, serif !important;
+  font-size: 20px !important;
 }
 
 
