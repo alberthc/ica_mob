@@ -141,9 +141,15 @@
   height: auto;
 }
 
-/* BACKGROUND IMAGES */
+/* LINKS */
 
-/* MISC. */
+.no-link {
+  font-style: italic;
+}
+
+.no-link:hover {
+  cursor: default;
+}
 
 /* NAVBAR & FOOTER */
 
