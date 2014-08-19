@@ -92,7 +92,7 @@ $global-radius: 10px;
 $small-range: (0em, 40em);
 $medium-range: (40.063em, 64em);
 $large-range: (64.063em, 90em);
-// $xlarge-range: (90.063em, 120em);
+$xlarge-range: (90.063em, 120em);
 // $xxlarge-range: (120.063em, 99999999em);
 
 $screen: "only screen";
@@ -111,8 +111,8 @@ $medium-only: "#{$screen} and (min-width:#{lower-bound($medium-range)}) and (max
 $large-up: "#{$screen} and (min-width:#{lower-bound($large-range)})";
 $large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-width:#{upper-bound($large-range)})";
 
-// $xlarge-up: "#{$screen} and (min-width:#{lower-bound($xlarge-range)})";
-// $xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max-width:#{upper-bound($xlarge-range)})";
+$xlarge-up: "#{$screen} and (min-width:#{lower-bound($xlarge-range)})";
+$xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max-width:#{upper-bound($xlarge-range)})";
 
 // $xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})";
 // $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})";
@@ -1395,7 +1395,7 @@ $topbar-link-padding: $topbar-height / 3;
   }
 
   html {
-    font-size: .8em;
+    //font-size: .8em;
   }
 
   .indent {
@@ -1706,7 +1706,103 @@ $topbar-link-padding: $topbar-height / 3;
 }
 // @media #{$large-only} { }
 
-// @media #{$xlarge-up} { }
+@media #{$xlarge-up} {
+  footer {
+    .bg-footer-2 {
+      background-color: $grey8;
+      padding-left: 200px !important;
+      padding-right: 50px !important;
+    }
+  }
+
+  html {
+    font-size: 1.2em !important;
+  }
+
+  .indent {
+    text-indent: 50px;
+  }
+
+  .block-spacing {
+    padding: 50px 0 50px 0 !important;
+  }
+
+  .block-spacing-sml {
+    padding: 25px 0 25px 0 !important;
+  }
+
+  .block-spacing-bottom {
+    padding: 0 0 50px 0 !important;
+  }
+
+  .block-spacing-top {
+    padding: 50px 0 0 0 !important;
+  }
+
+  .main-photo {
+    height: 700px;
+    position: relative;
+  }
+
+  .fixed-photo {
+    height: 500px;
+    background-attachment: fixed;
+  }
+
+   .fixed-photo2 {
+    height: 450px;
+    background-attachment: fixed;
+  }
+
+  .img-overlay {
+    max-width: 400px;
+    width: 40%; //400px;
+    height: auto;
+    margin: auto;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+  }
+
+  .temp2-main-bg {
+    height: 800px;
+  }
+
+  /* TABS */
+
+  .tab-title {
+    //margin: 0 20px; //for circular with width of 200px
+    margin: 0 50px;
+  }
+    
+  .tabs.centered {
+    //width: 960px; //for circular with width of 200px
+    width: 1000px;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+
+  .tabs-content {
+    .content {
+      background-color: $grey7;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+
+      p {
+        padding: 15px;
+      }
+    }
+  }
+
+  #stp-1,
+  #stp-2 {
+    height: 400px;
+  }
+
+  #stp-3 {
+    height: 500px;
+  }   
+}
 // @media #{$xlarge-only} { }
 
 // @media #{$xxlarge-up} { }
