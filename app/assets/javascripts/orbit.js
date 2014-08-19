@@ -1,9 +1,7 @@
-
-
 $(document).foundation({
   orbit: {
       animation: 'slide', // Sets the type of animation used for transitioning between slides, can also be 'fade'
-      timer_speed: 1000, // Sets the amount of time in milliseconds before transitioning a slide
+      timer_speed: 3000, // Sets the amount of time in milliseconds before transitioning a slide
       pause_on_hover: true, // Pauses on the current slide while hovering
       resume_on_mouseout: false, // If pause on hover is set to true, this setting resumes playback after mousing out of slide
       next_on_click: true, // Advance to next slide on click
@@ -33,8 +31,8 @@ $(document).foundation({
       timer: true, // Does the slider have a timer active? Setting to false disables the timer.
       variable_height: false, // Does the slider have variable height content?
       swipe: true,
-      before_slide_change: noop, // Execute a function before the slide changes
-      after_slide_change: noop // Execute a function after the slide changes
+      before_slide_change: jQuery.noop, // Execute a function before the slide changes
+      after_slide_change: jQuery.noop // Execute a function after the slide changes
   }
 });
 
