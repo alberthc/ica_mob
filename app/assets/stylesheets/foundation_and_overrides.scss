@@ -1441,10 +1441,6 @@ $topbar-link-padding: $topbar-height / 3;
     top: 0; right: 0; bottom: 0; left: 0;
   }
 
-  .temp2-main-bg {
-    height: 175px;
-  }
-
   /* TABS */
 
   .tab-title {
@@ -1548,10 +1544,6 @@ $topbar-link-padding: $topbar-height / 3;
     margin: auto; 
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
-  }
-
-  .temp2-main-bg {
-    height: 500px;
   }
 
   /* TABS */
@@ -1664,10 +1656,6 @@ $topbar-link-padding: $topbar-height / 3;
     top: 0; right: 0; bottom: 0; left: 0;
   }
 
-  .temp2-main-bg {
-    height: 800px;
-  }
-
   /* TABS */
 
   .tab-title {
@@ -1707,6 +1695,10 @@ $topbar-link-padding: $topbar-height / 3;
 // @media #{$large-only} { }
 
 @media #{$xlarge-up} {
+  .responsive-button.set-width {
+    width: 280px;
+  }
+
   footer {
     .bg-footer-2 {
       background-color: $grey8;
@@ -1719,26 +1711,6 @@ $topbar-link-padding: $topbar-height / 3;
     font-size: 1.2em !important;
   }
 
-  .indent {
-    text-indent: 50px;
-  }
-
-  .block-spacing {
-    padding: 50px 0 50px 0 !important;
-  }
-
-  .block-spacing-sml {
-    padding: 25px 0 25px 0 !important;
-  }
-
-  .block-spacing-bottom {
-    padding: 0 0 50px 0 !important;
-  }
-
-  .block-spacing-top {
-    padding: 50px 0 0 0 !important;
-  }
-
   .main-photo {
     height: 700px;
     position: relative;
@@ -1749,59 +1721,14 @@ $topbar-link-padding: $topbar-height / 3;
     background-attachment: fixed;
   }
 
-   .fixed-photo2 {
-    height: 450px;
-    background-attachment: fixed;
-  }
-
   .img-overlay {
-    max-width: 400px;
+    max-width: 500px;
     width: 40%; //400px;
     height: auto;
     margin: auto;
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
   }
-
-  .temp2-main-bg {
-    height: 800px;
-  }
-
-  /* TABS */
-
-  .tab-title {
-    //margin: 0 20px; //for circular with width of 200px
-    margin: 0 50px;
-  }
-    
-  .tabs.centered {
-    //width: 960px; //for circular with width of 200px
-    width: 1000px;
-    margin: 0 auto !important;
-    text-align: center !important;
-  }
-
-  .tabs-content {
-    .content {
-      background-color: $grey7;
-      border-radius: 5px;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-
-      p {
-        padding: 15px;
-      }
-    }
-  }
-
-  #stp-1,
-  #stp-2 {
-    height: 400px;
-  }
-
-  #stp-3 {
-    height: 500px;
-  }   
 }
 // @media #{$xlarge-only} { }
 
