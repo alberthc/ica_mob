@@ -13,33 +13,33 @@
           <ul class="right">
             <li><%= link_to "HOME", root_path, class: "fast-color-trans" %></li>
             <li class="has-dropdown">
-              <%= link_to "ABOUT", "javascript:;" %>
+              <%= link_to "ABOUT", "javascript:;", class: "fast-color-trans" %>
               <ul class="dropdown">
-                <li><%= link_to "Vision/Mission", about_path %></li>
-                <li><%= link_to "Discipleship", discipleship_path %></li>
+                <li><%= link_to "Vision/Mission", about_path, class: "fast-color-trans" %></li>
+                <li><%= link_to "Discipleship", discipleship_path, class: "fast-color-trans" %></li>
                 <!--<li><%#= link_to "History", "javascript:;" %></li>-->
-                <li><%= link_to "Church Leadership", church_leadership_path %></li>
-                <li><%= link_to "Church", whec_path %></li>
+                <li><%= link_to "Church Leadership", church_leadership_path, class: "fast-color-trans" %></li>
+                <li><%= link_to "Church (coming soon)", "javascript:;", class: "fast-color-trans no-link" %></li>
               </ul>
             </li>
             <li class="has-dropdown">
-              <%= link_to "MINISTRIES", "javascript:;" %>
+              <%= link_to "MINISTRIES", "javascript:;", class: "fast-color-trans" %>
               <ul class="dropdown">
-                <li><%= link_to "USC", usc_path %></li>
-                <li><%= link_to "UCLA", ucla_path %></li>
-                <li><%= link_to "UCI", uci_path %></li>
-                <li><%= link_to "CAL", ucb_path, target: "_blank" %></li>
+                <li><%= link_to "USC", usc_path, class: "fast-color-trans" %></li>
+                <li><%= link_to "UCLA", ucla_path, class: "fast-color-trans" %></li>
+                <li><%= link_to "UCI", uci_path, class: "fast-color-trans" %></li>
+                <li><%= link_to "Cal (coming soon)", "javascript:;", target: "_blank", class: "fast-color-trans no-link" %></li>
               </ul>
             </li>
             <li class="has-dropdown">
-              <%= link_to "PROGRAMS", "javascript:;" %>
+              <%= link_to "PROGRAMS", "javascript:;", class: "fast-color-trans" %>
               <ul class="dropdown">
-                <li><%= link_to "Summer Training Program", stp_path %></li>
+                <li><%= link_to "Summer Training Program", stp_path, class: "fast-color-trans" %></li>
                 <!--<li><%#= link_to "VSET", "javascript:;" %></li>-->
-                <li><%= link_to "Special Events", special_events_path %></li>
+                <li><%= link_to "Special Events", special_events_path, class: "fast-color-trans" %></li>
               </ul>
             </li>
-            <li><%= link_to "CONTACT US", contact_path %></li>
+            <li><%= link_to "CONTACT US", contact_path, class: "fast-color-trans" %></li>
           </ul>
         </section>
       </nav>

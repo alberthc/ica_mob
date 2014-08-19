@@ -17,6 +17,18 @@
   padding: 20px 20px 20px 20px !important;
 }
 
+/* CUSTOM TEXT */
+
+.usc-link {
+  color: inherit;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.usc-link:hover {
+  color: $usc-secondary;
+}
+
 /* ELEMENT DISPLAY CONVERSIONS */
 
 .block {
@@ -129,9 +141,15 @@
   height: auto;
 }
 
-/* BACKGROUND IMAGES */
+/* LINKS */
 
-/* MISC. */
+.no-link {
+  font-style: italic;
+}
+
+.no-link:hover {
+  cursor: default;
+}
 
 /* NAVBAR & FOOTER */
 
@@ -160,6 +178,10 @@ footer {
 
   .bg-footer-1 {
     background-color: $blue3;
+  }
+
+  .header-link:hover {
+    color: $grey5;
   }
 }
 
