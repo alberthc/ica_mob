@@ -1,6 +1,17 @@
 var activeTab = '';
 var arrow = '';
 
+// Handle page loading
+$(window).load(function() {
+  init();
+  repositionArrow();
+});
+
+//Handle browser resizing
+$(window).resize(function() {
+    repositionArrow();
+});
+
 // Handle on click of tab
 $('.tab-title').click(function () {
   var newActiveTab = '#' + $(this).find('a').attr('id');
@@ -37,23 +48,26 @@ $('.tab-title').click(function () {
   }, 10);*/
 });
 
-//Handle browser resizing
-$(window).resize(function() {
-	// Find active tab on page load only
-	if (activeTab == '') {
-		activeTab = $('li.tab-title.active');
-		arrow = $('.arrow-up');
-	}
+function init() {
+  // Find active tab on page load only
+  if (activeTab == '') {
+    activeTab = $('li.tab-title.active').find('a');
+    arrow = $('.arrow-up');
+  }
 
+  $(activeTab).css('opacity', 1);
+}
+
+function repositionArrow() {
   // Check if elements exists before proceeding
   if (activeTab.length == 0 || arrow.length == 0) {
     return;
   }
 
-	// Move the arrow to the correct position when browser is resized
-	var adjustedArrowPos = centerX(activeTab);
-	$(arrow).css('margin-left', adjustedArrowPos);
-});
+  // Move the arrow to the correct position when browser is resized
+  var adjustedArrowPos = centerX(activeTab);
+  $(arrow).css('margin-left', adjustedArrowPos);
+}
 
 var centerX = function(element) {
   var offset = $(element).offset();
