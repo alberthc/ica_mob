@@ -17,6 +17,9 @@
     <!-- <title><%#= content_for?(:title) ? yield(:title) : "In Christ Alone" %></title> -->
     <title><%= full_title(yield(:title)) %></title>
 
+    <meta name="description" content=<%= meta_description(yield(:description)) %> />
+    <meta name="keywords" content=<%= meta_keywords(yield(:keywords)) %> />
+
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
