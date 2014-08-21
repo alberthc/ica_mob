@@ -10,4 +10,22 @@ module ApplicationHelper
     end
   end
 
+  def meta_description(description)
+    default = "In Christ Alone (ICA) ministry website"
+    if description.empty?
+      default
+    else
+      "#{description}"
+    end
+  end
+
+  def meta_keywords(keywords)
+    default = "In Christ Alone, ICA, Christian organization"
+    if keywords.empty?
+      default
+    else
+      "#{default}, #{keywords}"
+    end
+  end
+
 end
