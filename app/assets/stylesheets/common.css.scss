@@ -19,6 +19,10 @@
 
 /* CUSTOM TEXT */
 
+.highlight-text {
+  color: $blue5;
+}
+
 .usc-link {
   color: inherit;
   font-style: italic;
@@ -27,6 +31,10 @@
 
 .usc-link:hover {
   color: $usc-secondary;
+}
+
+.verse {
+  font-style: italic;
 }
 
 /* ELEMENT DISPLAY CONVERSIONS */
@@ -49,8 +57,16 @@
 
 /* IMAGES & BACKGROUND */
 
+.bg-blue {
+  background-color: $blue5;
+}
+
 .bg-gold {
   background-color: $gold1;
+}
+
+.bg-grey {
+    background-color: $grey7;
 }
 
 .bg-red {
@@ -122,6 +138,11 @@
 
 .fig-link {
   margin: 0 0 50px 0;
+}
+
+.img-fill {
+  width: 100%;
+  height: auto;
 }
 
 .rectangular {
