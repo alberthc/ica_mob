@@ -37,7 +37,7 @@
 .verse
 {
 	padding-right: 50px;
-	font-family: arial;
+	font-family: Arial;
 	font-weight: bold;
 	font-style: italic;
 	font-size: 24pt;
@@ -95,6 +95,7 @@ h3.foundational
 /*Cross stuff */
 .cross_size
 {
-  height: 500px;
-  width:425px;
+  background-image: asset-url('whec/cross.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
