@@ -58,20 +58,36 @@ $(document).on('click', '.mobile-scroll-top', function() {
 
 $(document).ready(function() {
 
-/* CROSSFADE ANIMATION */
+  resizeCfSquares();
 
-$('.cf').hover(function() {
-  var topContent = $(this).find('div.top');
-  var bottomContent = $(this).find('div.bottom');
+  /* CROSSFADE ANIMATION */
 
-  topContent.css('opacity', 0);
-  bottomContent.css('opacity', 1);
-}, function() {
-  var topContent = $(this).find('div.top');
-  var bottomContent = $(this).find('div.bottom');
+  $('.cf').hover(function() {
+    var topContent = $(this).find('div.top');
+    var bottomContent = $(this).find('div.bottom');
 
-  topContent.css('opacity', 1);
-  bottomContent.css('opacity', 0); 
+    topContent.css('opacity', 0);
+    bottomContent.css('opacity', 1);
+  }, function() {
+    var topContent = $(this).find('div.top');
+    var bottomContent = $(this).find('div.bottom');
+
+    topContent.css('opacity', 1);
+    bottomContent.css('opacity', 0); 
+  });
+
+  $(window).resize(function() {
+    resizeCfSquares(); 
+  });
+
 });
 
-});
+function resizeCfSquares() {
+  var squares = $('.cf');
+  var theWidth = $(squares[0]).width();
+
+  $.each(squares, function(i, val) {
+    //var width = $(val).width();
+    $(val).css('height', theWidth);
+  });
+}

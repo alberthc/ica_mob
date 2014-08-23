@@ -4,11 +4,38 @@
 
 .cf {
   position:relative;
-  height:515px;
-  width:98%;
-  margin:0 auto;
-}
 
+  div {
+    position:absolute;
+    left:0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+
+    .cf-content {
+      padding: 0 20px;
+      vertical-align: middle;
+    }
+  }
+
+  div.bottom {
+    opacity: 0;
+  }
+
+  div.bottom,
+  div.top {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    h4 {
+      padding: 0 20px;
+    }
+  }
+}
+/*
 .cf div {
   position:absolute;
   left:0;
@@ -20,7 +47,7 @@
 
 .cf div.bottom {
   opacity: 0;
-}
+}*/
 
 /*Typography */
 
@@ -53,11 +80,11 @@
 /* BELIEFS GRID */
 
 #beliefs-1 { background-color: $blue6; }
-#beliefs-1 { background-color: $blue5; }
-#beliefs-1 { background-color: $blue6; }
-#beliefs-1 { background-color: $blue5; }
-#beliefs-1 { background-color: $blue6; }
-#beliefs-1 { background-color: $blue5; }
-#beliefs-1 { background-color: $blue6; }
-#beliefs-1 { background-color: $blue5; }
-#beliefs-1 { background-color: $blue6; }
+#beliefs-2 { background-color: $blue5; }
+#beliefs-3 { background-color: $blue6; }
+#beliefs-4 { background-color: $blue5; }
+#beliefs-5 { background-color: $blue6; }
+#beliefs-6 { background-color: $blue5; }
+#beliefs-7 { background-color: $blue6; }
+#beliefs-8 { background-color: $blue5; }
+#beliefs-9 { background-color: $blue6; }
