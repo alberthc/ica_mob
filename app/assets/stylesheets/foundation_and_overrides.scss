@@ -1493,6 +1493,13 @@ $topbar-link-padding: $topbar-height / 3;
     }
   }
 
+  .vertical-align {
+    top: -3%;
+    -webkit-transform: translateY(3%);
+    -ms-transform: translateY(3%);
+    transform: translateY(3%);
+  }
+
   #stp-1,
   #stp-2,
   #stp-3 {
