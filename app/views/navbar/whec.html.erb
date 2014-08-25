@@ -28,7 +28,7 @@
         <%= link_to "Church Leaders", church_leadership_path, class: "responsive-button" %>
       </div>
       <div class="medium-6 small-12 columns">
-        <%= link_to "Faith Statement", "", class: "responsive-button" %>
+        <%= link_to "Faith Statement", "javascript:;", class: "responsive-button scrollable", id: "blah", data: {scroll_id: "#faith-statement"} %>
       </div>
     </div>
   </div>
@@ -75,7 +75,7 @@
   </div>
 </div>
 
-<div class="row block-spacing-sml">
+<div class="row block-spacing-sml" id="faith-statement">
   <div class="small-12 columns">
     <div class="row medium-centered">
       <div class="medium-11 small-12 columns small-only-text-center">

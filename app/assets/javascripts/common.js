@@ -80,6 +80,15 @@ $(document).ready(function() {
     resizeCfSquares(); 
   });
 
+  /* Click Events */
+
+  $('.scrollable').on('click', function() {
+    var scrollId = $(this).data("scroll-id");
+    $('html, body').animate({
+      scrollTop: $(scrollId).offset().top
+    }, 300);
+  });
+
 });
 
 function resizeCfSquares() {
