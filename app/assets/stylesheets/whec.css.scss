@@ -1,21 +1,42 @@
+@import "utilities/global";
 
-@import "foundation/components/buttons";
-.cross_size
-{
-  height: 500px;
-  width:425px;
-}
+/* Crossfade Stuff */
 
-/*Fade Stuff*/
-
-#cf {
+.cf {
   position:relative;
-  height:515px;
-  width:98%;
-  margin:0 auto;
-}
 
-#cf div {
+  div {
+    position:absolute;
+    left:0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+
+    .cf-content {
+      padding: 0 20px;
+      vertical-align: middle;
+    }
+  }
+
+  div.bottom {
+    opacity: 0;
+  }
+
+  div.bottom,
+  div.top {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    h4 {
+      padding: 0 20px;
+    }
+  }
+}
+/*
+.cf div {
   position:absolute;
   left:0;
   -webkit-transition: opacity 1s ease-in-out;
@@ -24,14 +45,13 @@
   transition: opacity 1s ease-in-out;
 }
 
-#cf div.top:hover {
-  opacity:0;
-}
-
+.cf div.bottom {
+  opacity: 0;
+}*/
 
 /*Typography */
 
-.verse
+/*.verse
 {
 	padding-right: 50px;
 	font-family: arial;
@@ -44,41 +64,7 @@
 .verse white_harvest
 {
 	color: #8F9EAD;
-}
-
-.invite
-{
-	font-family: Georgia;
-	font-size: 16pt;
-	color: #495159;
-}
-
-p.psalms
-{
-	font-family: georgia;
-	font-style: italic;
-	font-size: 12pt;
-	color: #373D43;
-}
-
-
-h2.foundational
-{
-  font-family: montserrat;
-  font-size: 18pt;
-}
-
-h3.foundational
-{
-  font-family: montserrat;
-  font-size: 16pt;
-}
-
-/*Buttons*/
-
-.whec_button{
-	@include button($button-med, #445D76, 40px, false, false, false);
-}
+}*/
 
 /* Square */
 
@@ -91,3 +77,44 @@ h3.foundational
 	padding-right: 10%;
 }
 
+/* BELIEFS GRID */
+
+#beliefs-1 {
+  background-color: #E8EEF3;
+  color: #626C76;
+}
+
+#beliefs-2 {
+  background-color: #D2DCE7;
+  color: #626C76;
+}
+
+#beliefs-3 {
+  background-color: #BBCBDB;
+  color: #626C76;
+}
+
+#beliefs-4 {
+  background-color: #A5BACF;
+  color: #626C76;
+}
+
+#beliefs-5 {
+  background-color: #8EA8C3;
+  color: white;
+}
+
+#beliefs-6 {
+  background-color: #6B7E92;
+  color: white;
+}
+
+#beliefs-7 {
+  background-color: #505F6E;
+  color: white;
+}
+
+#beliefs-8 {
+  background-color: #3C4753;
+  color: white;
+}

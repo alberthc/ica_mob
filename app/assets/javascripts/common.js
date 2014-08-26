@@ -50,9 +50,54 @@ $('.open-clearing').on('click', function(e) {
   $(selector).eq($(this).data('thumb-index')).trigger('click');
 });
 
-  /* MOBILE UP ARROW */
+/* MOBILE UP ARROW */
 
 $(document).on('click', '.mobile-scroll-top', function() {
   $('html, body').animate({
     scrollTop: 0}, 300);
 });
+
+$(document).ready(function() {
+
+  resizeCfSquares();
+
+  /* CROSSFADE ANIMATION */
+
+  $('.cf').hover(function() {
+    var topContent = $(this).find('div.top');
+    var bottomContent = $(this).find('div.bottom');
+
+    topContent.css('opacity', 0);
+    bottomContent.css('opacity', 1);
+  }, function() {
+    var topContent = $(this).find('div.top');
+    var bottomContent = $(this).find('div.bottom');
+
+    topContent.css('opacity', 1);
+    bottomContent.css('opacity', 0); 
+  });
+
+  $(window).resize(function() {
+    resizeCfSquares(); 
+  });
+
+  /* Click Events */
+
+  $('.scrollable').on('click', function() {
+    var scrollId = $(this).data("scroll-id");
+    $('html, body').animate({
+      scrollTop: $(scrollId).offset().top
+    }, 300);
+  });
+
+});
+
+function resizeCfSquares() {
+  var squares = $('.cf');
+  var theWidth = $(squares[0]).width();
+
+  $.each(squares, function(i, val) {
+    //var width = $(val).width();
+    $(val).css('height', theWidth);
+  });
+}

@@ -197,6 +197,10 @@
 }
 
 // WHEC
+#faith-statement-cross {
+  background-image: asset-url('whec/faith-statement-cross.jpg');
+}
+
 #whec-albert_jeremy_worship{
   background-image: asset-url('whec/albert_jeremy_worship.jpg');
 }
@@ -205,12 +209,12 @@
   background-image: asset-url('whec/elaine_worship.jpg');
 }
 
-#whec-worship{
-  background-image: asset-url('whec/praise-night2.jpg');
+#whec-praise-1{
+  background-image: asset-url('whec/praise-night-1.jpg');
 }
 
-#whec-worship-jack{
-  background-image: asset-url('whec/praise-night-jack.jpg');
+#whec-worship-2{
+  background-image: asset-url('whec/praise-night-2.jpg');
 }
 
 #whec-baptism_prayer{
@@ -236,9 +240,9 @@
 #whec-cross
 {
   background-image:asset-url('whec/cross.jpg');
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center center; 
+  //background-repeat: no-repeat;
+  //background-size: 100%;
+  //background-position: center center; 
 }
 
 

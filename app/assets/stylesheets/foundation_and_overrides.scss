@@ -1441,6 +1441,33 @@ $topbar-link-padding: $topbar-height / 3;
     top: 0; right: 0; bottom: 0; left: 0;
   }
 
+  .responsive-white-border {
+    border-color: white;
+    border-style: solid;
+    border-top-width: 5px;
+    border-right-width: 10px;
+    border-bottom-width: 5px;
+    border-left-width: 10px;
+  }
+
+  .responsive-white-border-left {
+    border-color: white;
+    border-style: solid;
+    border-top-width: 5px;
+    border-right-width: 10px;
+    border-bottom-width: 5px;
+    border-left-width: 10px;
+  }
+
+  .responsive-white-border-right {
+    border-color: white;
+    border-style: solid;
+    border-top-width: 5px;
+    border-right-width: 10px;
+    border-bottom-width: 5px;
+    border-left-width: 10px;
+  }
+
   /* TABS */
 
   .tab-title {
@@ -1464,6 +1491,13 @@ $topbar-link-padding: $topbar-height / 3;
 	padding: 5px;
       }
     }
+  }
+
+  .vertical-align {
+    top: -3%;
+    -webkit-transform: translateY(3%);
+    -ms-transform: translateY(3%);
+    transform: translateY(3%);
   }
 
   #stp-1,
@@ -1522,6 +1556,13 @@ $topbar-link-padding: $topbar-height / 3;
     padding: 50px 0 0 0 !important;
   }
 
+  .cf {
+    h4,
+    h5 {
+      font-size: .8em !important;
+    }
+  }
+
   .main-photo {
     height: 400px;
     position: relative;
@@ -1544,6 +1585,28 @@ $topbar-link-padding: $topbar-height / 3;
     margin: auto; 
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
+  }
+
+  .responsive-white-border {
+    border: 7px solid white;
+  }
+  
+  .responsive-white-border-left {
+    border-color: white;
+    border-style: solid;
+    border-top-width: 7px;
+    border-right-width: 7px;
+    border-bottom-width: 7px;
+    border-left-width: 14px;
+  }
+  
+  .responsive-white-border-right {
+    border-color: white;
+    border-style: solid;
+    border-top-width: 7px;
+    border-right-width: 14px;
+    border-bottom-width: 7px;
+    border-left-width: 7px;
   }
 
   /* TABS */
@@ -1681,6 +1744,28 @@ $topbar-link-padding: $topbar-height / 3;
         padding: 15px;
       }
     }
+  }
+
+  .responsive-white-border {
+    border: 10px solid white;
+  }
+
+  .responsive-white-border-left {
+    border-color: white;
+    border-style: solid;
+    border-top-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
+    border-left-width: 20px;
+  }
+
+  .responsive-white-border-right {
+    border-color: white;
+    border-style: solid;
+    border-top-width: 10px;
+    border-right-width: 20px;
+    border-bottom-width: 10px;
+    border-left-width: 10px;
   }
 
   #stp-1,
