@@ -7,9 +7,10 @@ $(document).foundation({
       next_on_click: true, // Advance to next slide on click
       animation_speed: 500, // Sets the amount of time in milliseconds the transition between slides will last
       stack_on_small: false,
-      navigation_arrows: false,
+      navigation_arrows: true,
       slide_number: false,
       slide_number_text: 'of',
+      slide_progress: false,
       container_class: 'orbit-container',
       stack_on_small_class: 'orbit-stack-on-small',
       next_class: 'orbit-next', // Class name given to the next button

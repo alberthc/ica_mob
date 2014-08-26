@@ -6,8 +6,9 @@ $(".accordion dd ").on("click", "a:eq(0)", function (event)
         var dd_parent = $(this).parent();
         var dd_this = $(this);
 
-        if(dd_parent.hasClass('active'))
+        if(dd_parent.hasClass('active')){
           $(".accordion dd div.content:visible").slideToggle("slow");
+        }
         else
         {
           
@@ -15,7 +16,7 @@ $(".accordion dd ").on("click", "a:eq(0)", function (event)
           $(this).parent().find(".content").slideToggle("slow");
           $('html,body').animate({
             scrollTop: dd_this.offset().top
-          }, 300); 
+          }, 1000); 
         }
       });
 
