@@ -155,17 +155,21 @@
   height: auto;
 }
 
-.rectangular {
+.img-padded {
+  padding: 5px;
+}
+
+/*.rectangular { 
   width: 300px;
   height: 400px;
   hspacing: 10px;
   transition: opacity .5s;
-  -webkit-transition: opacity .5s; /* For Safari 3.1 to 6.0 */
+  -webkit-transition: opacity .5s; // For Safari 3.1 to 6.0
 }
 
 .rectangular:hover {
   opacity: .7;
-}
+}*/
 
 .img-max {
   width: 100%;
@@ -261,6 +265,14 @@ footer {
 .fast-opacity-trans {
   transition: opacity 300ms;
   -webkit-transition: opacity 300ms; /* Safari */
+}
+
+.rev-opacity {
+  opacity: .7;
+}
+
+.rev-opacity:hover {
+  opacity: 1;
 }
 
 /* TYPOGRAPHY */

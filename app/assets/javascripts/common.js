@@ -50,11 +50,17 @@ $('.open-clearing').on('click', function(e) {
   $(selector).eq($(this).data('thumb-index')).trigger('click');
 });
 
-/* MOBILE UP ARROW */
+/* CLICK EVENTS */
 
+// Mobile up arrow
 $(document).on('click', '.mobile-scroll-top', function() {
   $('html, body').animate({
     scrollTop: 0}, 300);
+});
+
+// Close modal for IOS devices
+$(document).on('click tap touchstart', '.reveal-modal-bg', function() {
+  return $('[data-reveal]').foundation('reveal', 'close');
 });
 
 $(document).ready(function() {

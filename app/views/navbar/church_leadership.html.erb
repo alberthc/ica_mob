@@ -9,10 +9,12 @@
 </div>
 
 
-<div class="row text-center">
-  <div class = "small-9 small-centered columns">
-	  <div class="small-12 medium-6 large-4 columns">
-      <a href="#", id = "pastormin", class = "rectangular inline-block",  data-reveal-id="modal1"></a>
+<div class="row text-center collapse">
+  <div class = "small-11 small-centered columns">
+    <div class="row collapse">
+	  <div class="small-12 medium-4 columns">
+      <!-- <a href="#", id = "pastormin", class = "rectangular inline-block",  data-reveal-id="modal1"></a>-->
+      <%= link_to image_tag('pmin.jpg', class: 'img-fill img-padded rev-opacity fast-opacity-trans'), 'javascript:;', data: {reveal_id: 'modal1'} %>
       <div id="modal1" class="reveal-modal" data-reveal>
         <div class = "small 8 columns">
           <h3 class ="serif">
@@ -29,8 +31,9 @@
  	    </div>
     </div>
 
-	  <div class="small-12 medium-6 large-4 columns">
-  		<a href="#", id = "pastorgreer", class = "rectangular inline-block",  data-reveal-id="modal2"></a>
+	  <div class="small-12 medium-4 columns">
+  		<!-- <a href="#", id = "pastorgreer", class = "rectangular inline-block",  data-reveal-id="modal2"></a> -->
+      <%= link_to image_tag('jgreer.jpg', class: 'img-fill img-padded rev-opacity fast-opacity-trans'), 'javascript:;', data: {reveal_id: "modal2"} %>
       <div id="modal2" class="reveal-modal" data-reveal>
         <div class = "small 8 columns">
           <h3 class = "serif">
@@ -47,8 +50,9 @@
     </div>
   	</div>
 
-	  <div class="small-12 medium-6 large-4 columns">
-      <a href="#", id = "mikewong", class = "rectangular inline-block",  data-reveal-id="modal3"></a>
+	  <div class="small-12 medium-4 columns">
+      <!-- <a href="#", id = "mikewong", class = "rectangular inline-block",  data-reveal-id="modal3"></a> -->
+      <%= link_to image_tag('mgw.jpg', class: 'img-fill img-padded rev-opacity fast-opacity-trans'), 'javascript:;', data: {reveal_id: "modal3"} %>
       <div id="modal3" class="reveal-modal" data-reveal>
         <div class = "small 8 columns">
           <h3 class = "serif">
@@ -62,7 +66,8 @@
             <p class = "responsive-indent">Michael graduated from UCLA with a Bachelor's degree in Electrical Engineering but never worked in the field as the Lord called him to minister on campus immediately after graduation. He is happily married to Elaine, who is a PhD student at UCLA in Environmental Engineering and who is also active in disciple-making on campus. Michael is currently a part-time student at Talbot Theological Seminary in the M.Div program. </p>
         </div>
       </div>
-    </div> 
+    </div>
+    </div>
   </div>
 </div>
 
