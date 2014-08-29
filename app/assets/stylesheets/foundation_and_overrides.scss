@@ -1402,6 +1402,10 @@ $topbar-link-padding: $topbar-height / 3;
     text-indent: 15px;
   }
 
+  .bg-img-fixed {
+    background-position: center center;
+  }
+
   .block-spacing {
     padding: 25px 0 25px 0 !important;
   }
@@ -1552,6 +1556,10 @@ $topbar-link-padding: $topbar-height / 3;
     text-indent: 35px;
   }
 
+  .bg-img-fixed {
+    background-position: center center;
+  }
+
   .block-spacing {
     padding: 50px 0 50px 0 !important;
   }
@@ -1581,7 +1589,7 @@ $topbar-link-padding: $topbar-height / 3;
   }
 
   .fixed-photo {
-    height: 300px;
+    height: 400px;
   }
 
   .img-overlay {
@@ -1707,7 +1715,7 @@ $topbar-link-padding: $topbar-height / 3;
   }
 
   .fixed-photo {
-    height: 400px;
+    height: 450px;
     background-attachment: fixed;
   }
 
