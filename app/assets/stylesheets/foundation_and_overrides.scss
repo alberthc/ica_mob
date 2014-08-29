@@ -1423,7 +1423,6 @@ $topbar-link-padding: $topbar-height / 3;
     position: relative;
   }
 
-
   .fixed-photo {
     height: 200px;
   }
@@ -1468,6 +1467,14 @@ $topbar-link-padding: $topbar-height / 3;
     border-left-width: 10px;
   }
 
+  .rev-opacity {
+      opacity: 1;
+  }
+
+  .rev-opacity:hover {
+      opacity: .7;
+  }
+
   /* TABS */
 
   .tab-title {
@@ -1507,7 +1514,16 @@ $topbar-link-padding: $topbar-height / 3;
   }
 }
 
-// @media #{$medium-up} { }
+@media #{$medium-up} {
+  .rev-opacity {
+      opacity: .7;
+  }
+
+  .rev-opacity:hover {
+      opacity: 1;
+  }
+}
+
 @media #{$medium-only} {
   .responsive-button {
     @include button(
