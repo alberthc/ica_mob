@@ -55,4 +55,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'jquery-turbolinks'
 
 gem 'google-api-client', require: 'google/api_client'
-gem 'gdata'
+gem 'gdata', git: 'https://github.com/agentrock/gdata.git'
