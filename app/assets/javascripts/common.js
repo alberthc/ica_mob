@@ -96,6 +96,17 @@ $(document).ready(function() {
     }, 300);
   });
 
+  /* HOVER EVENTS */
+
+  $('.clickable').hover(function() {
+    // mouse enter event
+    var color = $(this).css('background-color');
+    //$(this).css('background-color', 'red');
+  }, function(){
+    // mouse leave event
+    //$(this).css('background-color', 'green');
+  });
+
 });
 
 function resizeCfSquares() {
