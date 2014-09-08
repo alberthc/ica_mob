@@ -10,6 +10,9 @@
     			<h1><strong>USC ICA</strong></h1>
           <section class="separation-1"></section>    
     		</div>
+        <div class="row">
+          <%= @feed_output %>
+        </div>
         <div class="row" data-equalizer>
     			<div class="small-12 medium-4 medium-push-8 large-4 large-push-8 columns bg-gold text-center" data-equalizer-watch>
             <br><br><br>
@@ -24,50 +27,19 @@
           </div>
           <div class="small-12 medium-8 medium-pull-4 large-8 large-pull-4 columns orb-bg bg-red" data-equalizer-watch>
     				<ul class="example-orbit-content" data-orbit data-option="slide_number:false;" >
+                      <% @feed_parsed.each do |entry| %>
                       <li data-orbit-slide="headline-1">
                         <div class="text-center">
                           <section class="separation-2"></section>
-                          <h3 class="white">Church</h3>
+                          <h3 class="white"><%= entry[:title] %></h3>
                           <section class="separation-1"></section>
-                          <h5 class="serif white">Sunday 9/7</h5>
-                          <h5 class="serif white">9:45am</h5>
-                          <h5 class="serif white">Location: SGM 101</h5>
+                          <h5 class="serif white">Date: <%= entry[:date] %></h5>
+                          <h5 class="serif white">Time: <%= entry[:time] %></h5>
+                          <h5 class="serif white">Location: <%= entry[:location] %></h5>
                           <section class="separation-2"></section>
                         </div>
                       </li>
-                      <li data-orbit-slide="headline-2">
-                        <div class="text-center">
-                          <section class="separation-2"></section>
-                          <h3 class="white">Girls Bible Study</h3>
-                          <section class="separation-1"></section>
-                          <h5 class="serif white">Tuesday 9/9</h5>
-                          <h5 class="serif white">8:00pm</h5>
-                          <h5 class="serif white">Location: VKC 161</h5>
-                          <section class="separation-2"></section>
-                        </div>
-                      </li>
-                      <li data-orbit-slide="headline-3">
-                        <div class="text-center">
-                          <section class="separation-2"></section>
-                          <h3 class="white">International Students Bible Study</h3>
-                          <section class="separation-1"></section>
-                          <h5 class="serif white">Tuesday 9/9</h5>
-                          <h5 class="serif white">9:00pm</h5>
-                          <h5 class="serif white">Location: VKC 105</h5>
-                          <section class="separation-2"></section>
-                        </div>
-                      </li>
-                      <li data-orbit-slide="headline-4">
-                        <div class="text-center">
-                          <section class="separation-2"></section>
-                          <h3 class="white">Guys Bible Study</h3>
-                          <section class="separation-1"></section>
-                          <h5 class="serif white">Wednesday 9/10</h5>
-                          <h5 class="serif white">8:00pm</h5>
-                          <h5 class="serif white">Location: VKC Steps</h5>
-                          <section class="separation-2"></section>
-                        </div>
-                      </li>
+                      <% end %>
                       <li data-orbit-slide="headline-5">
                         <div class="text-center">
                           <section class="separation-2"></section>
