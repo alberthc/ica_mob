@@ -7,6 +7,11 @@ class UscController < ApplicationController
     @feed_parsed = Array.new
 
     feed.elements.each('entry') do |entry|
+      content = entry.elements['content'].text
+      if content == "none"
+        next
+      end
+
       datetime = DateTime.parse(entry.elements['gd:when'].attribute('startTime').value)
 
       title = entry.elements['title'].text
