@@ -7,11 +7,19 @@ class UscController < ApplicationController
     @feed_parsed = Array.new
 
     feed.elements.each('entry') do |entry|
-      title = entry.elements['title'].text
+      datetime = DateTime.parse(entry.elements['gd:when'].attribute('startTime').value)
 
-      parsed_entry = {title: title}
+      title = entry.elements['title'].text
+      date = datetime.strftime('%A %-m/%-d')
+      time = datetime.strftime('%-I:%M %p')
+      location = entry.elements['gd:where'].attribute('valueString').value
+
+      parsed_entry = {title: title,
+                      date: date,
+                      time: time,
+                      location: location}
       @feed_parsed.push(parsed_entry)
-      if @feed_parsed.size == 5
+      if @feed_parsed.size == 4
         break
       end
     end
