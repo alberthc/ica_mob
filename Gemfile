@@ -54,3 +54,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 gem 'jquery-turbolinks'
 
+gem 'jquery-ui-rails'

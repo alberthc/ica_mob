@@ -98,16 +98,38 @@ $(document).ready(function() {
 
   /* HOVER EVENTS */
 
+  var isAnimatingClickable = false;
   $('.clickable').hover(function() {
+    console.log(isAnimatingClickable);
     // mouse enter event
-    var color = $(this).css('background-color');
-    //$(this).css('background-color', 'red');
+    if (!isAnimatingClickable) {
+      isAnimatingClickable = true;
+      var color = $(this).css('background-color');
+      var newColor = LightenDarkenColor(rgb2hex(color), -20);
+      $(this).animate({
+        backgroundColor: newColor
+      }, 1000, function() {
+        isAnimatingClickable = false;
+      });
+    }
   }, function(){
+    console.log(isAnimatingClickable);
     // mouse leave event
-    //$(this).css('background-color', 'green');
+    if (!isAnimatingClickable) {
+      isAnimatingClickable = true;
+      var color = $(this).css('background-color');
+      var newColor = LightenDarkenColor(rgb2hex(color), 20);
+      $(this).animate({
+        backgroundColor: newColor
+      }, 1000, function() {
+        isAnimatingClickable = false;
+      });
+    }
   });
 
 });
+
+/* HELPER FUNCTIONS */
 
 function resizeCfSquares() {
   var squares = $('.cf');
@@ -117,4 +139,44 @@ function resizeCfSquares() {
     //var width = $(val).width();
     $(val).css('height', theWidth);
   });
+}
+
+// Lighten or darken color given in hex format
+function LightenDarkenColor(col, amt) {
+  var usePound = false;
+
+  if (col[0] == "#") {
+    col = col.slice(1);
+    usePound = true;
+  }
+
+  var num = parseInt(col,16);
+
+  var r = (num >> 16) + amt;
+
+  if (r > 255) r = 255;
+  else if  (r < 0) r = 0;
+
+  var b = ((num >> 8) & 0x00FF) + amt;
+
+  if (b > 255) b = 255;
+  else if  (b < 0) b = 0;
+
+  var g = (num & 0x0000FF) + amt;
+
+  if (g > 255) g = 255;
+  else if (g < 0) g = 0;
+
+  return (usePound?"#":"") + (g | (b << 8) | (r << 16)).toString(16);
+}
+
+// Convert rgb to hex
+function rgb2hex(rgb) {
+  if (/^#[0-9A-F]{6}$/i.test(rgb)) return rgb;
+
+  rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+  function hex(x) {
+    return ("0" + parseInt(x).toString(16)).slice(-2);
+  }
+  return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
 }
