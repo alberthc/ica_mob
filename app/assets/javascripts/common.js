@@ -89,6 +89,10 @@ $(document).ready(function() {
 
   /* Click Events */
 
+  $('.clickable').on('click', function() {
+    var link = $(this).data("href");
+  });
+
   $('.scrollable').on('click', function() {
     var scrollId = $(this).data("scroll-id");
     $('html, body').animate({
@@ -100,32 +104,50 @@ $(document).ready(function() {
 
   var isAnimatingClickable = false;
   $('.clickable').hover(function() {
-    console.log(isAnimatingClickable);
+    //console.log("on enter = " + isAnimatingClickable);
     // mouse enter event
     if (!isAnimatingClickable) {
       isAnimatingClickable = true;
       var color = $(this).css('background-color');
       var newColor = LightenDarkenColor(rgb2hex(color), -20);
-      $(this).animate({
+      $(this).stop().animate({
         backgroundColor: newColor
-      }, 1000, function() {
+      }, 0, function() {
         isAnimatingClickable = false;
+        $(this).css('background-color', newColor);
       });
     }
   }, function(){
-    console.log(isAnimatingClickable);
+    //console.log("on exit = " + isAnimatingClickable);
     // mouse leave event
     if (!isAnimatingClickable) {
       isAnimatingClickable = true;
       var color = $(this).css('background-color');
       var newColor = LightenDarkenColor(rgb2hex(color), 20);
-      $(this).animate({
+      $(this).stop().animate({
         backgroundColor: newColor
-      }, 1000, function() {
+      }, 0, function() {
         isAnimatingClickable = false;
+        $(this).css('background-color', newColor);
       });
     }
   });
+
+  /*$(".clickable").bind("mouseover", function() {
+    var color = $(this).css("background-color");
+    var newColor = LightenDarkenColor(rgb2hex(color), -20);
+
+    $(this).animate({
+      backgroundColor: newColor
+    }, 300);
+
+    $(this).bind("mouseout", function() {
+      //$(this).css("background-color", color);
+      $(this).animate({
+        backgroundColor: color
+      }, 300);
+    });
+  });*/
 
 });
 
