@@ -91,6 +91,7 @@ $(document).ready(function() {
 
   $('.clickable').on('click', function() {
     var link = $(this).data("href");
+    window.location.href = link;
   });
 
   $('.scrollable').on('click', function() {
