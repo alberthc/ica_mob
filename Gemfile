@@ -48,7 +48,7 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 
-gem 'foundation-rails'
+gem 'foundation-rails', '5.3.3.0'
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
