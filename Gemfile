@@ -48,10 +48,13 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 
-gem 'foundation-rails'
+gem 'foundation-rails', '5.3.3.0'
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 gem 'jquery-turbolinks'
 
 gem 'jquery-ui-rails'
+
+gem 'google-api-client', require: 'google/api_client'
+gem 'gdata', git: 'https://github.com/agentrock/gdata.git'
