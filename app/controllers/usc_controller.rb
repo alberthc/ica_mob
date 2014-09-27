@@ -53,6 +53,9 @@ class UscController < ApplicationController
     end
   end
 
+  def leaders
+  end
+
   def smallgroups
   end
 

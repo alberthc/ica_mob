@@ -13,7 +13,7 @@
             <br><br><br>
             <h4 class="serif"><strong><em>Large Group Rally</em></strong></h4>
             <h6 class="serif">Wednesday, 6:30pm</h6>
-            <h6 class="serif">Ackerman Viewpoint Conference Room</h6>
+            <h6 class="serif">Location: Boelter 5440</h6>
             <br>
             <h4 class="serif"><strong><em>Church</em></strong></h4>
             <h6 class="serif">Pickup Time:9:00am</h6>
@@ -22,27 +22,19 @@
           </div>
           <div class="small-12 medium-8 medium-pull-4 large-8 large-pull-4 columns orb-bg bg-ucla-blue" data-equalizer-watch>
     				<ul class="example-orbit-content" data-orbit data-option="slide_number:false; next_on_click: false;" >
+                      <% @feed_parsed.each do |entry| %>
                       <li data-orbit-slide="headline-1">
                         <div class="text-center">
                           <section class="separation-2"></section>
-                          <h3 class="white">Summer ICA</h3>
-                          <section class="separation-2"></section>  
-                    
-                          <h5 class="serif white">Check back for fun summer events!</h5>
+                          <h3 class="white"><%= entry[:title] %></h3>
+                          <section class="separation-1"></section>
+                          <h5 class="serif white"><%= entry[:date] %></h5>
+                          <h5 class="serif white"><%= entry[:time] %></h5>
+                          <h5 class="serif white">Location: <%= entry[:location] %></h5>
                           <section class="separation-2"></section>
                         </div>
                       </li>
-                      <li data-orbit-slide="headline-2">
-                        <div class="text-center">
-                          <section class="separation-2"></section>
-                          <h3 class="white">Summer Training Program</h3>
-                          <section class="separation-1"></section>  
-                          <h5 class="serif white">8/31 - 9/20</h5>
-                          <h5 class="serif white">Location: Pine Valley Bible Conference Center</h5>
-                          <h5 class="serif white">Register: <a href="www.tinyurl.com/stp2014app" class="usc-link fast-color-trans" target="_blank">here</a></h5>
-                          <section class="separation-2"></section>
-                        </div>
-                      </li>
+                      <% end %>
                       <li data-orbit-slide="headline-3">
                         <div class="text-center">
                           <section class="separation-2"></section>
