@@ -1388,6 +1388,10 @@ $topbar-link-padding: $topbar-height / 3;
   	width: 200px;
   }
 
+  .responsive-button.set-width-3e {
+    width: 200px;
+  }
+
   footer {
     .bg-footer-2 {
       background-color: $grey8;
@@ -1540,6 +1544,10 @@ $topbar-link-padding: $topbar-height / 3;
   	width: 200px;
   }
 
+  .responsive-button.set-width-3e {
+    width: 205px;
+  }
+
   footer {
     .bg-footer-2 {
       background-color: $grey8;
@@ -1677,6 +1685,10 @@ $topbar-link-padding: $topbar-height / 3;
   	width: 240px;
   }
 
+  .responsive-button.set-width-3e {
+    width: 265px;
+  }
+
   footer {
     .bg-footer-2 {
       background-color: $grey8;
@@ -1791,6 +1803,10 @@ $topbar-link-padding: $topbar-height / 3;
 @media #{$xlarge-up} {
   .responsive-button.set-width {
     width: 280px;
+  }
+
+  .responsive-button.set-width-3e {
+    width: 325px;
   }
 
   footer {

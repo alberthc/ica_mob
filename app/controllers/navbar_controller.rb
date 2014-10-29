@@ -11,13 +11,13 @@ class NavbarController < ApplicationController
   def discipleship
   end
 
-  def equipping
+  def equip
   end
 
-  def establishing
+  def establish
   end
 
-  def evangelism
+  def evangelize
   end
 
   def home
