@@ -15,6 +15,9 @@
 /log/*.log
 /tmp
 
+# Ignore models for env distinction
+/app/models/staging.rb
+
 # Ignore other unneeded files.
 database.yml
 doc/
