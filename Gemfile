@@ -4,6 +4,19 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
 
+# Use SCSS for stylesheets
+gem 'sass-rails', '~> 4.0.3'
+
+# Use Uglifier as compressor for JavaScript assets
+gem 'uglifier', '>= 1.3.0'
+
+# Use CoffeeScript for .js.coffee assets and views
+gem 'coffee-rails', '~> 4.0.0'
+
+# Use asset sync to sync assets to S3 bucket and reduce slug size
+gem 'asset_sync'
+gem "fog", "~>1.20"
+
 group :development do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
@@ -14,12 +27,6 @@ group :production do
   gem 'rails_12factor', '0.0.2'
 end
 
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
@@ -47,7 +54,6 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-
 gem 'foundation-rails', '5.3.3.0'
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
@@ -57,4 +63,5 @@ gem 'jquery-turbolinks'
 gem 'jquery-ui-rails'
 
 gem 'google-api-client', require: 'google/api_client'
+
 gem 'gdata', git: 'https://github.com/agentrock/gdata.git'
