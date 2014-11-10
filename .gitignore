@@ -18,6 +18,10 @@
 # Ignore models for env distinction
 /app/models/staging.rb
 
+# Ignore precompiled assets
+/public/production
+/public/staging
+
 # Ignore other unneeded files.
 database.yml
 doc/
