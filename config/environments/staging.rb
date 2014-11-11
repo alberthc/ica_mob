@@ -60,6 +60,12 @@ Rails.application.configure do
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 
+  asset_sync_config_file = File.join(Rails.root, 'config', 'asset_sync.yml')
+    ASSETCONFIG = HashWithIndifferentAccess.new(YAML::load(IO.read(asset_sync_config_file)))[Rails.env]
+    ASSETCONFIG.each do |k,v|
+    ENV[k.upcase] ||= v
+  end
+
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   config.action_controller.asset_host = "//#{ENV['FOG_DIRECTORY']}.s3-us-west-1.amazonaws.com" #"http://assets.example.com"
 
