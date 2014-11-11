@@ -37,7 +37,7 @@ Rails.application.configure do
 
   config.assets.enabled = true
 
-  # config.assets.initialize_on_precompile = true
+  config.assets.initialize_on_precompile = false
 
   # `config.assets.precompile` has moved to config/initializers/assets.rb
 
