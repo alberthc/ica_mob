@@ -21,6 +21,7 @@
 # Ignore precompiled assets
 /public/production
 /public/staging
+/public/assets
 
 # Ignore other unneeded files.
 database.yml
