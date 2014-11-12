@@ -65,3 +65,5 @@ gem 'jquery-ui-rails'
 gem 'google-api-client', require: 'google/api_client'
 
 gem 'gdata', git: 'https://github.com/agentrock/gdata.git'
+
+gem 'smusher'
