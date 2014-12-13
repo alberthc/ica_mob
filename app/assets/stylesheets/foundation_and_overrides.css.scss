@@ -1444,6 +1444,10 @@ $topbar-link-padding: $topbar-height / 3;
     top: 0; right: 0; bottom: 0; left: 0;
   }
 
+  .no-padding-bottom-sml {
+    margin-bottom: 0 !important;
+  }
+
   .responsive-white-border {
     border-color: white;
     border-style: solid;

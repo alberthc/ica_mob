@@ -2,7 +2,7 @@ class NavbarController < ApplicationController
   def about
   end
 
-  def church_leadership
+  def leadership
   end
 
   def contact

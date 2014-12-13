@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # navbar controller
   match '/about', to: 'navbar#about', via: 'get'
-  match '/church-leadership', to: 'navbar#church_leadership', via: 'get'
+  match '/leadership', to: 'navbar#leadership', via: 'get'
   match '/equip', to: 'navbar#equip', via: 'get'
   match '/establish', to: 'navbar#establish', via: 'get'
   match '/evangelize', to: 'navbar#evangelize', via: 'get'
