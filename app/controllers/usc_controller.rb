@@ -3,7 +3,7 @@ class UscController < ApplicationController
     client = GData::Client::DocList.new
     #calendar_feed_addr = 'http://www.google.com/calendar/feeds/uscinchristalone@gmail.com/public/full?orderby=starttime&sortorder=ascending&futureevents=true&singleevents=true'
 
-    calendar_feed_addr = 'http://www.google.com/calendar/feeds/uscinchristalone@gmail.com/public/full?alt=json&max-results=15' + USC_API_KEY
+    calendar_feed_addr = 'http://www.google.com/calendar/feeds/uscinchristalone@gmail.com/public/full?alt=json&max-results=15&key=' + USC_API_KEY
 
     # Check if GData client successfully gets data from the calendar feed
     begin
