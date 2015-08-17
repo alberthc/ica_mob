@@ -8,3 +8,6 @@ USC_EMAIL = 'uscinchristalone@gmail.com'
 
 # Campus public access API keys
 USC_API_KEY = 'AIzaSyDkQtUDr5g_O8ZHZMa9Tx-Og69dNSCBA0Y'
+
+# Util Constants
+DEFAULT_TIME_ZONE = '-0700'

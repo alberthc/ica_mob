@@ -26,6 +26,7 @@ class UscController < ApplicationController
                                                     maxResults: 20,
                                                     orderBy: 'startTime',
                                                     timeMin: Util.get_current_time,
+                                                    timeZone: DEFAULT_TIME_ZONE,
                                                     key: USC_API_KEY})
     
     entries = result.data.items
