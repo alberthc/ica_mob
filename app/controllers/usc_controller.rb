@@ -1,42 +1,67 @@
 class UscController < ApplicationController
   def home
-    client = GData::Client::DocList.new
-    #calendar_feed_addr = 'http://www.google.com/calendar/feeds/uscinchristalone@gmail.com/public/full?orderby=starttime&sortorder=ascending&futureevents=true&singleevents=true'
+    # google_api_client = GData::Client::DocList.new
 
-    #calendar_feed_addr = 'http://www.google.com/calendar/feeds/uscinchristalone@gmail.com/public/full?alt=json&max-results=15&key=' + USC_API_KEY
+    # calendar_feed_addr = 'https://www.googleapis.com/calendar/v3/calendars/uscinchristalone%40gmail.com/events?singleEvents=true&maxResults=30&orderBy=startTime&key=' + USC_API_KEY
 
-    calendar_feed_addr = 'https://www.googleapis.com/calendar/v3/calendars/uscinchristalone@gmail.com/events?key=' + USC_API_KEY
-
-    # Check if GData client successfully gets data from the calendar feed
+=begin
+    # Check if GData client successfully gets data from the calendar feed - DEPRECATE V2 API
     begin
       feed = client.get(calendar_feed_addr).to_xml
+      feed = client.get(calendar_feed_addr)
+
+      puts 'UscController#home: feed = ' + feed
     rescue
       puts 'UscController#home: error getting gdata client calendar feed, address=' + calendar_feed_addr
     end
+=end
+
+    google_api_client = Google::APIClient.new
+    google_api_calendar = google_api_client.discovered_api('calendar', 'v3')
+    google_api_client.authorization = nil
+
+    result = google_api_client.execute(api_method: google_api_calendar.events.list,
+                                       parameters: {calendarId: USC_EMAIL,
+                                                    singleEvents: true,
+                                                    maxResults: 20,
+                                                    orderBy: 'startTime',
+                                                    timeMin: Util.get_current_time,
+                                                    key: USC_API_KEY})
+    
+    entries = result.data.items
+=begin
+    entries.each do |e|
+      print e.summary + "\n"
+      puts e.summary + "\n"
+    end
+=end
 
     # Structure containing the feed parsed for display
-    @feed_parsed = Array.new
+    @parsed_entries = Array.new
     numEntriesChecked = 0
 
-    if !feed.nil?
-      feed.elements.each('entry') do |entry|
+    if !entries.nil?
+      entries.each do |entry|
         numEntriesChecked += 1
         if numEntriesChecked > MAX_NUM_ANNOUNCEMENTS_TO_CHECK
           break
         end
 
         # skip entry if description contains SKIP_ENTRY_TEXT
-        content = entry.elements['content'].text
+        content = entry.description
         if content == SKIP_ENTRY_TEXT
           next
         end
 
-        datetime = DateTime.parse(entry.elements['gd:when'].attribute('startTime').value)
+        #datetime = DateTime.parse(entry.elements['gd:when'].attribute('startTime').value)
 
-        title = entry.elements['title'].text
-        date = datetime.strftime('%A %-m/%-d')
-        time = datetime.strftime('%-I:%M %p')
-        location = entry.elements['gd:where'].attribute('valueString').value
+        dateTime = entry.start.dateTime
+
+        title = entry.summary
+        date = dateTime.strftime('%A %-m/%-d')
+        time = dateTime.strftime('%-I:%M %p')
+        #location = entry.elements['gd:where'].attribute('valueString').value
+        location = entry.location
 
         parsed_entry = {title: title,
                         date: date,
@@ -44,13 +69,13 @@ class UscController < ApplicationController
                         location: location}
 
         # check if parsed_entry is part of a recurring event that is already on the list and don't show
-        if exists(@feed_parsed, parsed_entry)
+        if exists(@parsed_entries, parsed_entry)
           next
         end
 
-        @feed_parsed.push(parsed_entry)
+        @parsed_entries.push(parsed_entry)
 
-        if @feed_parsed.size == MAX_NUM_ANNOUNCEMENTS_TO_DISPLAY
+        if @parsed_entries.size == MAX_NUM_ANNOUNCEMENTS_TO_DISPLAY
           break
         end
       end
