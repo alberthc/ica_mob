@@ -10,4 +10,4 @@ USC_EMAIL = 'uscinchristalone@gmail.com'
 USC_API_KEY = 'AIzaSyDkQtUDr5g_O8ZHZMa9Tx-Og69dNSCBA0Y'
 
 # Util Constants
-DEFAULT_TIME_ZONE = '-0700'
+DEFAULT_TZ = '-0700'
