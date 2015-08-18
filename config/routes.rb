@@ -10,7 +10,8 @@ Rails.application.routes.draw do
   match '/special-events', to: 'navbar#special_events', via: 'get'
   match '/stp', to: 'navbar#stp', via: 'get'
   match '/whec', to: 'navbar#whec', via: 'get'
-  
+
+=begin 
   # ucla controller
   match '/ucla',  to: 'ucla#home',    via: 'get'
   match '/ucla/leaders',  to: 'ucla#leaders',    via: 'get'
@@ -28,6 +29,22 @@ Rails.application.routes.draw do
 
   # cal controller
   match '/ucb',  to: 'cal#home',    via: 'get'
+=end
+
+  # campus controller
+  match '/usc',  to: 'campus#usc',    via: 'get'
+  match '/usc/leaders',  to: 'campus#usc_leaders',    via: 'get'
+  match '/usc/small-groups',  to: 'campus#usc_small_groups',    via: 'get'
+  
+  match '/ucla',  to: 'campus#ucla',    via: 'get'
+  match '/ucla/leaders',  to: 'campus#ucla_leaders',    via: 'get'
+  match '/ucla/small-groups',  to: 'campus#ucla_small_groups',    via: 'get'
+  
+  match '/uci',  to: 'campus#uci',    via: 'get'
+  match '/uci/leaders',  to: 'campus#uci_leaders',    via: 'get'
+  match '/uci/small-groups',  to: 'campus#uci_small_groups',    via: 'get'
+
+  match '/ucb',  to: 'campus#cal',    via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
