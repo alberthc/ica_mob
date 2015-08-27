@@ -10,7 +10,7 @@ UCLA_EMAIL = 'icabruins@gmail.com'
 UCI_EMAIL = 'irvineica@gmail.com'
 RUTGERS_EMAIL = 'rutgersicaministry@gmail.com'
 
-RUTGERS_GCAL_ID = '90v078d5jo8ai8k0cfv5jjjhq8'
+RUTGERS_GCAL_ID = '90v078d5jo8ai8k0cfv5jjjhq8@group.calendar.google.com'
 
 # Campus public access API keys
 USC_API_KEY = 'AIzaSyDkQtUDr5g_O8ZHZMa9Tx-Og69dNSCBA0Y'
