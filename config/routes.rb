@@ -46,6 +46,10 @@ Rails.application.routes.draw do
 
   match '/ucb',  to: 'campus#cal',    via: 'get'
 
+  match '/rutgers',  to: 'campus#rutgers',    via: 'get'
+  match '/rutgers/leaders',  to: 'campus#rutgers_leaders',    via: 'get'
+  match '/rutgers/small-groups',  to: 'campus#rutgers_small_groups',    via: 'get'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

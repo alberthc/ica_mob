@@ -28,7 +28,7 @@ class CampusController < ApplicationController
     @description = 'USC In Christ Alone (ICA) is a recognized student organization at USC that welcomes both believers and non-believers. We have a strong emphasis on discipleship and seeking and saving the lost. Our desire is to know Christ and make Christ known on our campus and around the world. We hold weekly small group Bible studies and large group meetings along with other fun activities.'
     @rally_name = 'Large Group Rally'
     @rally_datetime = 'Thursday, 6:30pm'
-    @rally_location = 'Location: VKC 156'
+    @rally_location = 'VKC 156'
     @church_name = 'Church'
     @church_datetime = 'Sunday Service begins at 9:45am'
     @church_location = 'SGM 101'
@@ -44,7 +44,7 @@ class CampusController < ApplicationController
     retrieve_events(USC_EMAIL, USC_API_KEY)
   end
 
-  def usc_smallgroups
+  def usc_small_groups
   end
 
   def usc_leaders
@@ -76,7 +76,7 @@ class CampusController < ApplicationController
     retrieve_events(UCLA_EMAIL, UCLA_API_KEY)
   end
 
-  def ucla_smallgroups
+  def ucla_small_groups
   end
 
   def ucla_leaders
@@ -108,7 +108,7 @@ class CampusController < ApplicationController
     retrieve_events(UCI_EMAIL, UCI_API_KEY)
   end
 
-  def uci_smallgroups
+  def uci_small_groups
   end
 
   def uci_leaders
@@ -118,7 +118,39 @@ class CampusController < ApplicationController
     redirect_to "http://www.lhecberkeley.org/in-christ-alone-collegiate-fellowship.html"
   end
 
-  def retrieve_events(gmail, api_key)
+  def rutgers
+    @campus_name = 'Rutgers'
+    @campus_org_name = 'Rutgers ICA'
+    @campus_main_pic_id = 'rutgers-main'
+    @campus_group_small_pic = 'campus/rutgers-leaders.jpg'
+    @campus_group_pic = 'campus/rutgers-leaders.jpg'
+    @keywords = 'Rutgers, student organization, campus fellowship, church, fellowship, discipleship, evangelism, witnessing, navigators, missions, navs, ministry'
+    @description = 'We have a strong emphasis on discipleship and seeking and saving the lost. Our desire is to know Christ and make Christ known on our campus and around the world. We hold weekly small group Bible studies and large group meetings along with other fun activities.'
+    @rally_name = 'Large Group Rally'
+    @rally_datetime = 'Wednesday, 6:30pm'
+    @rally_location = 'TBD'
+    @church_name = 'Graceway Presbyterian Church'
+    @church_datetime = 'Sunday Service begins at 11:00am'
+    @church_location = 'New Brunswick Theological Seminary, 35 Seminary Place, New Brunswick, NJ 08901'
+    @announcements_bg_color1_class = 'bg-grey-rutgers'
+    @announcements_bg_color2_class = 'bg-red-rutgers'
+    @fb_campus_link = 'none'
+    @small_groups_path = rutgers_small_groups_path
+    @small_groups_pic_id = 'small-groups'
+    @leaders_path = rutgers_leaders_path
+    @leaders_pic_id = 'rutgers-statue'
+    @gcal_path = 'https://www.google.com/calendar/embed?src=90v078d5jo8ai8k0cfv5jjjhq8%40group.calendar.google.com&ctz=America/New_York'
+
+    retrieve_events(RUTGERS_GCAL_ID, RUTGERS_API_KEY)
+  end
+
+  def rutgers_small_groups
+  end
+
+  def rutgers_leaders
+  end
+
+  def retrieve_events(gcalid, api_key)
     # google_api_client = GData::Client::DocList.new
 
     # calendar_feed_addr = 'https://www.googleapis.com/calendar/v3/calendars/uscinchristalone%40gmail.com/events?singleEvents=true&maxResults=30&orderBy=startTime&key=' + USC_API_KEY
@@ -140,26 +172,28 @@ class CampusController < ApplicationController
     google_api_client.authorization = nil
 
     result = google_api_client.execute(api_method: google_api_calendar.events.list,
-                                       parameters: {calendarId: gmail,
+                                       parameters: {calendarId: gcalid,
                                                     singleEvents: true,
                                                     maxResults: 20,
                                                     orderBy: 'startTime',
                                                     timeMin: Util.get_current_time,
                                                     key: api_key})
     
-    entries = result.data.items
-#=begin
-    entries.each do |e|
-      print e.summary + "\n"
-      puts e.summary + "\n"
+    if !result.data.nil?
+      entries = result.data.items
     end
-#=end
 
     # Structure containing the feed parsed for display
     @parsed_entries = Array.new
     numEntriesChecked = 0
 
     if !entries.nil?
+#=begin
+      entries.each do |e|
+        puts e.summary + "\n"
+      end
+#=end
+
       entries.each do |entry|
         puts 'entry = ' + entry.summary
         numEntriesChecked += 1

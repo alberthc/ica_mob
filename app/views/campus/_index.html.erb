@@ -50,7 +50,11 @@
           <section class="separation-2"></section>
           <section class="separation-2"></section>
           <section class="separation-2"></section>
-          <h3 class="serif white">Click <a href="<%= @campus_fb_link %>" class="usc-link fast-color-trans" target="_blank">here</a> to check out more events on our Facebook page!</h3>
+          <% if @fb_campus_link == 'none' %>
+            <h3 class="serif white">Welcome to the Rutgers In Christ Alone Ministry page!</h3>
+          <% else %>
+            <h3 class="serif white">Click <a href="<%= @fb_campus_link %>" class="usc-link fast-color-trans" target="_blank">here</a> to check out more events on our Facebook page!</h3>
+          <% end %>
           <section class="separation-2"></section>
           <section class="separation-2"></section>
           <section class="separation-2"></section>
