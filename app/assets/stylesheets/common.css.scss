@@ -43,6 +43,16 @@
   color: $usc-secondary;
 }
 
+.rutgers-link {
+  color: inherit;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.rutgers-link:hover {
+  color: $rutgers-secondary;
+}
+
 .verse {
   font-style: italic;
 }

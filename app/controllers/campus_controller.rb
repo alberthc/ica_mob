@@ -35,6 +35,7 @@ class CampusController < ApplicationController
     @announcements_bg_color1_class = 'bg-gold'
     @announcements_bg_color2_class = 'bg-red'
     @fb_campus_link = 'https://www.facebook.com/groups/5748715849/?ref=br_tf'
+    @fb_link_class = 'usc-link'
     @small_groups_path = usc_small_groups_path
     @small_groups_pic_id = 'small-groups'
     @leaders_path = usc_leaders_path
@@ -67,6 +68,7 @@ class CampusController < ApplicationController
     @announcements_bg_color1_class = 'bg-gold'
     @announcements_bg_color2_class = 'bg-ucla-blue'
     @fb_campus_link = 'https://www.facebook.com/groups/5175699521/'
+    @fb_link_class = 'usc-link'
     @small_groups_path = ucla_small_groups_path
     @small_groups_pic_id = 'small-groups'
     @leaders_path = ucla_leaders_path
@@ -99,6 +101,7 @@ class CampusController < ApplicationController
     @announcements_bg_color1_class = 'bg-gold'
     @announcements_bg_color2_class = 'bg-ucla-blue'
     @fb_campus_link = 'https://www.facebook.com/groups/28628738058/'
+    @fb_link_class = 'usc-link'
     @small_groups_path = uci_small_groups_path
     @small_groups_pic_id = 'small-groups'
     @leaders_path = uci_leaders_path
@@ -134,7 +137,8 @@ class CampusController < ApplicationController
     @church_location = 'New Brunswick Theological Seminary, 35 Seminary Place, New Brunswick, NJ 08901'
     @announcements_bg_color1_class = 'bg-grey-rutgers'
     @announcements_bg_color2_class = 'bg-red-rutgers'
-    @fb_campus_link = 'none'
+    @fb_campus_link = 'https://www.facebook.com/groups/893558397405911/'
+    @fb_link_class = 'rutgers-link'
     @small_groups_path = rutgers_small_groups_path
     @small_groups_pic_id = 'small-groups'
     @leaders_path = rutgers_leaders_path
