@@ -42,7 +42,7 @@ class CampusController < ApplicationController
     @leaders_pic_id = 'usc-statue'
     @gcal_path = 'https://www.google.com/calendar/embed?src=uscinchristalone%40gmail.com&ctz=America/Los_Angeles'
 
-    retrieve_events(USC_EMAIL, USC_API_KEY)
+    retrieve_events(USC_EMAIL, USC_API_KEY, DEFAULT_TZ)
   end
 
   def usc_small_groups
@@ -75,7 +75,7 @@ class CampusController < ApplicationController
     @leaders_pic_id = 'ucla-statue'
     @gcal_path = 'https://www.google.com/calendar/embed?src=icabruins%40gmail.com&ctz=America/Los_Angeles'
 
-    retrieve_events(UCLA_EMAIL, UCLA_API_KEY)
+    retrieve_events(UCLA_EMAIL, UCLA_API_KEY, DEFAULT_TZ)
   end
 
   def ucla_small_groups
@@ -108,7 +108,7 @@ class CampusController < ApplicationController
     @leaders_pic_id = 'uci-statue'
     @gcal_path = 'https://www.google.com/calendar/embed?src=irvineica%40gmail.com&ctz=America/Los_Angeles'
 
-    retrieve_events(UCI_EMAIL, UCI_API_KEY)
+    retrieve_events(UCI_EMAIL, UCI_API_KEY, DEFAULT_TZ)
   end
 
   def uci_small_groups
@@ -145,7 +145,7 @@ class CampusController < ApplicationController
     @leaders_pic_id = 'rutgers-statue'
     @gcal_path = 'https://www.google.com/calendar/embed?src=90v078d5jo8ai8k0cfv5jjjhq8%40group.calendar.google.com&ctz=America/New_York'
 
-    retrieve_events(RUTGERS_GCAL_ID, RUTGERS_API_KEY)
+    retrieve_events(RUTGERS_GCAL_ID, RUTGERS_API_KEY, NEW_YORK_TZ)
   end
 
   def rutgers_small_groups
@@ -154,7 +154,7 @@ class CampusController < ApplicationController
   def rutgers_leaders
   end
 
-  def retrieve_events(gcalid, api_key)
+  def retrieve_events(gcalid, api_key, timeZone)
     # google_api_client = GData::Client::DocList.new
 
     # calendar_feed_addr = 'https://www.googleapis.com/calendar/v3/calendars/uscinchristalone%40gmail.com/events?singleEvents=true&maxResults=30&orderBy=startTime&key=' + USC_API_KEY
@@ -180,7 +180,8 @@ class CampusController < ApplicationController
                                                     singleEvents: true,
                                                     maxResults: 20,
                                                     orderBy: 'startTime',
-                                                    timeMin: Util.get_current_time,
+                                                    timeMin: Util.get_current_time(timeZone),
+                                                    timeZone: timeZone,
                                                     key: api_key})
     
     if !result.data.nil?
@@ -227,7 +228,7 @@ class CampusController < ApplicationController
 
         if !dateTime.nil?
           date = dateTime.strftime('%A %-m/%-d')
-          time = dateTime.strftime('%-I:%M %p')
+          time = dateTime.in_time_zone(timeZone).strftime('%-I:%M %p')
         else
           date = date.strftime('%A %-m/%-d')
           time = 'TBD'

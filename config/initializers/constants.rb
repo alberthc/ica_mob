@@ -19,4 +19,7 @@ UCI_API_KEY = 'AIzaSyAN3e4mVDFOaNFMvleSeF78_ZtLDYxR864'
 RUTGERS_API_KEY = 'AIzaSyAetLWL80gsZlB1Mazhr2wsJvYJ40ClPwA'
 
 # Util Constants
-DEFAULT_TZ = '-0700'
+LOS_ANGELES_TZ = 'America/Los_Angeles'
+NEW_YORK_TZ = 'America/New_York'
+
+DEFAULT_TZ = LOS_ANGELES_TZ
