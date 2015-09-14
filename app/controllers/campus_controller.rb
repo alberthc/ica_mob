@@ -17,6 +17,70 @@ class CampusController < ApplicationController
   @leaders_pic_id = ''
   @gcal_path = ''
 =end
+
+  def home
+    case params[:campus_name]
+      when Campus::USC
+        usc
+      when Campus::UCLA
+        ucla
+      when Campus::UCI
+        uci
+      when Campus::CAL
+        puts 'no cal'
+      when Campus::RUTGERS
+        rutgers
+      else
+        raise ActionController::RoutingError.new('Not Found')
+    end
+  end
+
+  def leaders
+#    case params[:name]
+#      when Campus::USC
+#        usc
+#      when Campus::UCLA
+#        ucla
+#      when Campus::UCI
+#        uci
+#      when Campus::CAL
+#        puts 'no cal'
+#      when Campus::RUTGERS
+#        rutgers
+#      else
+#        raise ActionController::RoutingError.new('Not Found')
+#    end
+
+    campus_name = params[:campus_name]
+    validate_campus_name(campus_name)
+    get_campus_leaders(campus_name)
+    @num_columns = 2
+
+    if !@campus_leaders.nil?
+      puts 'LISTING CAMPUS LEADERS'
+      for leader in @campus_leaders
+        puts 'name = ' + leader.name + ', bio = ' + leader.bio
+      end
+    end
+
+  end
+
+  def small_groups
+    case params[:campus_name]
+      when Campus::USC
+        usc
+      when Campus::UCLA
+        ucla
+      when Campus::UCI
+        uci
+      when Campus::CAL
+        puts 'no cal'
+      when Campus::RUTGERS
+        rutgers
+      else
+        raise ActionController::RoutingError.new('Not Found')
+    end
+  end
  
   def usc
     @campus_name = 'USC'
@@ -258,20 +322,33 @@ class CampusController < ApplicationController
 
   private
 
-    # Check if newEntry already exists in list of parsed entries
-    def exists(entries, newEntry)
+    # Check if new_entry already exists in list of parsed entries
+    def exists(entries, new_entry)
       if entries.empty?
         return false
       else
         entries.each do |entry|
-          if entry[:title] == newEntry[:title] &&
-            entry[:location] == newEntry[:location] &&
-            entry[:time] == newEntry[:time]
+          if entry[:title] == new_entry[:title] &&
+            entry[:location] == new_entry[:location] &&
+            entry[:time] == new_entry[:time]
             return true
           end
         end
       end
       return false
+    end
+
+    def get_campus_leaders(campus_name)
+      @campus_leaders_column_1 = CampusLeader.where(campus_name: campus_name, column: 1, is_active: true)
+      @campus_leaders_column_2 = CampusLeader.where(campus_name: campus_name, column: 2, is_active: true)
+    end
+
+    def validate_campus_name(campus_name)
+      if Campus::VALID_CAMPUSES.include?(campus_name)
+        return true
+      else
+        return false
+      end
     end
 
 end

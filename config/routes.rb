@@ -11,44 +11,49 @@ Rails.application.routes.draw do
   match '/stp', to: 'navbar#stp', via: 'get'
   match '/whec', to: 'navbar#whec', via: 'get'
 
-=begin 
-  # ucla controller
-  match '/ucla',  to: 'ucla#home',    via: 'get'
-  match '/ucla/leaders',  to: 'ucla#leaders',    via: 'get'
-  match '/ucla/small-groups',  to: 'ucla#smallgroups',    via: 'get'
-
-  # usc controller
-  match '/usc',  to: 'usc#home',    via: 'get'
-  match '/usc/leaders',  to: 'usc#leaders',    via: 'get'
-  match '/usc/small-groups',  to: 'usc#smallgroups',    via: 'get'
-
-  # uci controller
-  match '/uci',  to: 'uci#home',    via: 'get'
-  match '/uci/leaders',  to: 'uci#leaders',    via: 'get'
-  match '/uci/small-groups',  to: 'uci#smallgroups',    via: 'get'
-
-  # cal controller
-  match '/ucb',  to: 'cal#home',    via: 'get'
-=end
-
   # campus controller
-  match '/usc',  to: 'campus#usc',    via: 'get'
-  match '/usc/leaders',  to: 'campus#usc_leaders',    via: 'get'
-  match '/usc/small-groups',  to: 'campus#usc_small_groups',    via: 'get'
-  
-  match '/ucla',  to: 'campus#ucla',    via: 'get'
-  match '/ucla/leaders',  to: 'campus#ucla_leaders',    via: 'get'
-  match '/ucla/small-groups',  to: 'campus#ucla_small_groups',    via: 'get'
-  
-  match '/uci',  to: 'campus#uci',    via: 'get'
-  match '/uci/leaders',  to: 'campus#uci_leaders',    via: 'get'
-  match '/uci/small-groups',  to: 'campus#uci_small_groups',    via: 'get'
+
+  match '/campus/:campus_name',  to: 'campus#home',  via: 'get'
+  match '/campus/:campus_name/leaders',  to: 'campus#leaders',  via: 'get'
+  match '/campus/:campus_name/small-groups',  to: 'campus#small_groups',  via: 'get'
+
+  match '/usc',  to: redirect('/campus/usc'),    via: 'get'
+  match '/usc/leaders',  to: redirect('/campus/usc/leaders'),    via: 'get'
+  match '/usc/small-groups',  to: redirect('/campus/usc/small-groups'),    via: 'get'
+
+  match '/ucla',  to: redirect('/campus/ucla'),    via: 'get'
+  match '/ucla/leaders',  to: redirect('/campus/ucla/leaders'),    via: 'get'
+  match '/ucla/small-groups',  to: redirect('/campus/ucla/small-groups'),    via: 'get'
+
+  match '/uci',  to: redirect('/campus/uci'),    via: 'get'
+  match '/uci/leaders',  to: redirect('/campus/uci/leaders'),    via: 'get'
+  match '/uci/small-groups',  to: redirect('/campus/uci/small-groups'),    via: 'get'
 
   match '/ucb',  to: 'campus#cal',    via: 'get'
 
-  match '/rutgers',  to: 'campus#rutgers',    via: 'get'
-  match '/rutgers/leaders',  to: 'campus#rutgers_leaders',    via: 'get'
-  match '/rutgers/small-groups',  to: 'campus#rutgers_small_groups',    via: 'get'
+  match '/rutgers',  to: redirect('/campus/rutgers'),    via: 'get'
+  match '/rutgers/leaders',  to: redirect('/campus/rutgers/leaders'),    via: 'get'
+  match '/rutgers/small-groups',  to: redirect('/campus/rutgers/small-groups'),    via: 'get'
+
+  # old campus routes
+
+  # match '/usc',  to: 'campus#usc',    via: 'get'
+  # match '/usc/leaders',  to: 'campus#usc_leaders',    via: 'get'
+  # match '/usc/small-groups',  to: 'campus#usc_small_groups',    via: 'get'
+  
+  # match '/ucla',  to: 'campus#ucla',    via: 'get'
+  # match '/ucla/leaders',  to: 'campus#ucla_leaders',    via: 'get'
+  # match '/ucla/small-groups',  to: 'campus#ucla_small_groups',    via: 'get'
+  
+  # match '/uci',  to: 'campus#uci',    via: 'get'
+  # match '/uci/leaders',  to: 'campus#uci_leaders',    via: 'get'
+  # match '/uci/small-groups',  to: 'campus#uci_small_groups',    via: 'get'
+
+  # match '/ucb',  to: 'campus#cal',    via: 'get'
+
+  # match '/rutgers',  to: 'campus#rutgers',    via: 'get'
+  # match '/rutgers/leaders',  to: 'campus#rutgers_leaders',    via: 'get'
+  # match '/rutgers/small-groups',  to: 'campus#rutgers_small_groups',    via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
