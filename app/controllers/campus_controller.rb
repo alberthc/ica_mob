@@ -61,7 +61,7 @@ class CampusController < ApplicationController
     @description = 'Brothers and sisters committed to worshipping Christ and making Him known.'
     @rally_name = 'Large Group Rally'
     @rally_datetime = 'Wednesday, 6:30pm'
-    @rally_location = 'Haines A44'
+    @rally_location = 'Kinsey Pavilion 1200'
     @church_name = 'Church'
     @church_datetime = 'Pickup Time: 9:00am'
     @church_location = 'Pickup Location: De Neve Turnaround'
