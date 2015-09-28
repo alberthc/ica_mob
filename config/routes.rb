@@ -29,31 +29,13 @@ Rails.application.routes.draw do
   match '/uci/leaders',  to: redirect('/campus/uci/leaders'),    via: 'get'
   match '/uci/small-groups',  to: redirect('/campus/uci/small-groups'),    via: 'get'
 
-  match '/ucb',  to: 'campus#cal',    via: 'get'
+  #match '/ucb',  to: 'campus#cal',    via: 'get'
+  match '/ucb',  to: redirect('http://www.lhecberkeley.org/in-christ-alone-collegiate-fellowship.html'),    via: 'get'
+  match '/cal',  to: redirect('http://www.lhecberkeley.org/in-christ-alone-collegiate-fellowship.html'),    via: 'get'
 
   match '/rutgers',  to: redirect('/campus/rutgers'),    via: 'get'
   match '/rutgers/leaders',  to: redirect('/campus/rutgers/leaders'),    via: 'get'
   match '/rutgers/small-groups',  to: redirect('/campus/rutgers/small-groups'),    via: 'get'
-
-  # old campus routes
-
-  # match '/usc',  to: 'campus#usc',    via: 'get'
-  # match '/usc/leaders',  to: 'campus#usc_leaders',    via: 'get'
-  # match '/usc/small-groups',  to: 'campus#usc_small_groups',    via: 'get'
-  
-  # match '/ucla',  to: 'campus#ucla',    via: 'get'
-  # match '/ucla/leaders',  to: 'campus#ucla_leaders',    via: 'get'
-  # match '/ucla/small-groups',  to: 'campus#ucla_small_groups',    via: 'get'
-  
-  # match '/uci',  to: 'campus#uci',    via: 'get'
-  # match '/uci/leaders',  to: 'campus#uci_leaders',    via: 'get'
-  # match '/uci/small-groups',  to: 'campus#uci_small_groups',    via: 'get'
-
-  # match '/ucb',  to: 'campus#cal',    via: 'get'
-
-  # match '/rutgers',  to: 'campus#rutgers',    via: 'get'
-  # match '/rutgers/leaders',  to: 'campus#rutgers_leaders',    via: 'get'
-  # match '/rutgers/small-groups',  to: 'campus#rutgers_small_groups',    via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

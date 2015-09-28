@@ -41,19 +41,22 @@ class CampusController < ApplicationController
   end
 
   def small_groups
-    case params[:campus_url_key]
-      when Campus::USC
-        usc
-      when Campus::UCLA
-        ucla
-      when Campus::UCI
-        uci
-      when Campus::CAL
-        puts 'no cal'
-      when Campus::RUTGERS
-        rutgers
-      else
-        raise ActionController::RoutingError.new('Not Found')
+    campus_url_key = params[:campus_url_key]
+    if (!validate_campus_url_key(campus_url_key))
+      raise ActionController::RoutingError.new('Not Found')
+    end
+
+    campus = Campus.find_by_url_key(campus_url_key)
+    retrieve_small_groups_info(campus)
+
+    @small_groups_page_title = campus.school_name + " Small Groups"
+    @num_small_group_display_columns = 2
+
+    if !@campus_leaders.nil?
+      puts 'LISTING CAMPUS LEADERS'
+      for leader in @campus_leaders
+        puts 'name = ' + leader.name + ', bio = ' + leader.bio
+      end
     end
   end
  
@@ -75,72 +78,16 @@ class CampusController < ApplicationController
     @announcements_bg_color2_class = campus.announcements_bg_color2_class
     @fb_campus_link = campus.fb_campus_link
     @fb_link_class = campus.fb_link_class
-    @small_groups_path = request.original_url + '/small_groups'
+    @small_groups_path = request.original_url + '/small-groups'
     @small_groups_pic_id = campus.small_groups_pic_id
     @leaders_path = request.original_url + '/leaders'
     @leaders_pic_id = campus.leaders_pic_id
     @gcal_path = campus.gcal_path
 
-    retrieve_events(email, api_key, tz)
+    retrieve_gcal_events(email, api_key, tz)
   end
 
-  def usc
-  end
-
-  def usc_small_groups
-  end
-
-  def usc_leaders
-  end
-
-  def ucla
-  end
-
-  def ucla_small_groups
-  end
-
-  def ucla_leaders
-  end
-
-  def uci
-  end
-
-  def uci_small_groups
-  end
-
-  def uci_leaders
-  end
-
-  def cal
-    redirect_to "http://www.lhecberkeley.org/in-christ-alone-collegiate-fellowship.html"
-  end
-
-  def rutgers
-  end
-
-  def rutgers_small_groups
-  end
-
-  def rutgers_leaders
-  end
-
-  def retrieve_events(gcalid, api_key, timeZone)
-    # google_api_client = GData::Client::DocList.new
-
-    # calendar_feed_addr = 'https://www.googleapis.com/calendar/v3/calendars/uscinchristalone%40gmail.com/events?singleEvents=true&maxResults=30&orderBy=startTime&key=' + USC_API_KEY
-
-=begin
-    # Check if GData client successfully gets data from the calendar feed - DEPRECATE V2 API
-    begin
-      feed = client.get(calendar_feed_addr).to_xml
-      feed = client.get(calendar_feed_addr)
-
-      puts 'UscController#home: feed = ' + feed
-    rescue
-      puts 'UscController#home: error getting gdata client calendar feed, address=' + calendar_feed_addr
-    end
-=end
-
+  def retrieve_gcal_events(gcalid, api_key, timeZone)
     google_api_client = Google::APIClient.new
     google_api_calendar = google_api_client.discovered_api('calendar', 'v3')
     google_api_client.authorization = nil
@@ -176,8 +123,6 @@ class CampusController < ApplicationController
           next
         end
 
-        #datetime = DateTime.parse(entry.elements['gd:when'].attribute('startTime').value)
-
         # Some events only have date
         dateTime = nil
         date = nil
@@ -198,7 +143,6 @@ class CampusController < ApplicationController
           time = 'TBD'
         end
 
-        #location = entry.elements['gd:where'].attribute('valueString').value
         location = entry.location
 
         parsed_entry = {title: title,
@@ -255,6 +199,13 @@ class CampusController < ApplicationController
             @campus_leaders_column_2.push campus_leader
           end
         end
+      end
+    end
+
+    def retrieve_small_groups_info(campus)
+      @small_groups = campus.campus_small_groups
+      if @small_groups.nil?
+        @small_groups = Array.new
       end
     end
 

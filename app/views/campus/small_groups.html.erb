@@ -1,0 +1,49 @@
+<% provide(:title, @small_groups_page_title) %>
+
+<%= render 'small_groups/small_groups_common' %>
+<br>
+<br>
+
+<h2 class="text-center">Find A Small Group</h2>
+
+<div class="row">
+  <section class="small-12 large-10 large-centered columns">
+    <%
+    index = 0
+    while index < @small_groups.length
+      small_groups_row = Array.new
+      small_groups_row.push @small_groups[index]
+
+      next_small_group_index = index + 1
+      if next_small_group_index < @small_groups.length
+        small_groups_row.push @small_groups[next_small_group_index]
+        index = next_small_group_index
+      end %>
+
+      <div class="row">
+      <%
+      small_groups_row.each do |small_group|
+        if small_groups_row.length == 2 %>
+          <section class="small-12 medium-6 columns white-border contact-box">
+        <% elsif small_groups_row.length == 1 %>
+          <section class="small-12 medium-6 medium-centered columns white-border contact-box">
+        <% end %>
+            <h5><%= small_group.name %></h5>
+            <p>Current Study: <%= small_group.current_study %><br>
+               Location/Time: <%= small_group.location_and_time %><br>
+               Leaders: <%= small_group.leaders %><br>
+            </p>
+          </section>
+      <% end %>
+      </div>
+      <%
+      index += 1
+    end %>
+  </section> 
+</div>
+
+<div class="row text-center block-spacing-top">
+  <div class="small-12 columns">
+    <%= link_to "Get Involved", contact_path, class: "responsive-button" %>
+  </div>
+</div>
