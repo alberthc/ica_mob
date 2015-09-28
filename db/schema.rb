@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150914011303) do
+ActiveRecord::Schema.define(version: 20150927033752) do
 
   create_table "campus", force: true do |t|
     t.string   "school_name"
@@ -43,6 +43,13 @@ ActiveRecord::Schema.define(version: 20150914011303) do
 
   add_index "campus", ["url_key"], name: "index_campus_on_url_key"
 
+  create_table "campus_campus_leaders", force: true do |t|
+    t.integer  "campus_id"
+    t.integer  "campus_leader_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
   create_table "campus_leaders", force: true do |t|
     t.string   "name"
     t.string   "title"
@@ -51,7 +58,6 @@ ActiveRecord::Schema.define(version: 20150914011303) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image_path"
-    t.integer  "column"
     t.integer  "position"
   end
 
@@ -60,15 +66,5 @@ ActiveRecord::Schema.define(version: 20150914011303) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  create_table "campuses_campus_leaders", force: true do |t|
-    t.integer  "campus_id"
-    t.integer  "campus_leader_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "campuses_campus_leaders", ["campus_id"], name: "index_campuses_campus_leaders_on_campus_id"
-  add_index "campuses_campus_leaders", ["campus_leader_id"], name: "index_campuses_campus_leaders_on_campus_leader_id"
 
 end

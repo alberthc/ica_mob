@@ -1,7 +1,7 @@
 class Campus < ActiveRecord::Base
-
-  has_many :campuses_campus_leaders
-  has_many :campus_leaders, :through => :campuses_campus_leaders
+  has_many :campus_campus_leaders
+  has_many :campus_leaders, :through => :campus_campus_leaders
+  #has_and_belongs_to_many :campus_leaders
   has_one :campus_small_group
 
   # Campus constants

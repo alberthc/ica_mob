@@ -1,60 +1,36 @@
 class CampusController < ApplicationController
-=begin
-  @campus_name = 'none'
-  @campus_org_name 'ICA'
-  @keywords = 'ICA, In Christ Alone, Campus Christian fellowship'
-  @description = 'Campus Christian fellowship'
-  @rally_name = 'Large Group Rally'
-  @rally_datetime = 'TBD'
-  @rally_location = 'TBD'
-  @church_name = 'Church'
-  @church_datetime = 'Sunday Service begins at 9:45am'
-  @church_location = 'SGM 101'
-  @fb_campus_link = ''
-  @small_group_path = ''
-  @small_group_pic_id = ''
-  @leaders_path = ''
-  @leaders_pic_id = ''
-  @gcal_path = ''
-=end
 
   def home
-    case params[:campus_name]
+    campus_url_key = params[:campus_url_key]
+    campus = Campus.find_by_url_key(campus_url_key)
+    
+    case campus_url_key
       when Campus::USC
-        usc
+        campus_constructor(campus, USC_EMAIL, USC_API_KEY, DEFAULT_TZ)
       when Campus::UCLA
-        ucla
+        campus_constructor(campus, UCLA_EMAIL, UCLA_API_KEY, DEFAULT_TZ)
       when Campus::UCI
-        uci
+        campus_constructor(campus, UCI_EMAIL, UCI_API_KEY, DEFAULT_TZ)
       when Campus::CAL
         puts 'no cal'
       when Campus::RUTGERS
-        rutgers
+        campus_constructor(campus, RUTGERS_EMAIL, RUTGERS_API_KEY, DEFAULT_TZ)
       else
         raise ActionController::RoutingError.new('Not Found')
     end
   end
 
   def leaders
-#    case params[:name]
-#      when Campus::USC
-#        usc
-#      when Campus::UCLA
-#        ucla
-#      when Campus::UCI
-#        uci
-#      when Campus::CAL
-#        puts 'no cal'
-#      when Campus::RUTGERS
-#        rutgers
-#      else
-#        raise ActionController::RoutingError.new('Not Found')
-#    end
+    campus_url_key = params[:campus_url_key]
+    if (!validate_campus_url_key(campus_url_key))
+      raise ActionController::RoutingError.new('Not Found')
+    end
 
-    campus_name = params[:campus_name]
-    validate_campus_name(campus_name)
-    get_campus_leaders(campus_name)
-    @num_columns = 2
+    campus = Campus.find_by_url_key(campus_url_key)
+    create_campus_leader_lists(campus)
+
+    @leaders_page_title = campus.school_name + " Leaders"
+    @campus_name = campus.school_name
 
     if !@campus_leaders.nil?
       puts 'LISTING CAMPUS LEADERS'
@@ -62,11 +38,10 @@ class CampusController < ApplicationController
         puts 'name = ' + leader.name + ', bio = ' + leader.bio
       end
     end
-
   end
 
   def small_groups
-    case params[:campus_name]
+    case params[:campus_url_key]
       when Campus::USC
         usc
       when Campus::UCLA
@@ -82,31 +57,34 @@ class CampusController < ApplicationController
     end
   end
  
-  def usc
-    @campus_name = 'USC'
-    @campus_org_name = 'USC ICA'
-    @campus_main_pic_id = 'USC-main'
-    @campus_group_small_pic = 'usc-group-sml.jpg'
-    @campus_group_pic = 'usc-group.jpg'
-    @keywords = 'USC, student organization, campus fellowship, fellowship, discipleship, evangelism, witnessing, navigators, missions, navs, ministry'
-    @description = 'USC In Christ Alone (ICA) is a recognized student organization at USC that welcomes both believers and non-believers. We have a strong emphasis on discipleship and seeking and saving the lost. Our desire is to know Christ and make Christ known on our campus and around the world. We hold weekly small group Bible studies and large group meetings along with other fun activities.'
-    @rally_name = 'Large Group Rally'
-    @rally_datetime = 'Thursday, 6:30pm'
-    @rally_location = 'VKC 156'
-    @church_name = 'Church'
-    @church_datetime = 'Sunday Service begins at 9:45am'
-    @church_location = 'SGM 101'
-    @announcements_bg_color1_class = 'bg-gold'
-    @announcements_bg_color2_class = 'bg-red'
-    @fb_campus_link = 'https://www.facebook.com/groups/5748715849/?ref=br_tf'
-    @fb_link_class = 'usc-link'
-    @small_groups_path = usc_small_groups_path
-    @small_groups_pic_id = 'small-groups'
-    @leaders_path = usc_leaders_path
-    @leaders_pic_id = 'usc-statue'
-    @gcal_path = 'https://www.google.com/calendar/embed?src=uscinchristalone%40gmail.com&ctz=America/Los_Angeles'
+  def campus_constructor(campus, email, api_key, tz)
+    @campus_name = campus.school_name
+    @campus_org_name = campus.org_name
+    @campus_main_pic_id = campus.main_pic_id
+    @campus_group_small_pic = campus.group_pic_path + '.jpg'
+    @campus_group_pic = campus.group_pic_path + '.jpg'
+    @keywords = campus.keywords
+    @description = campus.description
+    @rally_name = campus.rally_name
+    @rally_datetime = campus.rally_datetime
+    @rally_location = campus.rally_location
+    @church_name = campus.church_name
+    @church_datetime = campus.church_datetime
+    @church_location = campus.church_location
+    @announcements_bg_color1_class = campus.announcements_bg_color1_class
+    @announcements_bg_color2_class = campus.announcements_bg_color2_class
+    @fb_campus_link = campus.fb_campus_link
+    @fb_link_class = campus.fb_link_class
+    @small_groups_path = request.original_url + '/small_groups'
+    @small_groups_pic_id = campus.small_groups_pic_id
+    @leaders_path = request.original_url + '/leaders'
+    @leaders_pic_id = campus.leaders_pic_id
+    @gcal_path = campus.gcal_path
 
-    retrieve_events(USC_EMAIL, USC_API_KEY, DEFAULT_TZ)
+    retrieve_events(email, api_key, tz)
+  end
+
+  def usc
   end
 
   def usc_small_groups
@@ -116,30 +94,6 @@ class CampusController < ApplicationController
   end
 
   def ucla
-    @campus_name = 'UCLA'
-    @campus_org_name = 'Bruin ICA'
-    @campus_main_pic_id = 'UCLA-main'
-    @campus_group_small_pic = 'ucla_group.jpg'
-    @campus_group_pic = 'ucla_group.jpg'
-    @keywords = 'UCLA, student organization, campus fellowship, fellowship, discipleship, evangelism, witnessing, navigators, missions, navs, ministry'
-    @description = 'Brothers and sisters committed to worshipping Christ and making Him known.'
-    @rally_name = 'Large Group Rally'
-    @rally_datetime = 'Wednesday, 6:30pm'
-    @rally_location = 'Haines A44'
-    @church_name = 'Church'
-    @church_datetime = 'Pickup Time: 9:00am'
-    @church_location = 'Pickup Location: De Neve Turnaround'
-    @announcements_bg_color1_class = 'bg-gold'
-    @announcements_bg_color2_class = 'bg-ucla-blue'
-    @fb_campus_link = 'https://www.facebook.com/groups/5175699521/'
-    @fb_link_class = 'usc-link'
-    @small_groups_path = ucla_small_groups_path
-    @small_groups_pic_id = 'small-groups'
-    @leaders_path = ucla_leaders_path
-    @leaders_pic_id = 'ucla-statue'
-    @gcal_path = 'https://www.google.com/calendar/embed?src=icabruins%40gmail.com&ctz=America/Los_Angeles'
-
-    retrieve_events(UCLA_EMAIL, UCLA_API_KEY, DEFAULT_TZ)
   end
 
   def ucla_small_groups
@@ -149,30 +103,6 @@ class CampusController < ApplicationController
   end
 
   def uci
-    @campus_name = 'UCI'
-    @campus_org_name = 'Irvine ICA'
-    @campus_main_pic_id = 'UCI-main'
-    @campus_group_small_pic = 'uci-group.jpg'
-    @campus_group_pic = 'uci-group.jpg'
-    @keywords = 'UCI, student organization, campus fellowship, fellowship, discipleship, evangelism, witnessing, navigators, missions, navs, ministry'
-    @description = 'Brothers and sisters committed to worshipping Christ and making Him known.'
-    @rally_name = 'Large Group Rally'
-    @rally_datetime = 'Thursday, 6:30pm'
-    @rally_location = 'Balboa Island B'
-    @church_name = 'Church'
-    @church_datetime = 'Pickup Time: 8:45am'
-    @church_location = 'Pickup Location: Please Contact Driver'
-    @announcements_bg_color1_class = 'bg-gold'
-    @announcements_bg_color2_class = 'bg-ucla-blue'
-    @fb_campus_link = 'https://www.facebook.com/groups/28628738058/'
-    @fb_link_class = 'usc-link'
-    @small_groups_path = uci_small_groups_path
-    @small_groups_pic_id = 'small-groups'
-    @leaders_path = uci_leaders_path
-    @leaders_pic_id = 'uci-statue'
-    @gcal_path = 'https://www.google.com/calendar/embed?src=irvineica%40gmail.com&ctz=America/Los_Angeles'
-
-    retrieve_events(UCI_EMAIL, UCI_API_KEY, DEFAULT_TZ)
   end
 
   def uci_small_groups
@@ -186,30 +116,6 @@ class CampusController < ApplicationController
   end
 
   def rutgers
-    @campus_name = 'Rutgers'
-    @campus_org_name = 'Rutgers ICA'
-    @campus_main_pic_id = 'rutgers-main'
-    @campus_group_small_pic = 'campus/rutgers-leaders.jpg'
-    @campus_group_pic = 'campus/rutgers-leaders.jpg'
-    @keywords = 'Rutgers, student organization, campus fellowship, church, fellowship, discipleship, evangelism, witnessing, navigators, missions, navs, ministry'
-    @description = 'We have a strong emphasis on discipleship and seeking and saving the lost. Our desire is to know Christ and make Christ known on our campus and around the world. We hold weekly small group Bible studies and large group meetings along with other fun activities.'
-    @rally_name = 'Large Group Rally'
-    @rally_datetime = 'Wednesday, 6:30pm'
-    @rally_location = 'TBD'
-    @church_name = 'Graceway Presbyterian Church'
-    @church_datetime = 'Sunday Service begins at 11:00am'
-    @church_location = 'New Brunswick Theological Seminary, 35 Seminary Place, New Brunswick, NJ 08901'
-    @announcements_bg_color1_class = 'bg-grey-rutgers'
-    @announcements_bg_color2_class = 'bg-red-rutgers'
-    @fb_campus_link = 'https://www.facebook.com/groups/893558397405911/'
-    @fb_link_class = 'rutgers-link'
-    @small_groups_path = rutgers_small_groups_path
-    @small_groups_pic_id = 'small-groups'
-    @leaders_path = rutgers_leaders_path
-    @leaders_pic_id = 'rutgers-statue'
-    @gcal_path = 'https://www.google.com/calendar/embed?src=90v078d5jo8ai8k0cfv5jjjhq8%40group.calendar.google.com&ctz=America/New_York'
-
-    retrieve_events(RUTGERS_GCAL_ID, RUTGERS_API_KEY, NEW_YORK_TZ)
   end
 
   def rutgers_small_groups
@@ -257,12 +163,6 @@ class CampusController < ApplicationController
     numEntriesChecked = 0
 
     if !entries.nil?
-#=begin
-      entries.each do |e|
-        puts e.summary + "\n"
-      end
-#=end
-
       entries.each do |entry|
         puts 'entry = ' + entry.summary
         numEntriesChecked += 1
@@ -338,13 +238,28 @@ class CampusController < ApplicationController
       return false
     end
 
-    def get_campus_leaders(campus_name)
-      @campus_leaders_column_1 = CampusLeader.where(campus_name: campus_name, column: 1, is_active: true)
-      @campus_leaders_column_2 = CampusLeader.where(campus_name: campus_name, column: 2, is_active: true)
+    def create_campus_leader_lists(campus)
+      @campus_leaders = campus.campus_leaders.where(is_active: true).order(:position)
+      create_large_screen_leader_lists(@campus_leaders)
     end
 
-    def validate_campus_name(campus_name)
-      if Campus::VALID_CAMPUSES.include?(campus_name)
+    def create_large_screen_leader_lists(campus_leaders)
+      @campus_leaders_column_1 = Array.new
+      @campus_leaders_column_2 = Array.new
+
+      if !@campus_leaders.nil?
+        @campus_leaders.each do |campus_leader|
+          if campus_leader.position % 2 != 0
+            @campus_leaders_column_1.push campus_leader
+          else
+            @campus_leaders_column_2.push campus_leader
+          end
+        end
+      end
+    end
+
+    def validate_campus_url_key(campus_url_key)
+      if Campus::VALID_CAMPUSES.include?(campus_url_key)
         return true
       else
         return false

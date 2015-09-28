@@ -6,7 +6,5 @@ class CreateCampusesCampusLeaders < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :campuses_campus_leaders, :campus_id
-    add_index :campuses_campus_leaders, :campus_leader_id
   end
 end

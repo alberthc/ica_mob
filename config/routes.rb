@@ -13,9 +13,9 @@ Rails.application.routes.draw do
 
   # campus controller
 
-  match '/campus/:campus_name',  to: 'campus#home',  via: 'get'
-  match '/campus/:campus_name/leaders',  to: 'campus#leaders',  via: 'get'
-  match '/campus/:campus_name/small-groups',  to: 'campus#small_groups',  via: 'get'
+  match '/campus/:campus_url_key',  to: 'campus#home',  via: 'get'
+  match '/campus/:campus_url_key/leaders',  to: 'campus#leaders',  via: 'get'
+  match '/campus/:campus_url_key/small-groups',  to: 'campus#small_groups',  via: 'get'
 
   match '/usc',  to: redirect('/campus/usc'),    via: 'get'
   match '/usc/leaders',  to: redirect('/campus/usc/leaders'),    via: 'get'
