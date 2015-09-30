@@ -1,40 +1,5 @@
 <% provide(:title, @leaders_page_title) %>
 
-<% def create_accordion_list(campus_leaders) %>
-  <li>
-    <dl class="accordion" data-accordion="myAccordionGroup">
-      <% if !campus_leaders.nil? %>
-      <% for leader in campus_leaders %>
-        <dd class="accordion-navigation">
-          <% panel_div_id = "panel" + leader.id.to_s + "c" %>
-          <% panel_href = "#" + panel_div_id %>
-          <a href=<%= panel_href %> >
-            <div class="AutoM row" data-equalizer>
-              <div class="small-3 columns" data-equalizer-watch>
-                <%= image_tag leader.image_path + ".jpg" , alt: leader.name %>
-              </div>
-              <div class="small-9 columns" data-equalizer-watch>
-                <h3 class="AccT"><%= leader.name %></h3>
-                <h6 class="AccN"><%= leader.title %></h6>
-                <div class="DownTri"></div>
-              </div>
-            </div>
-          </a>
-          <div id=<%= panel_div_id %> class="content">
-            <div class="Letter"><%= leader.bio %></div>
-            <div href=<%= panel_href %>>
-              <div class="UpTri"></div>
-            </div>
-            <section class="sepSmall"></section>
-          </div>
-        </dd>
-        <section class="separation-1"></section>
-      <% end %>
-      <% end %>
-    </dl>
-  </li>
-<% end %>
-
 <div class="small-12">
   <section class="main-photo bg-img-top fast-height-trans" id="<%= @campus_name %>-leaders"></section>
   </div>
@@ -51,8 +16,8 @@
 <div class="row show-for-large-up">
   <div class="small-12 medium-8 large-10 small-centered columns">
     <ul id="accordion" class="small-block-grid-1 medium-block-grid-1 large-block-grid-2 small-centered">
-      <% create_accordion_list @campus_leaders_column_1 %>
-      <% create_accordion_list @campus_leaders_column_2 %>
+      <%= render 'campus/accordion_list', campus_leaders_list: @campus_leaders_column_1 %>
+      <%= render 'campus/accordion_list', campus_leaders_list: @campus_leaders_column_2 %>
     </ul>
   </div>	
 </div>
@@ -60,7 +25,7 @@
 <div class="row hide-for-large-up">
   <div class="small-12 medium-8 large-10 small-centered columns">
     <ul id="accordion" class="small-block-grid-1 medium-block-grid-1 large-block-grid-2 small-centered">
-      <% create_accordion_list @campus_leaders %>
+      <%= render 'campus/accordion_list', campus_leaders_list: @campus_leaders %>
     </ul>
   </div>	
 </div>	

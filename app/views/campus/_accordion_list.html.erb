@@ -1,0 +1,30 @@
+<li>
+  <dl class="accordion" data-accordion="myAccordionGroup">
+    <% for leader in campus_leaders_list %>
+      <dd class="accordion-navigation">
+        <% panel_div_id = "panel" + leader.id.to_s + "c" %>
+        <% panel_href = "#" + panel_div_id %>
+        <a href=<%= panel_href %> >
+          <div class="AutoM row" data-equalizer>
+            <div class="small-3 columns" data-equalizer-watch>
+              <%= image_tag leader.image_path + ".jpg" , alt: leader.name %>
+            </div>
+            <div class="small-9 columns" data-equalizer-watch>
+              <h3 class="AccT"><%= leader.name %></h3>
+              <h6 class="AccN"><%= leader.title %></h6>
+              <div class="DownTri"></div>
+            </div>
+          </div>
+        </a>
+        <div id=<%= panel_div_id %> class="content">
+          <div class="Letter"><%= leader.bio %></div>
+          <div href=<%= panel_href %>>
+            <div class="UpTri"></div>
+          </div>
+          <section class="sepSmall"></section>
+        </div>
+      </dd>
+      <section class="separation-1"></section>
+    <% end %>
+  </dl>
+</li>

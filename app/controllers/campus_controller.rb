@@ -27,7 +27,7 @@ class CampusController < ApplicationController
     end
 
     campus = Campus.find_by_url_key(campus_url_key)
-    create_campus_leader_lists(campus)
+    create_campus_leaders_lists(campus)
 
     @leaders_page_title = campus.school_name + " Leaders"
     @campus_name = campus.school_name
@@ -47,7 +47,7 @@ class CampusController < ApplicationController
     end
 
     campus = Campus.find_by_url_key(campus_url_key)
-    retrieve_small_groups_info(campus)
+    get_small_groups_info(campus)
 
     @small_groups_page_title = campus.school_name + " Small Groups"
     @num_small_group_display_columns = 2
@@ -182,27 +182,28 @@ class CampusController < ApplicationController
       return false
     end
 
-    def create_campus_leader_lists(campus)
+    def create_campus_leaders_lists(campus)
       @campus_leaders = campus.campus_leaders.where(is_active: true).order(:position)
-      create_large_screen_leader_lists(@campus_leaders)
+      if @campus_leaders.nil?
+        @campus_leaders = Array.new
+      end
+      create_large_screen_leaders_lists(@campus_leaders)
     end
 
-    def create_large_screen_leader_lists(campus_leaders)
+    def create_large_screen_leaders_lists(campus_leaders)
       @campus_leaders_column_1 = Array.new
       @campus_leaders_column_2 = Array.new
 
-      if !@campus_leaders.nil?
-        @campus_leaders.each do |campus_leader|
-          if campus_leader.position % 2 != 0
-            @campus_leaders_column_1.push campus_leader
-          else
-            @campus_leaders_column_2.push campus_leader
-          end
+      @campus_leaders.each do |campus_leader|
+        if campus_leader.position % 2 != 0
+          @campus_leaders_column_1.push campus_leader
+        else
+          @campus_leaders_column_2.push campus_leader
         end
       end
     end
 
-    def retrieve_small_groups_info(campus)
+    def get_small_groups_info(campus)
       @small_groups = campus.campus_small_groups
       if @small_groups.nil?
         @small_groups = Array.new
