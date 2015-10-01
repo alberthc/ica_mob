@@ -3,7 +3,7 @@
 // CAMPUS
 
 #small-groups {
-  background-image: asset-url('SGpic.png');
+  background-image: asset-url('small-groups-icon.png');
 }
 
 #ucla-main {
@@ -22,15 +22,17 @@
   //background-image: asset-url('USC-main.jpg');
   background-image: asset-url('usc-campus-1.jpg');
 }
+
 #usc-group {
   background-image: asset-url('usc-group.jpg');
-  }
+}
+
 #usc-leaders {
   background-image: asset-url('usc-leaders.jpg');
 }
 
 #uci-main {
-  background-image: asset-url('UCI-main.jpg');
+  background-image: asset-url('uci-main.jpg');
 }
 
 #uci-group {
@@ -43,6 +45,10 @@
 
 #rutgers-main {
   background-image: asset-url('rutgers-kirkpatrick-chapel.jpg');
+}
+
+#rutgers-group {
+  background-image: asset-url('rutgers-leaders.jpg');
 }
 
 #rutgers-leaders {
@@ -95,22 +101,27 @@
   background-image: asset-url('wc/wc-group-photo.jpg');
 }
 
+#cal-leaders-icon,
 #cal-statue {
   background: asset-url('berkeleybear.png');
 }
 
+#uci-leaders-icon,
 #uci-statue {
   background: asset-url('anteater.png');
 }
 
+#ucla-leaders-icon,
 #ucla-statue {
   background: asset-url('bruinbear.png');
 }
 
+#usc-leaders-icon,
 #usc-statue {
   background: asset-url('tommytrojan.png');
 }
 
+#rutgers-leaders-icon,
 #rutgers-statue {
   background: asset-url('rutgers-mascot.jpg');
 }

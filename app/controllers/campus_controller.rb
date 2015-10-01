@@ -33,12 +33,6 @@ class CampusController < ApplicationController
     @campus_name = campus.school_name
     @main_photo_id = campus.url_key + "-leaders"
 
-    if !@campus_leaders.nil?
-      puts 'LISTING CAMPUS LEADERS'
-      for leader in @campus_leaders
-        puts 'name = ' + leader.name + ', bio = ' + leader.bio
-      end
-    end
   end
 
   def small_groups
@@ -80,9 +74,9 @@ class CampusController < ApplicationController
     @fb_campus_link = campus.fb_campus_link
     @fb_link_class = campus.fb_link_class
     @small_groups_path = request.original_url + '/small-groups'
-    @small_groups_pic_id = campus.small_groups_pic_id
+    @small_groups_pic_id = 'small-groups'
     @leaders_path = request.original_url + '/leaders'
-    @leaders_pic_id = campus.leaders_pic_id
+    @leaders_pic_id = campus.url_key + '-leaders-icon'
     @gcal_path = campus.gcal_path
 
     retrieve_gcal_events(email, api_key, tz)
@@ -189,6 +183,13 @@ class CampusController < ApplicationController
         @campus_leaders = Array.new
       end
       create_large_screen_leaders_lists(@campus_leaders)
+
+      if !@campus_leaders.nil?
+        puts 'LISTING CAMPUS LEADERS'
+        for leader in @campus_leaders
+          puts 'name = ' + leader.name + ', bio = ' + leader.bio
+        end
+      end
     end
 
     def create_large_screen_leaders_lists(campus_leaders)

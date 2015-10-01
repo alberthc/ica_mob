@@ -9,6 +9,9 @@
       <p>Current Study: <%= small_group.current_study %><br>
          Location/Time: <%= small_group.location_and_time %><br>
          Leaders: <%= small_group.leaders %><br>
+        <% if !small_group.contact_info.nil? %>
+         Contact: <%= small_group.contact_info %><br>
+        <% end %>
       </p>
     </section>
   <% end %>

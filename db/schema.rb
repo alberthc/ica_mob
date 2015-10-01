@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151001025738) do
+ActiveRecord::Schema.define(version: 20151001032211) do
 
   create_table "campus", force: true do |t|
     t.string   "school_name"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20151001025738) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "url_key"
+    t.string   "email"
   end
 
   add_index "campus", ["url_key"], name: "index_campus_on_url_key"
