@@ -31,6 +31,7 @@ class CampusController < ApplicationController
 
     @leaders_page_title = campus.school_name + " Leaders"
     @campus_name = campus.school_name
+    @main_photo_id = campus.url_key + "-leaders"
 
     if !@campus_leaders.nil?
       puts 'LISTING CAMPUS LEADERS'
@@ -63,9 +64,9 @@ class CampusController < ApplicationController
   def campus_constructor(campus, email, api_key, tz)
     @campus_name = campus.school_name
     @campus_org_name = campus.org_name
-    @campus_main_pic_id = campus.main_pic_id
-    @campus_group_small_pic = campus.group_pic_path + '.jpg'
-    @campus_group_pic = campus.group_pic_path + '.jpg'
+    @campus_main_pic_id = campus.url_key + '-main'
+    @campus_group_small_pic = campus.url_key + '-group-sml.jpg'
+    @campus_group_pic = campus.url_key + '-group.jpg'
     @keywords = campus.keywords
     @description = campus.description
     @rally_name = campus.rally_name
