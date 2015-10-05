@@ -206,7 +206,7 @@ class CampusController < ApplicationController
     end
 
     def get_small_groups_info(campus)
-      @small_groups = campus.campus_small_groups
+      @small_groups = campus.campus_small_groups.order(:position)
       if @small_groups.nil?
         @small_groups = Array.new
       end
