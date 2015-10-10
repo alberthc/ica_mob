@@ -67,3 +67,5 @@ gem 'google-api-client', require: 'google/api_client'
 gem 'gdata', git: 'https://github.com/agentrock/gdata.git'
 
 gem 'smusher'
+
+gem 'yaml_db', github: 'jetthoughts/yaml_db'

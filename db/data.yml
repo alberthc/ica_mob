@@ -1,0 +1,833 @@
+
+---
+campus:
+  columns:
+  - id
+  - school_name
+  - org_name
+  - main_pic_id
+  - group_pic_path
+  - keywords
+  - description
+  - rally_name
+  - rally_datetime
+  - rally_location
+  - church_name
+  - church_datetime
+  - church_location
+  - announcements_bg_color1_class
+  - announcements_bg_color2_class
+  - fb_campus_link
+  - fb_link_class
+  - small_groups_path
+  - small_groups_pic_id
+  - leaders_path
+  - leaders_pic_id
+  - gcal_path
+  - campus_small_group_id
+  - created_at
+  - updated_at
+  - url_key
+  - email
+  records: 
+  - - 1
+    - USC
+    - USC ICA
+    - 
+    - 
+    - USC, student organization, campus fellowship, fellowship, discipleship, evangelism,
+      witnessing, navigators, missions, navs, ministry
+    - USC In Christ Alone (ICA) is a recognized student organization at USC that welcomes
+      both believers and non-believers. We have a strong emphasis on discipleship
+      and seeking and saving the lost. Our desire is to know Christ and make Christ
+      known on our campus and around the world. We hold weekly small group Bible studies
+      and large group meetings along with other fun activities.
+    - Large Group Rally
+    - Thursday, 6:30pm
+    - VKC 156
+    - Church
+    - Sunday Service begins at 9:45am
+    - SGM 101
+    - bg-gold
+    - bg-red
+    - https://www.facebook.com/groups/5748715849/?ref=br_tf
+    - usc-link
+    - 
+    - 
+    - 
+    - 
+    - https://www.google.com/calendar/embed?src=uscinchristalone%40gmail.com&ctz=America/Los_Angeles
+    - 
+    - '2015-10-01 03:44:23.125293'
+    - '2015-10-01 03:44:23.125293'
+    - usc
+    - uscinchristalone@gmail.com
+  - - 2
+    - UCLA
+    - Bruin ICA
+    - 
+    - 
+    - UCLA, student organization, campus fellowship, fellowship, discipleship, evangelism,
+      witnessing, navigators, missions, navs, ministry
+    - Brothers and sisters committed to worshipping Christ and making Him known.
+    - Large Group Rally
+    - Wednesday, 6:30pm
+    - Kinsey Pavilion 1200b
+    - Church
+    - ! 'Pickup time: 9:00am'
+    - ! 'Pickup location: De Neve Turnaround'
+    - bg-gold
+    - bg-ucla-blue
+    - https://www.facebook.com/groups/5175699521/
+    - usc-link
+    - 
+    - 
+    - 
+    - 
+    - https://www.google.com/calendar/embed?src=icabruins%40gmail.com&ctz=America/Los_Angeles
+    - 
+    - '2015-10-01 03:44:23.189305'
+    - '2015-10-07 04:33:24.353069'
+    - ucla
+    - icabruins@gmail.com
+  - - 3
+    - UCI
+    - Irvine ICA
+    - 
+    - 
+    - UCI, student organization, campus fellowship, fellowship, discipleship, evangelism,
+      witnessing, navigators, missions, navs, ministry
+    - Brothers and sisters committed to worshipping Christ and making Him known.
+    - Large Group Rally
+    - Thursday, 6:30pm
+    - Humanities Hall (HH) 112
+    - Church
+    - ! 'Pickup time: 8:45am'
+    - ! 'Pickup location: Flagpoles'
+    - bg-gold
+    - bg-ucla-blue
+    - https://www.facebook.com/groups/28628738058/
+    - usc-link
+    - 
+    - 
+    - 
+    - 
+    - https://www.google.com/calendar/embed?src=irvineica%40gmail.com&ctz=America/Los_Angeles
+    - 
+    - '2015-10-01 03:44:23.244191'
+    - '2015-10-01 14:29:27.768270'
+    - uci
+    - irvineica@gmail.com
+  - - 4
+    - Rutgers
+    - Rutgers ICA
+    - 
+    - 
+    - Rutgers, student organization, campus fellowship, fellowship, discipleship,
+      evangelism, witnessing, navigators, missions, navs, ministry
+    - We have a strong emphasis on discipleship and seeking and saving the lost. Our
+      desire is to know Christ and make Christ known on our campus and around the
+      world. We hold weekly small group Bible studies and large group meetings along
+      with other fun activities.
+    - Large Group Rally
+    - Wednesday, 6:30pm
+    - TBD
+    - Graceway Presbyterian Church
+    - Sunday Service begins at 11:00am
+    - New Brunswick Theological Seminary, 35 Seminary Place, New Brunswick, NJ 08901
+    - bg-grey-rutgers
+    - bg-red-rutgers
+    - https://www.facebook.com/groups/893558397405911/
+    - rutgers-link
+    - 
+    - 
+    - 
+    - 
+    - https://www.google.com/calendar/embed?src=90v078d5jo8ai8k0cfv5jjjhq8%40group.calendar.google.com&ctz=America/New_York
+    - 
+    - '2015-10-01 03:44:23.301395'
+    - '2015-10-01 03:44:23.301395'
+    - rutgers
+    - rutgersicaministry@gmail.com
+
+---
+campus_campus_leaders:
+  columns:
+  - id
+  - campus_id
+  - campus_leader_id
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 1
+    - 1
+    - '2015-10-01 03:44:24.367172'
+    - '2015-10-01 03:44:24.367172'
+  - - 2
+    - 1
+    - 2
+    - '2015-10-01 03:44:24.417888'
+    - '2015-10-01 03:44:24.417888'
+  - - 3
+    - 1
+    - 3
+    - '2015-10-01 03:44:24.465300'
+    - '2015-10-01 03:44:24.465300'
+  - - 4
+    - 1
+    - 4
+    - '2015-10-01 03:44:24.509578'
+    - '2015-10-01 03:44:24.509578'
+  - - 5
+    - 1
+    - 5
+    - '2015-10-01 03:44:24.556911'
+    - '2015-10-01 03:44:24.556911'
+  - - 6
+    - 1
+    - 6
+    - '2015-10-01 03:44:24.601454'
+    - '2015-10-01 03:44:24.601454'
+  - - 7
+    - 2
+    - 7
+    - '2015-10-01 03:44:24.647213'
+    - '2015-10-01 03:44:24.647213'
+  - - 8
+    - 2
+    - 8
+    - '2015-10-01 03:44:24.691899'
+    - '2015-10-01 03:44:24.691899'
+  - - 9
+    - 2
+    - 9
+    - '2015-10-01 03:44:24.734727'
+    - '2015-10-01 03:44:24.734727'
+  - - 10
+    - 2
+    - 10
+    - '2015-10-01 03:44:24.768336'
+    - '2015-10-01 03:44:24.768336'
+  - - 11
+    - 2
+    - 11
+    - '2015-10-01 03:44:24.809906'
+    - '2015-10-01 03:44:24.809906'
+  - - 12
+    - 2
+    - 12
+    - '2015-10-01 03:44:24.860202'
+    - '2015-10-01 03:44:24.860202'
+  - - 13
+    - 2
+    - 13
+    - '2015-10-01 03:44:24.909102'
+    - '2015-10-01 03:44:24.909102'
+  - - 14
+    - 3
+    - 14
+    - '2015-10-01 03:44:24.949678'
+    - '2015-10-01 03:44:24.949678'
+  - - 15
+    - 3
+    - 15
+    - '2015-10-01 03:44:24.984809'
+    - '2015-10-01 03:44:24.984809'
+  - - 16
+    - 3
+    - 16
+    - '2015-10-01 03:44:25.037346'
+    - '2015-10-01 03:44:25.037346'
+  - - 17
+    - 3
+    - 17
+    - '2015-10-01 03:44:25.079983'
+    - '2015-10-01 03:44:25.079983'
+  - - 18
+    - 3
+    - 18
+    - '2015-10-01 03:44:25.124872'
+    - '2015-10-01 03:44:25.124872'
+  - - 19
+    - 4
+    - 19
+    - '2015-10-01 03:44:25.179683'
+    - '2015-10-01 03:44:25.179683'
+  - - 20
+    - 4
+    - 20
+    - '2015-10-01 03:44:25.215630'
+    - '2015-10-01 03:44:25.215630'
+
+---
+campus_leaders:
+  columns:
+  - id
+  - name
+  - title
+  - bio
+  - is_active
+  - created_at
+  - updated_at
+  - image_path
+  - position
+  records: 
+  - - 1
+    - Albert Cho
+    - USC Minsitry Leader
+    - Upon graduation of high school, God sovereignly led Albert to Los Angeles, California
+      to attend USC from his hometown of Houston, Texas. At USC, where he began to
+      develop a deeper relationship with God. Blessed by discipleship and training,
+      Albert decided to become a campus leader at USC to pass on the blessings he
+      received as an undergrad while simultaneously beginning to work full-time as
+      a software engineer at DIRECTV. Albert's childhood dream was to become a professional
+      basketball player, but he decided to settle as an engineer when he stopped growing
+      at 5'8". To anyone gullible enough, Albert likes to tell tales about his pet
+      horse and the dirt roads of Texas.
+    - true
+    - '2015-10-01 03:44:23.377569'
+    - '2015-10-01 03:44:23.377569'
+    - leaders-albert
+    - 1
+  - - 2
+    - Ethan Chan
+    - USC Men's Team Leader
+    - An enthusiastic evangelist and loyal brother, Ethan's life was changed when
+      he grew a love for quiet time and seeing God's love through His Word. He now
+      leads the sophomore and junior small group, disciples younger men, and is working
+      toward a progressive Master's degree in Electrical Engineering. Ethan hails
+      from the beautiful state of Hawaii and enjoys playing the ukulele, playing tennis,
+      experimenting in the kitchen, and watching his unsuspecting friends try his
+      kitchen experiments.
+    - true
+    - '2015-10-01 03:44:23.473688'
+    - '2015-10-01 03:44:23.473688'
+    - leaders-ethan
+    - 2
+  - - 3
+    - Brenda Lee
+    - USC Women's Ministry Leader
+    - Brenda came to USC ICA during her freshman year. Throughout her undergrad years,
+      which was a pivotal time of being humbled by God and finding her identity in
+      Christ, she continually experienced the depths of God's love for her, and began
+      to see the importance of a life-long commitment to pursuing and following God
+      above all else, as well as the importance of passing on this conviction to others
+      through discipleship and evangelism. She is currently a 2nd year graduate dental
+      student at USC and hopes to use dentistry in the future to care for and minister
+      to patients, whether in a local or overseas setting. In her free time, she likes
+      to go to the cinema, play badminton/piano, eat sweets, and spend time with friends
+      and family.
+    - true
+    - '2015-10-01 03:44:23.522085'
+    - '2015-10-01 03:44:23.522085'
+    - leaders-brenda
+    - 3
+  - - 4
+    - David Lee
+    - USC Men's Team Leader
+    - ! 'David is dedicated to pursuing his life promise in Matthew 9:35-36: to follow
+      in the footsteps of Jesus Christ by preaching, teaching, and healing. This promise
+      has led him from USC to Mongolia to Taiwan, with plenty of opportunities to
+      teach, preach, and heal along the way. A recent graduate from USC who studied
+      biology and Chinese, he is generally considered by his brothers and sisters
+      to be a "character," but he''s still unsure whether his scooter, his penchant
+      for quips and one-liners, or his obsession with trivia is responsible for such
+      a reputation.'
+    - true
+    - '2015-10-01 03:44:23.557700'
+    - '2015-10-01 03:44:23.557700'
+    - leaders-david
+    - 4
+  - - 5
+    - Jennifer Hang
+    - USC Women's Team Leader
+    - God's faithful pursuit of Jen's heart led her to her freshmen year at USC where
+      she saw, for the first time, the magnitude of God's love for her and His unique
+      ability to fill and satisfy her in every way. Armed with these transforming
+      truths and a persevering spirit, Jen spent the remainder of her undergrad years
+      growing in her relationship with God and seeking His will for her life. Now,
+      having graduated, she works full-time while also serving in the ministry at
+      USC. When asked about favorite activities, Jen has no particular preferences
+      - she simply enjoys being around those whom she loves, regardless of what they're
+      doing. She is, however, especially fond of breakfast food, graphic design and
+      heart-to-heart conversations.
+    - true
+    - '2015-10-01 03:44:23.603080'
+    - '2015-10-01 03:44:23.603080'
+    - leaders-jen
+    - 5
+  - - 6
+    - Kezia Rusli
+    - USC Women's Team Leader
+    - Kezia really discovered a love for God and His Word in her first years of college
+      at USC, despite having grown up in the church. Now she loves reading the Word
+      and inviting others to discover God's fingerprints throughout the Bible with
+      her in serving and leading Bible studies. Kezia is currently a first-year graduate
+      student studying occupational therapy at USC and looks forward to seeing God
+      use OT to transform her and her ministry to the people she encounters. She enjoys
+      playing any and all board games, organizing things, and going on trips to the
+      playground.
+    - true
+    - '2015-10-01 03:44:23.644569'
+    - '2015-10-01 03:44:23.644569'
+    - leaders-kezia
+    - 6
+  - - 7
+    - Jack Cao
+    - UCLA Ministry Leader
+    - Jack Cao was born in China and came to the US when he was 10. He grew up not
+      knowing God, but became a Christian in high-school when God lead him to read
+      the Bible on his own through a time of struggle. He became a part of our sister
+      ministry in UC Berkeley, where he received his Bachelor's in Electrical Engineering.
+      During that time he came to a greater understanding of God's love and also God's
+      call to discipleship. After graduating, he came to UCLA to get his Master's
+      in EE and support our Bruin ICA ministry. Always willing to lend a helping hand,
+      Jack's spiritual upbringing at Cal makes him an excellent shepherd and brings
+      a fresh perspective among his brothers and sisters. In his spare time, he likes
+      to cook, hang out with people, run, and skip rocks by the river.
+    - true
+    - '2015-10-01 03:44:23.690614'
+    - '2015-10-01 03:44:23.690614'
+    - leaders-jack
+    - 1
+  - - 8
+    - Amy Chen
+    - UCLA Women's Ministry Leader
+    - Amy was introduced to the gospel by a staff member at Bruin ICA in 2006 during
+      her freshman year, when she received Jesus Christ as her Lord and Savior. The
+      next year, she went on VSET missions and was amazed at the saving grace and
+      power of God for other people. She has labored as a ministry servant and disciple-maker
+      ever since. In addition, she currently works full-time in the UCLA School of
+      Medicine. Amy loves talking to people, exploring new music and food, going on
+      spontaneous adventures, visiting coffee and tea shops, giving hugs, and has
+      a quirky curiosity for many random interests.
+    - true
+    - '2015-10-01 03:44:23.722992'
+    - '2015-10-01 03:44:23.722992'
+    - leaders-amy
+    - 2
+  - - 9
+    - Elaine Wong
+    - UCLA Women's Ministry Leader
+    - Elaine didn't grow up having a Christian background. Her mom used to be a strong
+      Buddhist, while her dad had no religion. She herself didn't have any religion,
+      but believed in a higher being. In junior high, in a dark time of her and her
+      family's life, she called out to God from the bottom of her heart, and God saved
+      her and her family, showing her that He was there and true and did a 180 change
+      in her family's life. Elaine, her mom, and her sister all came to know Christ.
+      Ever since that time, Elaine knew she wanted to live for God and His will. She
+      is now a PhD student at UCLA, Environmental Engineering major with an emphasis
+      in water treatment, and a teaching assistant at UCLA. She loves to dance, disciple,
+      pray, eat good food, and have quality time with her friends and husband.
+    - true
+    - '2015-10-01 03:44:23.763280'
+    - '2015-10-01 03:44:23.763280'
+    - leaders-elaine
+    - 3
+  - - 10
+    - Jessie Yeh
+    - UCLA Women's Ministry Leader
+    - Jessie recommitted her life to Christ in her freshman year at UCLA, and even
+      after graduating in 2012, she continues to be amazed at His faithfulness, patience,
+      and love for her. Always watching out for her brothers and sisters, her laughter
+      and timely encouragements are guaranteed to brighten anyone's day. Currently,
+      she works full-time in Westwood, while continuing to serve with ICA in hopes
+      of helping others know Christ and experience joy in following Him. In her spare
+      time, Jessie enjoys delighting in the simple things including but not limited
+      to the smell of fresh bread, listening to people's laughs, lattes, terrible
+      puns, and noodle soup.
+    - true
+    - '2015-10-01 03:44:23.801784'
+    - '2015-10-01 03:44:23.801784'
+    - leaders-jessie
+    - 4
+  - - 11
+    - Paul Lee
+    - Part-Time Staff
+    - A loving and supportive brother to many, Paul is known for his vocal techniques
+      and audacious comments. He first transferred to UCLA and joined ICA in his junior
+      year, and has continued to serve on campus after graduation. Paul is a humble
+      servant and a man of prayer, who loves the Word. He is a great listener and
+      genuinely enjoys having deep conversations, along with watching Pokemon, taking
+      selfies, playing ball, and shooting candid videos of his friends.
+    - true
+    - '2015-10-01 03:44:23.844400'
+    - '2015-10-01 03:44:23.844400'
+    - leaders-paul
+    - 5
+  - - 12
+    - Sarah Chacon
+    - Part-Time Staff
+    - Though she hails from Sylmar, California, Sarah is not your typical "valley
+      girl." She is an avid learner of different languages and cultures, and loves
+      engaging with people from all different walks of life to help them know Christ.
+      After graduating from UCLA in 2013, Sarah began volunteering as a part-time
+      staff with ICA, and can now be spotted regularly on campus sharing the love
+      of Jesus with students, leading bible studies, and engaging in one-to-one discipleship.
+      Sarah has a passion for music, languages, social justice, plants, Adventure
+      Time, and Korean pop music.
+    - true
+    - '2015-10-01 03:44:23.889971'
+    - '2015-10-01 03:44:23.889971'
+    - leaders-sarah
+    - 6
+  - - 13
+    - Josh Molitoris
+    - UCLA Men's Team Leader
+    - Josh spent the first year of his college experience at UCLA as a nominal Christian,
+      but soon realized that there is much more to life than what society so often
+      emphasizes. After experiencing God's love and mercy at ICA's Winter Conference
+      in 2012, it became clear to Josh that he ought to make his relationship with
+      God a priority in his life. Since then he has become a part of the  UCLA servants
+      team, leads Bible studies, and meets up with those who are interested in learning
+      more about Christianity. Apart from spending time serving the ministry, Josh
+      enjoys playing sports as well as playing and listening to music.
+    - true
+    - '2015-10-01 03:44:23.926359'
+    - '2015-10-01 03:44:23.926359'
+    - leaders-josh
+    - 7
+  - - 14
+    - Michael Wong
+    - UCI Ministry Director
+    - The Lord gave Michael a vision for disciple-making and evangelism late in high
+      school, and he went on to receive more training with the Navigators during his
+      undergraduate years at UCLA. He continued on the staff of the Navigators and
+      ICA at UCLA for another four years before being called to pioneer a new campus
+      ministry at UC Irvine. He continues to share the gospel on campus, lead Bible
+      studies and fellowship meetings, and disciple students on a full-time basis.
+      He recently married his long-time friend and colaborer, Elaine, and is attending
+      Talbot Theological Seminary.
+    - true
+    - '2015-10-01 03:44:23.963217'
+    - '2015-10-01 03:44:23.963217'
+    - leaders-mike
+    - 1
+  - - 15
+    - Caleb Molitoris
+    - UCI Ministry Leader
+    - As a missionary's kid, Caleb was exposed to Christianity at a young age. Having
+      been raised in Lutheran churches and schools, Caleb had a solid understanding
+      of who Jesus is and what He taught. However, he did not experience the blessings
+      of having a personal relationship with Christ until his college years at UCLA.
+      Because he was blessed by those who poured into him while he was a student,
+      Caleb was moved to personally invest in the lives of people. Caleb graduated
+      from UCLA with a BS in electrical engineering in 2012, and is now working at
+      Intel while serving as associate assistant director at UCI ICA.
+    - true
+    - '2015-10-01 03:44:24.009224'
+    - '2015-10-01 03:44:24.009224'
+    - leaders-caleb
+    - 2
+  - - 16
+    - Elaine Wong
+    - UCI Women's Ministry Leader
+    - Elaine didn't grow up having a Christian background. Her mom used to be a strong
+      Buddhist, while her dad had no religion. She herself didn't have any religion,
+      but believed in a higher being. In junior high, in a dark time of her and her
+      family's life, she called out to God from the bottom of her heart, and God saved
+      her and her family, showing her that He was there and true and did a 180 change
+      in her family's life. Elaine, her mom, and her sister all came to know Christ.
+      Ever since that time, Elaine knew she wanted to live for God and His will. She
+      is now a PhD student at UCLA, Environmental Engineering major with an emphasis
+      in water treatment, and a teaching assistant at UCLA. She loves to dance, disciple,
+      pray, eat good food, and have quality time with her friends and husband.
+    - true
+    - '2015-10-01 03:44:24.065433'
+    - '2015-10-01 03:44:24.065433'
+    - leaders-elaine
+    - 3
+  - - 17
+    - Bernadette Saldana
+    - Part-Time Staff
+    - Bernadette may be one of the friendliest people you will ever meet. Filipino
+      on the outside, and Korean at heart, she is an avid learner of different languages
+      and cultures, and loves relating with people from all different walks of life
+      to help them know Jesus. Shortly after receiving her Master's degree at UCI
+      in 2013, Bernadette began volunteering as a part-time staff with ICA while working
+      as a private tutor. Bernadette has a passion for music, kids, international
+      ministry, ESL, teaching, and Korean pop music. She can usually be spotted around
+      ring road sharing Christ's love in its various forms, so if you see her, make
+      sure to say hi!
+    - true
+    - '2015-10-01 03:44:24.109554'
+    - '2015-10-01 03:44:24.109554'
+    - leaders-bern
+    - 4
+  - - 18
+    - Michelle Yi
+    - Part-Time Staff
+    - Michelle spent her undergraduate years at Brandeis University, where her eyes
+      were opened to the truth. In her church, Chinese Bible Church of Greater Boston,
+      she served as a leader in its college fellowship and discipled girls in her
+      campus. As she concluded her time in Massachusetts, she decided to join ICA
+      as a part-time staff member in UC Irvine for training for the next two years.
+      Michelle hopes to fall more deeply in love with Jesus as she serves and grows
+      in fellowship with ICA. She lived in Seoul, South Korea for 9 years, and enjoys
+      playing soccer and reading.
+    - true
+    - '2015-10-01 03:44:24.148823'
+    - '2015-10-01 03:44:24.148823'
+    - leaders-michelle
+    - 5
+  - - 19
+    - Danny Furuyama
+    - Rutgers Ministry Leader
+    - Danny Furuyama attended University of California, Los Angeles. There he studied
+      electrical engineering and participated in a Christian fellowship group called
+      the Navigators where he served on staff for three years. In 2003, Danny and
+      two others pioneered a new chapter at UC Berkeley. In 2009, together with Vieng
+      Wong, they started Living Hope Evangelical Church. Danny has also led several
+      teams on Volunteer Summer English Teachers (VSET) in East Asia, Mongolia, Kyrgyzstan,
+      Kazakhstan, and Turkey. In 2015, Danny is starting a new chapter at Rutgers
+      University and serving as the youth pastor at Graceway Presbyterian Church.
+      He is married to Akemi and have two sons named Isaiah and Micah. Danny also
+      enjoys sports, board games, cooking, photography, and movies.
+    - true
+    - '2015-10-01 03:44:24.190677'
+    - '2015-10-01 03:44:24.190677'
+    - leaders-danny
+    - 1
+  - - 20
+    - Akemi Furuyama
+    - Rutgers Women's Ministry Leader
+    - Akemi lived in Northern California her entire life prior to moving to the East
+      Coast.  She graduated from the University of California, Davis with a Human
+      Development major and Education minor.  Akemi taught elementary school for 8
+      years.  Her current job is investing in and developing the life of her two young
+      boys, Isaiah and Micah.  Through these various life changes, the one constant
+      has been God who has strengthened Akemi's true identity as His precious daughter,
+      which is of greater value than serving Him or any of her roles.  Akemi looks
+      forward to supporting her husband in ministry and meeting up with sisters in
+      Christ.  She enjoys spending time with her family, taking pictures, and baking.
+    - true
+    - '2015-10-01 03:44:24.226178'
+    - '2015-10-01 03:44:24.226178'
+    - leaders-akemi
+    - 2
+
+---
+campus_small_groups:
+  columns:
+  - id
+  - campus_id
+  - created_at
+  - updated_at
+  - name
+  - current_study
+  - location_and_time
+  - leaders
+  - position
+  - contact_info
+  records: 
+  - - 1
+    - 1
+    - '2015-10-01 03:44:25.281832'
+    - '2015-10-01 03:44:26.200744'
+    - Freshman Guys
+    - Who is Jesus?
+    - Tuesdays 8pm @ THH 105
+    - Albert & Ethan
+    - 1
+    - 
+  - - 2
+    - 1
+    - '2015-10-01 03:44:25.318570'
+    - '2015-10-01 03:44:26.255770'
+    - Freshman Girls
+    - Who is Jesus?
+    - Tuesdays 8pm @ THH 107
+    - Brenda & Kezia
+    - 2
+    - 
+  - - 3
+    - 1
+    - '2015-10-01 03:44:25.354849'
+    - '2015-10-01 03:44:26.296696'
+    - Sophomore Guys
+    - The Spirit-Filled Follower of Jesus (DFD 2)
+    - Mondays 8pm @ Adams Apt
+    - Albert & Ethan
+    - 3
+    - 
+  - - 4
+    - 1
+    - '2015-10-01 03:44:25.413028'
+    - '2015-10-01 03:44:26.339695'
+    - Sophomore Girls
+    - The Spirit-Filled Follower of Jesus (DFD 2)
+    - Tuesdays 7pm @ SOS B50
+    - Jen & Nelly
+    - 4
+    - 
+  - - 5
+    - 1
+    - '2015-10-01 03:44:25.454885'
+    - '2015-10-01 03:44:26.375284'
+    - Junior/Senior Guys
+    - Growing in Discipleship (DFD 6)
+    - Fridays 4pm @ Adams Apt
+    - David & Ethan
+    - 5
+    - 
+  - - 6
+    - 1
+    - '2015-10-01 03:44:25.509724'
+    - '2015-10-01 03:44:26.429946'
+    - Junior/Senior Girls
+    - Walking with Christ (DFD 3)
+    - Wednesdays 8pm @ City Park
+    - Jen & Kezia
+    - 6
+    - 
+  - - 7
+    - 1
+    - '2015-10-01 03:44:25.559543'
+    - '2015-10-01 03:44:26.475351'
+    - Grads
+    - TBD
+    - TBD
+    - Pastor Min
+    - 7
+    - 
+  - - 8
+    - 1
+    - '2015-10-01 03:44:25.601340'
+    - '2015-10-01 03:44:26.505214'
+    - International Students
+    - Who is Jesus?
+    - Wednesdays 8pm @ THH 107
+    - David & Brenda
+    - 8
+    - 
+  - - 9
+    - 2
+    - '2015-10-01 03:44:25.646449'
+    - '2015-10-10 07:25:48.584580'
+    - Freshman Guys
+    - 7 I Am's
+    - Tuesdays 7pm @ Meet at De Neve Plaza
+    - Charles Paucar, Josh Molitoris
+    - 1
+    - (562) 229-2614, (714) 833-1401
+  - - 10
+    - 2
+    - '2015-10-01 03:44:25.691751'
+    - '2015-10-01 03:44:26.576243'
+    - Freshman Girls
+    - Who is Jesus?
+    - Tuesdays 7pm
+    - Jessie Yeh, Amy Chen
+    - 2
+    - (408) 396-5321, (650) 892-8323
+  - - 11
+    - 2
+    - '2015-10-01 03:44:25.737254'
+    - '2015-10-01 03:44:26.627669'
+    - Sophomore Guys
+    - TBD
+    - Tuesdays 7pm
+    - Paul Lee
+    - 3
+    - (562) 547-6792
+  - - 12
+    - 2
+    - '2015-10-01 03:44:25.773893'
+    - '2015-10-01 03:44:26.669190'
+    - Sophomore Girls
+    - TBD
+    - Tuesdays 7pm
+    - Tina Sun, Yvonne Li
+    - 4
+    - (310) 819-2936, (650) 255-2266
+  - - 13
+    - 2
+    - '2015-10-01 03:44:25.827597'
+    - '2015-10-01 03:44:26.706018'
+    - Junior Guys
+    - TBD
+    - Tuesdays 7pm
+    - Paul Lee
+    - 5
+    - (562) 547-6792
+  - - 14
+    - 2
+    - '2015-10-01 03:44:25.874439'
+    - '2015-10-01 03:44:26.754485'
+    - Junior Girls
+    - TBD
+    - Tuesdays 7pm
+    - Sarah Chacon
+    - 6
+    - (818) 606-2294
+  - - 15
+    - 2
+    - '2015-10-01 03:44:25.905082'
+    - '2015-10-05 05:18:57.205218'
+    - Senior Guys
+    - TBD
+    - Thursdays 7:30pm
+    - Jack Cao
+    - 7
+    - (408) 219-4950
+  - - 16
+    - 2
+    - '2015-10-01 03:44:25.952859'
+    - '2015-10-01 03:44:26.839409'
+    - Senior Girls
+    - TBD
+    - Saturdays 9am
+    - Amy Chen, Elaine Wong
+    - 8
+    - (650) 892-8323, (562) 293-8887
+  - - 17
+    - 3
+    - '2015-10-01 03:44:25.986428'
+    - '2015-10-01 03:44:26.888840'
+    - Freshman Guys
+    - Who is Jesus?
+    - TBD
+    - TBD
+    - 1
+    - 
+  - - 18
+    - 3
+    - '2015-10-01 03:44:26.047469'
+    - '2015-10-01 03:44:26.924138'
+    - Freshman Girls
+    - Who is Jesus?
+    - TBD
+    - TBD
+    - 2
+    - 
+  - - 19
+    - 3
+    - '2015-10-01 03:44:26.078069'
+    - '2015-10-01 03:44:26.959689'
+    - Sophomore/Junior Guys
+    - TBD
+    - TBD
+    - TBD
+    - 3
+    - 
+  - - 20
+    - 3
+    - '2015-10-01 03:44:26.121738'
+    - '2015-10-01 03:44:27.016856'
+    - Junior/Senior Guys
+    - TBD
+    - TBD
+    - TBD
+    - 4
+    - 
+  - - 21
+    - 4
+    - '2015-10-01 03:44:26.169933'
+    - '2015-10-01 03:44:27.057900'
+    - Bible Study
+    - TBD
+    - TBD
+    - TBD
+    - 1
+    - 
