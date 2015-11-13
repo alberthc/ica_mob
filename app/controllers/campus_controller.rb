@@ -182,27 +182,9 @@ class CampusController < ApplicationController
       if @campus_leaders.nil?
         @campus_leaders = Array.new
       end
-      create_large_screen_leaders_lists(@campus_leaders)
-
-      if !@campus_leaders.nil?
-        puts 'LISTING CAMPUS LEADERS'
-        for leader in @campus_leaders
-          puts 'name = ' + leader.name + ', bio = ' + leader.bio
-        end
-      end
-    end
-
-    def create_large_screen_leaders_lists(campus_leaders)
-      @campus_leaders_column_1 = Array.new
-      @campus_leaders_column_2 = Array.new
-
-      @campus_leaders.each do |campus_leader|
-        if campus_leader.position % 2 != 0
-          @campus_leaders_column_1.push campus_leader
-        else
-          @campus_leaders_column_2.push campus_leader
-        end
-      end
+      campus_leaders_columns = CampusLeader.get_campus_leaders_columns(@campus_leaders)
+      @campus_leaders_column_1 = campus_leaders_columns[:column_1]
+      @campus_leaders_column_2 = campus_leaders_columns[:column_2]
     end
 
     def get_small_groups_info(campus)
