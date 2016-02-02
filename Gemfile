@@ -62,7 +62,7 @@ gem 'jquery-turbolinks'
 
 gem 'jquery-ui-rails'
 
-gem 'google-api-client', require: 'google/api_client'
+gem 'google-api-client', '0.7.1', require: 'google/api_client'
 
 gem 'gdata', git: 'https://github.com/agentrock/gdata.git'
 
