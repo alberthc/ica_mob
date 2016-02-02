@@ -71,10 +71,10 @@ end
 # Create Small Groups
 
 usc_small_groups = CampusSmallGroup.create([
-{name: "Freshman Guys", current_study: "Who is Jesus?", location_and_time: "Tuesdays 8pm @ THH 105", leaders: "Albert & Ethan", position: 1},
+{name: "Freshman Guys", current_study: "7 I Am's", location_and_time: "Sundays 8pm @ THH 105", leaders: "Albert, Eric, & Eugene", position: 1},
 {name: "Freshman Girls", current_study: "Who is Jesus?", location_and_time: "Tuesdays 8pm @ THH 107", leaders: "Brenda & Kezia", position: 2},
-{name: "Sophomore Guys", current_study: "The Spirit-Filled Follower of Jesus (DFD 2)", location_and_time: "Mondays 8pm @ Adams Apt", leaders: "Albert & Ethan", position: 3},
-{name: "Sophomore Girls", current_study: "The Spirit-Filled Follower of Jesus (DFD 2)", location_and_time: "Tuesdays 7pm @ SOS B50", leaders: "Jen & Nelly", position: 4},
+{name: "Sophomore Guys", current_study: "The Character of a Follower of Jesus (DFD 4)", location_and_time: "Mondays 8pm @ Adams Apt", leaders: "Albert & Ethan", position: 3},
+{name: "Sophomore Girls", current_study: "Walking with Christ (DFD 3)", location_and_time: "Tuesdays 7pm @ SOS B50", leaders: "Jen & Nelly", position: 4},
 {name: "Junior/Senior Guys", current_study: "Growing in Discipleship (DFD 6)", location_and_time: "Fridays 4pm @ Adams Apt", leaders: "David & Ethan", position: 5},
 {name: "Junior/Senior Girls", current_study: "Walking with Christ (DFD 3)", location_and_time: "Wednesdays 8pm @ City Park", leaders: "Jen & Kezia", position: 6},
 {name: "Grads", current_study: "TBD", location_and_time: "TBD", leaders: "Pastor Min", position: 7},
@@ -82,9 +82,9 @@ usc_small_groups = CampusSmallGroup.create([
 ]);
 
 ucla_small_groups = CampusSmallGroup.create([
-{name: "Freshman Guys", current_study: "7 I Am's", location_and_time: "Thursdays 7pm @ Meet in De Neve Plaza", leaders: "Charles Paucar, Josh Molitoris", contact_info: "(562) 229-2614, (714) 833-1401", position: 1},
+{name: "Freshman Guys", current_study: "7 I Am's", location_and_time: "Thursdays 7pm @ Meet in De Neve Plaza", leaders: "Josh Molitoris", contact_info: "(562) 229-2614, (714) 833-1401", position: 1},
 {name: "Freshman Girls", current_study: "Who is Jesus?", location_and_time: "Tuesdays 7pm @ Meet in De Neve Plaza", leaders: "Jessie Yeh, Amy Chen", contact_info: "(408) 396-5321, (650) 892-8323", position: 2},
-{name: "Sophomore Guys", current_study: "TBD", location_and_time: "Tuesdays 7pm @ 424 Kelton Ave", leaders: "Paul Lee", contact_info: "(562) 547-6792", position: 3},
+{name: "Sophomore Guys", current_study: "TBD", location_and_time: "Thursdays 7:30pm @ 424 Kelton Ave", leaders: "Paul Lee", contact_info: "(562) 547-6792", position: 3},
 {name: "Sophomore Girls", current_study: "TBD", location_and_time: "Tuesdays 7pm @ Meet in front of Bruin Plate", leaders: "Tina Sun, Yvonne Li", contact_info: "(310) 819-2936, (650) 255-2266", position: 4},
 {name: "Junior Guys", current_study: "TBD", location_and_time: "Tuesdays 7pm @ 424 Kelton Ave", leaders: "Paul Lee", contact_info: "(562) 547-6792", position: 5},
 {name: "Junior Girls", current_study: "TBD", location_and_time: "Tuesdays 7pm", leaders: "Sarah Chacon", contact_info: "(818) 606-2294", position: 6},
