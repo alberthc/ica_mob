@@ -72,13 +72,13 @@ end
 
 usc_small_groups = CampusSmallGroup.create([
 {name: "Freshman Guys", current_study: "7 I Am's", location_and_time: "Sundays 8pm @ THH 105", leaders: "Albert, Eric, & Eugene", position: 1},
-{name: "Freshman Girls", current_study: "Who is Jesus?", location_and_time: "Tuesdays 8pm @ THH 107", leaders: "Brenda & Kezia", position: 2},
+{name: "Freshman Girls", current_study: "", location_and_time: "Please contact us via Contact Us page", leaders: "Brenda & Kezia", position: 2},
 {name: "Sophomore Guys", current_study: "The Character of a Follower of Jesus", location_and_time: "Mondays 8pm @ Adams Apt", leaders: "Albert & Ethan", position: 3},
-{name: "Sophomore Girls", current_study: "Walking with Christ (DFD 3)", location_and_time: "Tuesdays 7pm @ SOS B50", leaders: "Jen & Nelly", position: 4},
-{name: "Junior/Senior Guys", current_study: "Growing in Discipleship (DFD 6)", location_and_time: "Fridays 4pm @ Adams Apt", leaders: "David & Ethan", position: 5},
-{name: "Junior/Senior Girls", current_study: "Walking with Christ (DFD 3)", location_and_time: "Wednesdays 8pm @ City Park", leaders: "Jen & Kezia", position: 6},
-{name: "Grads", current_study: "TBD", location_and_time: "TBD", leaders: "Pastor Min", position: 7},
-{name: "International Students", current_study: "Who is Jesus?", location_and_time: "Wednesdays 8pm @ THH 107", leaders: "David & Brenda", position: 8}
+{name: "Sophomore Girls", current_study: "Walking with Christ", location_and_time: "Mondays 8:30pm @ THH 109", leaders: "Jen & Nelly", position: 4},
+{name: "Junior/Senior Guys", current_study: "Growing in Discipleship", location_and_time: "Fridays 4pm @ Adams Apt", leaders: "David & Ethan", position: 5},
+{name: "Junior/Senior Girls", current_study: "The Character of a Follower of Jesus", location_and_time: "Wednesdays 5pm @ City Park", leaders: "Jen & Kezia", position: 6},
+{name: "Grad Guys", current_study: "TBD", location_and_time: "TBD", leaders: "David", position: 7},
+{name: "Grad Girls", current_study: "Investigative Bible Studies", location_and_time: "Wednesdays 5:30pm @ THH 111", leaders: "David & Brenda", position: 8}
 ]);
 
 ucla_small_groups = CampusSmallGroup.create([
