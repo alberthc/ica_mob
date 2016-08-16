@@ -14,6 +14,8 @@ ucla = Campus.create(school_name: "UCLA", org_name: "Bruin ICA", keywords: "UCLA
 
 uci = Campus.create(school_name: "UCI", org_name: "Irvine ICA", keywords: "UCI, student organization, campus fellowship, fellowship, discipleship, evangelism, witnessing, navigators, missions, navs, ministry", description: "Brothers and sisters committed to worshipping Christ and making Him known.", rally_name: "Large Group Rally", rally_datetime: "Thursday, 6:30pm", rally_location: "SST 220B", church_name: "Church", church_datetime: "Pickup time: 8:45am", church_location: "Pickup location: Please contact driver", announcements_bg_color1_class: "bg-gold", announcements_bg_color2_class: "bg-ucla-blue", fb_campus_link: "https://www.facebook.com/groups/28628738058/", fb_link_class: "usc-link", gcal_path: "https://www.google.com/calendar/embed?src=irvineica%40gmail.com&ctz=America/Los_Angeles", url_key: "uci", email: UCI_EMAIL)
 
+cal = Campus.create(school_name: "CAL", org_name: "Berkeley ICA", keywords: "Cal, berkeley, student organization, campus fellowship, fellowship, discipleship, evangelism, witnessing, navigators, missions, navs, ministry", description: "Brothers and sisters committed to worshipping Christ and making Him known.", rally_name: "Large Group Rally", rally_datetime: "Wednesdays, 7-9pm", rally_location: "TBD", church_name: "Solano Community Church", church_datetime: "Pickup time: 9:00am", church_location: "Rides provided: Contact Tim", announcements_bg_color1_class: "bg-gold", announcements_bg_color2_class: "bg-cal-blue", fb_campus_link: "https://www.facebook.com/groups/312238458832031/", fb_link_class: "usc-link", gcal_path: "https://www.google.com/calendar/embed?src=irvineica%40gmail.com&ctz=America/Los_Angeles", url_key: "cal", email: CAL_EMAIL)
+
 rutgers = Campus.create(school_name: "Rutgers", org_name: "Rutgers ICA", keywords: "Rutgers, student organization, campus fellowship, fellowship, discipleship, evangelism, witnessing, navigators, missions, navs, ministry", description: "We have a strong emphasis on discipleship and seeking and saving the lost. Our desire is to know Christ and make Christ known on our campus and around the world. We hold weekly small group Bible studies and large group meetings along with other fun activities.", rally_name: "Large Group Rally", rally_datetime: "Wednesday, 6:30pm", rally_location: "TBD", church_name: "Graceway Presbyterian Church", church_datetime: "Sunday Service begins at 11:00am", church_location: "New Brunswick Theological Seminary, 35 Seminary Place, New Brunswick, NJ 08901", announcements_bg_color1_class: "bg-grey-rutgers", announcements_bg_color2_class: "bg-red-rutgers", fb_campus_link: "https://www.facebook.com/groups/893558397405911/", fb_link_class: "rutgers-link", gcal_path: "https://www.google.com/calendar/embed?src=90v078d5jo8ai8k0cfv5jjjhq8%40group.calendar.google.com&ctz=America/New_York", url_key: "rutgers", email: RUTGERS_EMAIL)
 
 # Create Campus Leaders
@@ -45,6 +47,10 @@ uci_leaders = CampusLeader.create([
 {name: "Michelle Yi", title: "Part-Time Staff", image_path: "leaders-michelle", position: 5, bio: "Michelle spent her undergraduate years at Brandeis University, where her eyes were opened to the truth. In her church, Chinese Bible Church of Greater Boston, she served as a leader in its college fellowship and discipled girls in her campus. As she concluded her time in Massachusetts, she decided to join ICA as a part-time staff member in UC Irvine for training for the next two years. Michelle hopes to fall more deeply in love with Jesus as she serves and grows in fellowship with ICA. She lived in Seoul, South Korea for 9 years, and enjoys playing soccer and reading.", is_active: true}
 ]);
 
+cal_leaders = CampusLeader.create([
+{name: "Timothy Liu", title: "Cal Ministry Leader", image_path: "leaders-tim", position: 1, bio: "Timothy grew up in Plano, Texas and became a follower of Jesus at a summer camp in middle school. However, it wasn't until his senior year of high school when he became baptized and began discipleship that his faith really solidified. He went to Cal and joined The Navigators (now In Christ Alone) since his freshman year. Timothy has a variety of interests: cooking, music (especially jazz), soccer, movies, and more. He works full-time at a startup in Berkeley and serves at Berkeley ICA with his passion for discipleship and evangelism. He currently considers Luke 17:10 his life verse.", is_active: true}
+]);
+
 rutgers_leaders = CampusLeader.create([
 {name: "Danny Furuyama", title: "Rutgers Ministry Leader", image_path: "leaders-danny", position: 1, bio: "Danny Furuyama attended University of California, Los Angeles. There he studied electrical engineering and participated in a Christian fellowship group called the Navigators where he served on staff for three years. In 2003, Danny and two others pioneered a new chapter at UC Berkeley. In 2009, together with Vieng Wong, they started Living Hope Evangelical Church. Danny has also led several teams on Volunteer Summer English Teachers (VSET) in East Asia, Mongolia, Kyrgyzstan, Kazakhstan, and Turkey. In 2015, Danny is starting a new chapter at Rutgers University and serving as the youth pastor at Graceway Presbyterian Church. He is married to Akemi and have two sons named Isaiah and Micah. Danny also enjoys sports, board games, cooking, photography, and movies.", is_active: true},
 {name: "Akemi Furuyama", title: "Rutgers Women's Ministry Leader", image_path: "leaders-akemi", position: 2, bio: "Akemi lived in Northern California her entire life prior to moving to the East Coast.  She graduated from the University of California, Davis with a Human Development major and Education minor.  Akemi taught elementary school for 8 years.  Her current job is investing in and developing the life of her two young boys, Isaiah and Micah.  Through these various life changes, the one constant has been God who has strengthened Akemi's true identity as His precious daughter, which is of greater value than serving Him or any of her roles.  Akemi looks forward to supporting her husband in ministry and meeting up with sisters in Christ.  She enjoys spending time with her family, taking pictures, and baking.", is_active: true}
@@ -52,19 +58,23 @@ rutgers_leaders = CampusLeader.create([
 
 # Create relation between Campus and CampusLeader
 
-for leader in usc_leaders
+usc_leaders.each do |leader|  
   CampusCampusLeader.create(campus: usc, campus_leader: leader)
 end
 
-for leader in ucla_leaders
+ucla_leaders.each do |leader|
   CampusCampusLeader.create(campus: ucla, campus_leader: leader)
 end
 
-for leader in uci_leaders
+uci_leaders.each do |leader|
   CampusCampusLeader.create(campus: uci, campus_leader: leader)
 end
 
-for leader in rutgers_leaders
+cal_leaders.each do |leader|
+  CampusCampusLeader.create(campus: cal, campus_leader: leader)
+end
+
+rutgers_leaders.each do |leader|
   CampusCampusLeader.create(campus: rutgers, campus_leader: leader)
 end
 
@@ -99,26 +109,36 @@ uci_small_groups = CampusSmallGroup.create([
 {name: "Junior/Senior Guys", current_study: "TBD", location_and_time: "TBD", leaders: "TBD", position: 4}
 ]);
 
+cal_small_groups = CampusSmallGroup.create([
+{name: "Inductive Bible Study", current_study: "TBD", location_and_time: "Weekly (TBD)", leaders: "Timothy Liu", position: 1},
+{name: "Reading from the New Testament", current_study: "", location_and_time: "Saturday nights", leaders: "Timothy Liu", position: 2}
+]);
+
 rutgers_small_groups = CampusSmallGroup.create([
 {name: "Bible Study", current_study: "TBD", location_and_time: "TBD", leaders: "TBD", position: 1}
 ]);
 
-for small_group in usc_small_groups
+usc_small_groups.each do |small_group|
   small_group.campus = usc
   small_group.save
 end
 
-for small_group in ucla_small_groups
+ucla_small_groups.each do |small_group|
   small_group.campus = ucla
   small_group.save
 end
 
-for small_group in uci_small_groups
+uci_small_groups.each do |small_group|
   small_group.campus = uci
   small_group.save
 end
 
-for small_group in rutgers_small_groups
+cal_small_groups.each do |small_group|
+  small_group.campus = cal
+  small_group.save
+end
+
+rutgers_small_groups.each do |small_group|
   small_group.campus = rutgers
   small_group.save
 end

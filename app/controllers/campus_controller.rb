@@ -12,7 +12,7 @@ class CampusController < ApplicationController
       when Campus::UCI
         campus_constructor(campus, UCI_EMAIL, UCI_API_KEY, DEFAULT_TZ)
       when Campus::CAL
-        puts 'no cal'
+        campus_constructor(campus, CAL_EMAIL, CAL_API_KEY, DEFAULT_TZ)
       when Campus::RUTGERS
         campus_constructor(campus, RUTGERS_EMAIL, RUTGERS_API_KEY, DEFAULT_TZ)
       else

@@ -30,8 +30,15 @@ Rails.application.routes.draw do
   match '/uci/small-groups',  to: redirect('/campus/uci/small-groups'),    via: 'get'
 
   #match '/ucb',  to: 'campus#cal',    via: 'get'
-  match '/ucb',  to: redirect('http://www.lhecberkeley.org/in-christ-alone-collegiate-fellowship.html'),    via: 'get'
-  match '/cal',  to: redirect('http://www.lhecberkeley.org/in-christ-alone-collegiate-fellowship.html'),    via: 'get'
+  #match '/ucb',  to: redirect('http://www.lhecberkeley.org/in-christ-alone-collegiate-fellowship.html'),    via: 'get'
+  #match '/cal',  to: redirect('http://www.lhecberkeley.org/in-christ-alone-collegiate-fellowship.html'),    via: 'get'
+
+  match '/cal',  to: redirect('/campus/cal'),    via: 'get'
+  match '/cal/leaders',  to: redirect('/campus/cal/leaders'),    via: 'get'
+  match '/cal/small-groups',  to: redirect('/campus/cal/small-groups'),    via: 'get'
+  match '/ucb',  to: redirect('/campus/cal'),    via: 'get'
+  match '/ucb/leaders',  to: redirect('/campus/cal/leaders'),    via: 'get'
+  match '/ucb/small-groups',  to: redirect('/campus/cal/small-groups'),    via: 'get'
 
   match '/rutgers',  to: redirect('/campus/rutgers'),    via: 'get'
   match '/rutgers/leaders',  to: redirect('/campus/rutgers/leaders'),    via: 'get'
