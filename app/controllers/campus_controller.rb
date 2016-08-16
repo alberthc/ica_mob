@@ -32,7 +32,6 @@ class CampusController < ApplicationController
     @leaders_page_title = campus.school_name + " Leaders"
     @campus_name = campus.school_name
     @main_photo_id = campus.url_key + "-leaders"
-
   end
 
   def small_groups
@@ -82,84 +81,84 @@ class CampusController < ApplicationController
     retrieve_gcal_events(email, api_key, tz)
   end
 
-  def retrieve_gcal_events(gcalid, api_key, timeZone)
-    google_api_client = Google::APIClient.new
-    google_api_calendar = google_api_client.discovered_api('calendar', 'v3')
-    google_api_client.authorization = nil
+  private
 
-    result = google_api_client.execute(api_method: google_api_calendar.events.list,
-                                       parameters: {calendarId: gcalid,
-                                                    singleEvents: true,
-                                                    maxResults: 20,
-                                                    orderBy: 'startTime',
-                                                    timeMin: Util.get_current_time(timeZone),
-                                                    timeZone: timeZone,
-                                                    key: api_key})
-    
-    if !result.data.nil?
-      entries = result.data.items
-    end
+    def retrieve_gcal_events(gcalid, api_key, timeZone)
+      google_api_client = Google::APIClient.new
+      google_api_calendar = google_api_client.discovered_api('calendar', 'v3')
+      google_api_client.authorization = nil
 
-    # Structure containing the feed parsed for display
-    @parsed_entries = Array.new
-    numEntriesChecked = 0
+      result = google_api_client.execute(api_method: google_api_calendar.events.list,
+                                         parameters: {calendarId: gcalid,
+                                                      singleEvents: true,
+                                                      maxResults: 20,
+                                                      orderBy: 'startTime',
+                                                      timeMin: Util.get_current_time(timeZone),
+                                                      timeZone: timeZone,
+                                                      key: api_key})
+      
+      if !result.data.nil?
+        entries = result.data.items
+      end
 
-    if !entries.nil?
-      entries.each do |entry|
-        puts 'entry = ' + entry.summary
-        numEntriesChecked += 1
-        if numEntriesChecked > MAX_NUM_ANNOUNCEMENTS_TO_CHECK
-          break
-        end
+      # Structure containing the feed parsed for display
+      @parsed_entries = Array.new
+      numEntriesChecked = 0
 
-        # skip entry if description contains SKIP_ENTRY_TEXT
-        content = entry.description
-        if content == SKIP_ENTRY_TEXT
-          next
-        end
+      if !entries.nil?
+        entries.each do |entry|
+          puts 'entry = ' + entry.summary
+          numEntriesChecked += 1
+          if numEntriesChecked > MAX_NUM_ANNOUNCEMENTS_TO_CHECK
+            break
+          end
 
-        # Some events only have date
-        dateTime = nil
-        date = nil
-        
-        begin
-          dateTime = entry.start.dateTime
-        rescue
-          date = Date.parse(entry.start.date)
-        end
+          # skip entry if description contains SKIP_ENTRY_TEXT
+          content = entry.description
+          if content == SKIP_ENTRY_TEXT
+            next
+          end
 
-        title = entry.summary
+          # Some events only have date
+          dateTime = nil
+          date = nil
+          
+          begin
+            dateTime = entry.start.dateTime
+          rescue
+            date = Date.parse(entry.start.date)
+          end
 
-        if !dateTime.nil?
-          date = dateTime.strftime('%A %-m/%-d')
-          time = dateTime.in_time_zone(timeZone).strftime('%-I:%M %p')
-        else
-          date = date.strftime('%A %-m/%-d')
-          time = 'TBD'
-        end
+          title = entry.summary
 
-        location = entry.location
+          if !dateTime.nil?
+            date = dateTime.strftime('%A %-m/%-d')
+            time = dateTime.in_time_zone(timeZone).strftime('%-I:%M %p')
+          else
+            date = date.strftime('%A %-m/%-d')
+            time = 'TBD'
+          end
 
-        parsed_entry = {title: title,
-                        date: date,
-                        time: time,
-                        location: location}
+          location = entry.location
 
-        # check if parsed_entry is part of a recurring event that is already on the list and don't show
-        if exists(@parsed_entries, parsed_entry)
-          next
-        end
+          parsed_entry = {title: title,
+                          date: date,
+                          time: time,
+                          location: location}
 
-        @parsed_entries.push(parsed_entry)
+          # check if parsed_entry is part of a recurring event that is already on the list and don't show
+          if exists(@parsed_entries, parsed_entry)
+            next
+          end
 
-        if @parsed_entries.size == MAX_NUM_ANNOUNCEMENTS_TO_DISPLAY
-          break
+          @parsed_entries.push(parsed_entry)
+
+          if @parsed_entries.size == MAX_NUM_ANNOUNCEMENTS_TO_DISPLAY
+            break
+          end
         end
       end
     end
-  end
-
-  private
 
     # Check if new_entry already exists in list of parsed entries
     def exists(entries, new_entry)
