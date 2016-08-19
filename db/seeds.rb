@@ -111,7 +111,7 @@ uci_small_groups = CampusSmallGroup.create([
 
 cal_small_groups = CampusSmallGroup.create([
 {name: "Inductive Bible Study", current_study: "TBD", location_and_time: "Weekly (TBD)", leaders: "Timothy Liu", contact_info: "(214) 707-2818", position: 1},
-{name: "Reading from the New Testament", current_study: "", location_and_time: "Saturday nights", leaders: "Timothy Liu", contact_info: "(214) 707-2818", position: 2}
+{name: "Reading from the New Testament", current_study: "New Testament", location_and_time: "Saturday nights", leaders: "Timothy Liu", contact_info: "(214) 707-2818", position: 2}
 ]);
 
 rutgers_small_groups = CampusSmallGroup.create([
