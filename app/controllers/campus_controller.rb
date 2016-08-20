@@ -12,7 +12,7 @@ class CampusController < ApplicationController
       when Campus::UCI
         campus_constructor(campus, UCI_EMAIL, UCI_API_KEY, DEFAULT_TZ)
       when Campus::CAL
-        campus_constructor(campus, CAL_EMAIL, CAL_API_KEY, DEFAULT_TZ)
+        campus_constructor(campus, CAL_GCAL_ID, CAL_API_KEY, DEFAULT_TZ)
       when Campus::RUTGERS
         campus_constructor(campus, RUTGERS_EMAIL, RUTGERS_API_KEY, DEFAULT_TZ)
       else
@@ -54,7 +54,7 @@ class CampusController < ApplicationController
     end
   end
  
-  def campus_constructor(campus, email, api_key, tz)
+  def campus_constructor(campus, gcal_id, api_key, tz)
     @campus_name = campus.school_name
     @campus_org_name = campus.org_name
     @campus_main_pic_id = campus.url_key + '-main'
@@ -78,7 +78,7 @@ class CampusController < ApplicationController
     @leaders_pic_id = campus.url_key + '-leaders-icon'
     @gcal_path = campus.gcal_path
 
-    retrieve_gcal_events(email, api_key, tz)
+    retrieve_gcal_events(gcal_id, api_key, tz)
   end
 
   private

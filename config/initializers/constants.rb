@@ -11,6 +11,7 @@ UCI_EMAIL = 'irvineica@gmail.com'
 CAL_EMAIL = 'timothytliu@gmail.com'
 RUTGERS_EMAIL = 'rutgersicaministry@gmail.com'
 
+CAL_GCAL_ID = 'k674ed9em6orvp5lgcnk61g08k@group.calendar.google.com'
 RUTGERS_GCAL_ID = '90v078d5jo8ai8k0cfv5jjjhq8@group.calendar.google.com'
 
 # Campus public access API keys
