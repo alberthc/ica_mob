@@ -105,7 +105,9 @@
 <div class="row hidden-for-small-only">
   <div class="small-12 columns text-center">
     <h1>Upcoming Events</h1>
-    <iframe src="<%= @gcal_path %>" id="UCLAcalendar"></iframe>
+    <div class="responsive-iframe-container">
+      <iframe src="<%= @gcal_path %>" id="UCLAcalendar"></iframe>
+    </div>
   </div>
 </div>
 
