@@ -14,7 +14,7 @@ class CampusController < ApplicationController
       when Campus::CAL
         campus_constructor(campus, CAL_GCAL_ID, CAL_API_KEY, DEFAULT_TZ)
       when Campus::RUTGERS
-        campus_constructor(campus, RUTGERS_EMAIL, RUTGERS_API_KEY, DEFAULT_TZ)
+        campus_constructor(campus, RUTGERS_GCAL_ID, RUTGERS_API_KEY, DEFAULT_TZ)
       else
         raise ActionController::RoutingError.new('Not Found')
     end
