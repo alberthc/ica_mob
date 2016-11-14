@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161114042703) do
+ActiveRecord::Schema.define(version: 20161114051102) do
 
   create_table "campus", force: true do |t|
     t.string   "school_name"
@@ -82,6 +82,7 @@ ActiveRecord::Schema.define(version: 20161114042703) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "campus_id"
+    t.boolean  "is_active"
   end
 
 end

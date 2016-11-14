@@ -27,7 +27,8 @@ class CampusController < ApplicationController
     end
 
     campus = Campus.find_by_url_key(campus_url_key)
-    create_campus_leaders_lists(campus)
+    @campus_leaders = create_leaders_lists(campus.campus_leaders)
+    @student_leaders = create_leaders_lists(campus.student_leaders)
 
     @leaders_page_title = campus.school_name + " Leaders"
     @campus_name = campus.school_name
@@ -176,14 +177,14 @@ class CampusController < ApplicationController
       return false
     end
 
-    def create_campus_leaders_lists(campus)
-      @campus_leaders = campus.campus_leaders.where(is_active: true).order(:position)
-      if @campus_leaders.nil?
-        @campus_leaders = Array.new
-      end
-      campus_leaders_columns = CampusLeader.get_campus_leaders_columns(@campus_leaders)
-      @campus_leaders_column_1 = campus_leaders_columns[:column_1]
-      @campus_leaders_column_2 = campus_leaders_columns[:column_2]
+    def create_leaders_lists(db_leaders)
+      leaders = Hash.new
+      leaders["all"] = db_leaders.where(is_active: true).order(:position)
+      leaders["all"] ||= Array.new
+      leaders_columns = CampusLeader.get_campus_leaders_columns(leaders["all"])
+      leaders["column1"] = leaders_columns[:column_1]
+      leaders["column2"] = leaders_columns[:column_2]
+      return leaders
     end
 
     def get_small_groups_info(campus)

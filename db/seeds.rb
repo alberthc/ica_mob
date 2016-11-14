@@ -83,9 +83,9 @@ end
 # Create Student Leaders
 
 rutgers_student_leaders = StudentLeader.create([
-{name: "Fangzhou Li", title: "President", image_path: "student-leader-jojo", position: 1, campus: rutgers},
-{name: "Andrew Lowe", title: "Vice President", image_path: "student-leader-andrewl", position: 2, campus: rutgers},
-{name: "Yaxin Chen", title: "Treasurer", image_path: "student-leader-yaxin", position: 3, campus: rutgers}
+{name: "Fangzhou Li", title: "President", image_path: "campus/leaders/student/jojo", position: 1, is_active: true, campus: rutgers},
+{name: "Andrew Lowe", title: "Vice President", image_path: "campus/leaders/student/andrewl", position: 2, is_active: true, campus: rutgers},
+{name: "Yaxin Chen", title: "Treasurer", image_path: "campus/leaders/student/yaxin", position: 3, is_active: true, campus: rutgers}
 ]);
 
 # Create Small Groups
