@@ -80,6 +80,14 @@ rutgers_leaders.each do |leader|
   CampusCampusLeader.create(campus: rutgers, campus_leader: leader)
 end
 
+# Create Student Leaders
+
+rutgers_student_leaders = StudentLeader.create([
+{name: "Fangzhou Li", title: "President", image_path: "student-leader-jojo", position: 1, campus: rutgers},
+{name: "Andrew Lowe", title: "Vice President", image_path: "student-leader-andrewl", position: 2, campus: rutgers},
+{name: "Yaxin Chen", title: "Treasurer", image_path: "student-leader-yaxin", position: 3, campus: rutgers}
+]);
+
 # Create Small Groups
 
 usc_small_groups = CampusSmallGroup.create([
