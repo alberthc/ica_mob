@@ -1,0 +1,26 @@
+<section class="separation-1"></section>
+
+<div class="row">
+  <div class="small-12 columns text-center">
+    <h1><strong><%= @campus_name %> Campus Leaders</strong></h1>
+  </div>
+</div>
+
+<section class="separation-1"></section>
+
+<div class="row show-for-large-up">
+  <div class="small-12 medium-8 large-10 small-centered columns">
+    <ul id="accordion" class="small-block-grid-1 medium-block-grid-1 large-block-grid-2 small-centered">
+      <%= render 'campus/accordion_list', campus_leaders_list: leaders["column1"] %>
+      <%= render 'campus/accordion_list', campus_leaders_list: leaders["column2"] %>
+    </ul>
+  </div>	
+</div>
+
+<div class="row hide-for-large-up">
+  <div class="small-12 medium-8 large-10 small-centered columns">
+    <ul id="accordion" class="small-block-grid-1 medium-block-grid-1 large-block-grid-2 small-centered">
+      <%= render 'campus/accordion_list', campus_leaders_list: leaders["all"] %>
+    </ul>
+  </div>	
+</div>
