@@ -1,4 +1,8 @@
+require 'google/apis/calendar_v3'
+
 class CampusController < ApplicationController
+
+  Calendar = Google::Apis::CalendarV3
 
   def home
     campus_url_key = params[:campus_url_key]
@@ -85,21 +89,19 @@ class CampusController < ApplicationController
   private
 
     def retrieve_gcal_events(gcalid, api_key, timeZone)
-      google_api_client = Google::APIClient.new
-      google_api_calendar = google_api_client.discovered_api('calendar', 'v3')
-      google_api_client.authorization = nil
+      calendar = Calendar::CalendarService.new
+      calendar.authorization = nil
+      calendar.key = api_key
 
-      result = google_api_client.execute(api_method: google_api_calendar.events.list,
-                                         parameters: {calendarId: gcalid,
-                                                      singleEvents: true,
-                                                      maxResults: 20,
-                                                      orderBy: 'startTime',
-                                                      timeMin: Util.get_current_time(timeZone),
-                                                      timeZone: timeZone,
-                                                      key: api_key})
+      result = calendar.list_events(gcalid,
+                                    max_results: 20,
+                                    single_events: true,
+                                    order_by: 'startTime',
+                                    time_min: Util.get_current_time(timeZone),
+                                    time_zone: timeZone)
       
-      if !result.data.nil?
-        entries = result.data.items
+      if !result.nil?
+        entries = result.items
       end
 
       # Structure containing the feed parsed for display
@@ -125,7 +127,7 @@ class CampusController < ApplicationController
           date = nil
           
           begin
-            dateTime = entry.start.dateTime
+            dateTime = entry.start.date_time
           rescue
             date = Date.parse(entry.start.date)
           end
