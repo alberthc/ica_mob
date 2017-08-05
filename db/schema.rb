@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20161114051102) do
 
-  create_table "campus", force: true do |t|
+  create_table "campus", force: :cascade do |t|
     t.string   "school_name"
     t.string   "org_name"
     t.string   "main_pic_id"
@@ -44,14 +44,17 @@ ActiveRecord::Schema.define(version: 20161114051102) do
 
   add_index "campus", ["url_key"], name: "index_campus_on_url_key"
 
-  create_table "campus_campus_leaders", force: true do |t|
+  create_table "campus_campus_leaders", force: :cascade do |t|
     t.integer  "campus_id"
     t.integer  "campus_leader_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end
 
-  create_table "campus_leaders", force: true do |t|
+  add_index "campus_campus_leaders", ["campus_id"], name: "index_campus_campus_leaders_on_campus_id"
+  add_index "campus_campus_leaders", ["campus_leader_id"], name: "index_campus_campus_leaders_on_campus_leader_id"
+
+  create_table "campus_leaders", force: :cascade do |t|
     t.string   "name"
     t.string   "title"
     t.text     "bio"
@@ -62,7 +65,7 @@ ActiveRecord::Schema.define(version: 20161114051102) do
     t.integer  "position"
   end
 
-  create_table "campus_small_groups", force: true do |t|
+  create_table "campus_small_groups", force: :cascade do |t|
     t.integer  "campus_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -74,7 +77,14 @@ ActiveRecord::Schema.define(version: 20161114051102) do
     t.string   "contact_info"
   end
 
-  create_table "student_leaders", force: true do |t|
+  create_table "campuses_campus_leaders", force: :cascade do |t|
+    t.integer  "campus_id"
+    t.integer  "campus_leader_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "student_leaders", force: :cascade do |t|
     t.string   "name"
     t.string   "title"
     t.string   "image_path"
