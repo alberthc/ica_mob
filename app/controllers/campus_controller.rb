@@ -1,8 +1,4 @@
-require 'google/apis/calendar_v3'
-
 class CampusController < ApplicationController
-
-  Calendar = Google::Apis::CalendarV3
 
   def home
     campus_url_key = params[:campus_url_key]
@@ -88,79 +84,59 @@ class CampusController < ApplicationController
 
   private
 
-    def retrieve_gcal_events(gcalid, api_key, timeZone)
-      calendar = Calendar::CalendarService.new
-      calendar.authorization = nil
-      calendar.key = api_key
+    def retrieve_gcal_events(gcalid, api_key, time_zone)
+      calendar = GoogleCalendarService.new api_key, gcalid
 
-      result = calendar.list_events(gcalid,
-                                    max_results: 20,
-                                    single_events: true,
-                                    order_by: 'startTime',
-                                    time_min: Util.get_current_time(timeZone),
-                                    time_zone: timeZone)
+      params = { 'max_results': 20,
+                 'single_events': true,
+                 'order_by': 'startTime',
+                 'time_min': Util.get_current_time(time_zone),
+                 'time_zone': time_zone }
+
+      result = calendar.get_events(params)
+      return if result.nil?
       
-      if !result.nil?
-        entries = result.items
+      @entries = Array.new
+      result.items.each_index do |i|
+        break if i >= MAX_ANNOUNCEMENTS_TO_CHECK || @entries.size >= MAX_ANNOUNCEMENTS_TO_DISPLAY
+        display_item = get_display_item(result.items[i], time_zone)
+        @entries.push display_item if display_item
+      end
+    end
+
+    def get_display_item(item, time_zone)
+      return if item.description == SKIP_ENTRY_TEXT
+      puts 'item = ' + item.summary
+
+      # Some events only have date
+      date_time = nil
+      date = nil
+      
+      begin
+        date_time = item.start.date_time
+      rescue
+        date = Date.parse(item.start.date)
       end
 
-      # Structure containing the feed parsed for display
-      @parsed_entries = Array.new
-      numEntriesChecked = 0
-
-      if !entries.nil?
-        entries.each do |entry|
-          puts 'entry = ' + entry.summary
-          numEntriesChecked += 1
-          if numEntriesChecked > MAX_NUM_ANNOUNCEMENTS_TO_CHECK
-            break
-          end
-
-          # skip entry if description contains SKIP_ENTRY_TEXT
-          content = entry.description
-          if content == SKIP_ENTRY_TEXT
-            next
-          end
-
-          # Some events only have date
-          dateTime = nil
-          date = nil
-          
-          begin
-            dateTime = entry.start.date_time
-          rescue
-            date = Date.parse(entry.start.date)
-          end
-
-          title = entry.summary
-
-          if !dateTime.nil?
-            date = dateTime.strftime('%A %-m/%-d')
-            time = dateTime.in_time_zone(timeZone).strftime('%-I:%M %p')
-          else
-            date = date.strftime('%A %-m/%-d')
-            time = 'TBD'
-          end
-
-          location = entry.location
-
-          parsed_entry = {title: title,
-                          date: date,
-                          time: time,
-                          location: location}
-
-          # check if parsed_entry is part of a recurring event that is already on the list and don't show
-          if exists(@parsed_entries, parsed_entry)
-            next
-          end
-
-          @parsed_entries.push(parsed_entry)
-
-          if @parsed_entries.size == MAX_NUM_ANNOUNCEMENTS_TO_DISPLAY
-            break
-          end
-        end
+      if !date_time.nil?
+        date = date_time.strftime('%A %-m/%-d')
+        time = date_time.in_time_zone(time_zone).strftime('%-I:%M %p')
+      else
+        date = date.strftime('%A %-m/%-d')
+        time = 'TBD'
       end
+
+      title = item.summary
+      location = item.location
+      display_item = {title: title,
+                      date: date,
+                      time: time,
+                      location: location}
+
+      # check if display_item is part of a recurring event that is already on the list and don't show
+      return if exists(@entries, display_item)
+
+      display_item
     end
 
     # Check if new_entry already exists in list of parsed entries
