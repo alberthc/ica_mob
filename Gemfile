@@ -55,17 +55,10 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'foundation-rails', '5.3.3.0'
-
-gem 'tzinfo-data', platforms: [:mingw, :mswin]
-
 gem 'jquery-turbolinks'
-
 gem 'jquery-ui-rails'
-
-gem 'google-api-client', '0.7.1', require: 'google/api_client'
-
 gem 'gdata', git: 'https://github.com/agentrock/gdata.git'
-
+gem 'google-api-client', '0.7.1', require: 'google/api_client'
 gem 'smusher'
-
+gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'yaml_db', github: 'jetthoughts/yaml_db'
