@@ -1,73 +1,14 @@
-.Ev
-{	
-	margin-top: 10px;
-//	margin-left: 20px;
-	background-color: #E0E2E4;
+.outer-panel-3e {
+  margin-top: 10px;
+  background-color: #E0E2E4;
 }
 
-.EvHeader
-{
-	text-align: center;
+.panel-content-3e {
+  margin: 10px 20px 0 20px;
+  text-align: left;
 }
 
-.EvBody
-{
-	margin-top: 10px;
-	margin-left: 20px;
-	margin-right: 20px;
-	text-align: left;
-	line-height: 170%;
-}
-
-.Est
-{
-	margin-top: 10px;
-	margin-right: 5px;
- margin-left: 5px;
-	background-color: #E0E2E4;
-}
-
-.EstHeader
-{
-	text-align: center;
-
-}
-
-.EstBody
-{	
-	margin-top: 10px;
-	margin-left: 20px;
-	margin-right: 20px;
-	text-align: left;
-
-//	line-height: 170%;
-
-}
-
-.Eq
-{
-
-	margin-top: 10px;
-	//margin-right: 20px;
-	background-color: #E0E2E4;
-}
-
-.EqHeader
-{
-	text-align: center;
-	
-}
-
-.EqBody
-{
-	margin-top: 10px;
-	margin-left: 20px;
-	margin-right: 20px;
-	text-align: left;
-//	line-height: 170%;
-
-}
-
-.separation-0-1 {
-  height: 5px;
+.inner-panel-3e {
+  margin: 10px 5px 0 5px;
+  background-color: #E0E2E4;
 }
