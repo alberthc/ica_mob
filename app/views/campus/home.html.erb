@@ -2,8 +2,12 @@
 <% provide(:keywords, @keywords) %>
 <% provide(:description, @description) %>
 
-<div class="small-12">
+<div class="medium-12 show-for-medium-up">
   <section class="main-photo bg-img fast-height-trans" id=<%= @campus_main_pic_id %>></section>
+</div>
+
+<div class="small-12 show-for-small-only">
+  <section class="main-photo bg-img fast-height-trans" id="<%= @campus_main_pic_id %>-sml"></section>
 </div>
 
 <div class="row text-center">
