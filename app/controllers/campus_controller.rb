@@ -121,13 +121,17 @@ class CampusController < ApplicationController
       if !date_time.nil?
         date = date_time.strftime('%A %-m/%-d')
         time = date_time.in_time_zone(time_zone).strftime('%-I:%M %p')
-      else
+      elsif !date.nil?
         date = date.strftime('%A %-m/%-d')
+        time = 'TBD'
+      else
+        date = 'TBD'
         time = 'TBD'
       end
 
       title = item.summary
-      location = item.location
+      location = 'TBD'
+      location = item.location if !item.location.nil?
       display_item = {title: title,
                       date: date,
                       time: time,
