@@ -13,6 +13,6 @@ class Campus < ActiveRecord::Base
   RUTGERS = 'rutgers'
 
   # List of campus constants
-  VALID_CAMPUSES = [USC, UCLA, UCI, CAL, RUTGERS]
+  VALID_CAMPUSES = [USC, UCLA, UCI, RUTGERS]
 
 end

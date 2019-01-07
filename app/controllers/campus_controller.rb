@@ -11,8 +11,8 @@ class CampusController < ApplicationController
         campus_constructor(campus, UCLA_EMAIL, UCLA_API_KEY, DEFAULT_TZ)
       when Campus::UCI
         campus_constructor(campus, UCI_EMAIL, UCI_API_KEY, DEFAULT_TZ)
-      when Campus::CAL
-        campus_constructor(campus, CAL_GCAL_ID, CAL_API_KEY, DEFAULT_TZ)
+      # when Campus::CAL
+      #   campus_constructor(campus, CAL_GCAL_ID, CAL_API_KEY, DEFAULT_TZ)
       when Campus::RUTGERS
         campus_constructor(campus, RUTGERS_GCAL_ID, RUTGERS_API_KEY, NEW_YORK_TZ)
       else
